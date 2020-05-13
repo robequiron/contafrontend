@@ -1,0 +1,66 @@
+<!------------------------------------------------------
+- Sidebar										                 
+------------------------------------------------------->
+<div id="sidebar">
+    <!------------------------------------------------------
+    - Sidebar brand								                 
+    ------------------------------------------------------->
+    <div id="sidebar-brand" class="themed-background">
+        <a href="index.html" class="sidebar-title">
+            <i class="fa fa-cube"></i> <span class="sidebar-nav-mini-hide">Conta<strong>UI</strong></span>
+        </a>
+    </div>
+                
+    <!------------------------------------------------------
+    - Sidebar										                 
+    ------------------------------------------------------->
+    <div id="sidebar-scroll">
+        <!------------------------------------------------------
+        - Sidebar content										                 
+        ------------------------------------------------------->
+        <div class="sidebar-content">
+            <ul class="sidebar-nav">
+                <div *ngFor="let menu of menus; let i = index">
+                    <!-- Items sidebar-->
+                    <li *ngIf="menu.title!=''">
+                        <a [routerLink]="menu.url" routerLinkActive="active" *ngIf="menu.url!=''">
+                            <i [class]=menu.icon></i>
+                            <span class="sidebar-nav-mini-hide">{{menu.title}}</span>
+                        </a>
+                    </li>
+                    <!-- Separator sibedar-->
+                    <li *ngIf="menu.title==''" class="sidebar-separator">
+                        <i class="fa fa-ellipsis-h"></i>
+                    </li>
+                    <!-- Submenu sidebar-->
+                    <li *ngIf="menu.submenu">
+                        <a  #i (click)="getSubmenu(i)" class="sidebar-nav-menu">
+                            <i class="sidebar-nav-indicator sidebar-nav-mini-hide fa fa-chevron-left"></i>
+                            <i [class]="menu.icon + ' sidebar-nav-icon'"></i>
+                            <span class="sidebar-nav-mini-hide">{{menu.title}}{{i}}</span>
+                        </a>
+                        <!-- Create submenu sidebar-->
+                        <ul>
+                            <ng-container *ngFor="let submenu of menu.submenu; let n = index">
+                                <!--SubmenuItem-->
+                                <li *ngIf="!submenu.items">
+                                    <a [routerLink]="submenu.url" routerLinkActive=" active">{{submenu.title}}</a>
+                                </li>
+                                <!--Submenu Items-->
+                                <li *ngIf="submenu.items">
+                                    <a  #n (click)="getItems(n)" class="sidebar-nav-submenu"><i class="fa fa-chevron-left sidebar-nav-indicator"></i>{{submenu.title}}</a>
+                                    <ul>
+                                        <li *ngFor="let item of submenu.items">
+                                            <a [routerLink]="item.url" routerLinkActive=" active">{{item.title}}</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ng-container>
+                        </ul>
+                    </li>                    
+                </div>
+            </ul>
+            <app-colortheme></app-colortheme>
+        </div>
+    </div>
+</div>             

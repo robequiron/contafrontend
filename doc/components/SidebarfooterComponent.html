@@ -1,0 +1,284 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>frontend documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/readthedocs.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">frontend documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>SidebarfooterComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/shared/sidebarfooter/sidebarfooter.component.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Bottom of the sidebar menu</p>
+<p>Parte inferior del menu sidebar</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-sidebarfooter</code></td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./sidebarfooter.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+
+/**
+ * Bottom of the sidebar menu
+ * 
+ * Parte inferior del menu sidebar
+ */
+
+@Component({
+  selector: &#x27;app-sidebarfooter&#x27;,
+  templateUrl: &#x27;./sidebarfooter.component.html&#x27;,
+  styles: []
+})
+export class SidebarfooterComponent implements OnInit {
+
+  /**
+   * @ignore
+   */
+  
+  constructor() { }
+
+  /**
+   * @ignore
+   */
+  
+  ngOnInit() {
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">                &lt;!-- Sidebar Extra Info --&gt;
+                &lt;div id&#x3D;&quot;sidebar-extra-info&quot; class&#x3D;&quot;sidebar-content sidebar-nav-mini-hide&quot;&gt;
+                    &lt;div class&#x3D;&quot;push-bit&quot;&gt;
+                        &lt;span class&#x3D;&quot;pull-right&quot;&gt;
+                            &lt;a href&#x3D;&quot;javascript:void(0)&quot; class&#x3D;&quot;text-muted&quot;&gt;&lt;i class&#x3D;&quot;fa fa-plus&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;/span&gt;
+                        &lt;small&gt;&lt;strong&gt;78 GB&lt;/strong&gt; / 100 GB&lt;/small&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;progress progress-mini push-bit&quot;&gt;
+                        &lt;div class&#x3D;&quot;progress-bar progress-bar-primary&quot; role&#x3D;&quot;progressbar&quot; aria-valuenow&#x3D;&quot;78&quot; aria-valuemin&#x3D;&quot;0&quot; aria-valuemax&#x3D;&quot;100&quot; style&#x3D;&quot;width: 78%&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;text-center&quot;&gt;
+                        &lt;small&gt;Crafted with &lt;i class&#x3D;&quot;fa fa-heart text-danger&quot;&gt;&lt;/i&gt; by &lt;a href&#x3D;&quot;http://goo.gl/vNS3I&quot; target&#x3D;&quot;_blank&quot;&gt;pixelcave&lt;/a&gt;&lt;/small&gt;&lt;br&gt;
+                        &lt;small&gt;&lt;span id&#x3D;&quot;year-copy&quot;&gt;&lt;/span&gt; &amp;copy; &lt;a href&#x3D;&quot;http://goo.gl/RcsdAh&quot; target&#x3D;&quot;_blank&quot;&gt;AppUI 2.1&lt;/a&gt;&lt;/small&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- END Sidebar Extra Info --&gt;
+             
+                &lt;!-- END Main Sidebar --&gt;</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div>                <!-- Sidebar Extra Info -->                <div id="sidebar-extra-info" class="sidebar-content sidebar-nav-mini-hide">                    <div class="push-bit">                        <span class="pull-right">                            <a href="javascript:void(0)" class="text-muted"><i class="fa fa-plus"></i></a>                        </span>                        <small><strong>78 GB</strong> / 100 GB</small>                    </div>                    <div class="progress progress-mini push-bit">                        <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" style="width: 78%"></div>                    </div>                    <div class="text-center">                        <small>Crafted with <i class="fa fa-heart text-danger"></i> by <a href="http://goo.gl/vNS3I" target="_blank">pixelcave</a></small><br>                        <small><span id="year-copy"></span> &copy; <a href="http://goo.gl/RcsdAh" target="_blank">AppUI 2.1</a></small>                    </div>                </div>                <!-- END Sidebar Extra Info -->                             <!-- END Main Sidebar --></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ColorthemeComponent', 'selector': 'app-colortheme'},{'name': 'ConfigComponent', 'selector': 'app-config'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'GrupoComponent', 'selector': 'app-grupo'},{'name': 'GruposComponent', 'selector': 'app-grupos'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PagesComponent', 'selector': 'app-pages'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'SidebarfooterComponent', 'selector': 'app-sidebarfooter'},{'name': 'UserComponent', 'selector': 'app-user'},{'name': 'UsersComponent', 'selector': 'app-users'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'SidebarfooterComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'SidebarfooterComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
