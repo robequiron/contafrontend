@@ -61,7 +61,7 @@
         'table-vcenter'     - middle align content vertically						                 
     ------------------------------------------------------->
     <div class="table-responsive">
-        <table id="general-table" class="table table-striped table-bordered table-vcenter">
+        <table id="general-table" [class]="classTable">
             <!------------------------------------------------------
             - Headboard										                 
             ------------------------------------------------------->  
@@ -90,6 +90,16 @@
             - Body										                 
             ------------------------------------------------------->
             <tbody>
+                <tr *ngIf="!loaded">
+                    <td colspan="3" class="text-center">
+                        <app-load-table></app-load-table>
+                    </td>
+                </tr>
+                <tr *ngIf="count===0">
+                    <td  colspan="3" class="text-center">
+                        <app-notfound></app-notfound>
+                    </td>
+                </tr>
                 <tr *ngFor="let grupo of grupos | paginate: { itemsPerPage: itemsPerPage, currentPage: p, totalItems: count }">
                     <td><strong>{{grupo.grupo}}</strong></td>
                     <td>{{grupo.name}}</td>
@@ -107,9 +117,13 @@
             <tfoot>
                 <tr>
                     <td></td>
-                    <td><div class="input-group">
+                    <td><div class="input-group col-md-12">
                         <span class="input-group-addon"><i class="fa fa-book"></i></span>
-                        <input type="text" (keydown.enter)="getGrupos()" [(ngModel)]="nameSearch" name="nameSearch" class="form-control" placeholder="Nombre del grupo...">
+                        <input type="text" name="nameSearch" class="form-control" placeholder="Nombre del grupo..."
+                        #focusSearch
+                        (keydown.control.n)="newGrupo()"
+                        (keydown.enter)="getGrupos()" 
+                        [(ngModel)]="nameSearch" >
                     </div></td>
                     <td></td>
                 </tr>

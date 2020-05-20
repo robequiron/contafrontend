@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ConfigService, GruposService } from 'src/app/services/services.index';
 import Swal from 'sweetalert2';
 import { GrupoTable } from 'src/app/models/tables/grupos.model';
 import { Grupo } from 'src/app/models/grupo.model';
+import { Router } from '@angular/router';
 /**
  * Component to show accounting group
  */
@@ -13,7 +14,22 @@ import { Grupo } from 'src/app/models/grupo.model';
   styles: []
 })
 export class GruposComponent implements OnInit {
+  /**
+   * Element search focus
+   */
+  @ViewChild("focusSearch", {static:true}) focusSearch: ElementRef;
+  
+  /**
+   * Data loaded
+   */
+  public loaded:boolean = false;  
 
+  /**
+  * Class table
+  */
+  public classTable:string ="";
+  
+  
   /**
    * Model group
    */
@@ -41,12 +57,12 @@ export class GruposComponent implements OnInit {
    */
   public p:number = 1;
   /**
-   * Search name user
+   * Search name group
    */
   public nameSearch:string ="";
 
   /**
-   * Users total
+   * Groups total
    */
   public count:number;
   /**
@@ -64,10 +80,12 @@ export class GruposComponent implements OnInit {
    * 
    * @param _grupos Inyect UserService
    * @param _config Inyect ConfigService
+   * @param router Router Module
    */
   constructor(
     private _grupos:GruposService, 
     private _config:ConfigService,
+    private router: Router,
   ) { }
 
   /**
@@ -76,13 +94,30 @@ export class GruposComponent implements OnInit {
   ngOnInit() {
     this.getConfig();
     this.getGrupos();
+    this.setFocus();
   }
+  
+  /**
+   * Set Focus element input
+   */
+  public setFocus() {
+    this.focusSearch.nativeElement.focus();
+  }
+
+  /**
+   * Navigate new group
+   */
+  public newGrupo() {
+    this.router.navigate(["/grupo","nuevo"]);
+  }
+
 
   /**
    * Loads default from tables		
    */
   public getConfig() {
     this.itemsPerPage = this._config.getLimitTable();
+    this.classTable = this._config.getclassTable();
   }
 
   /**
@@ -119,11 +154,15 @@ export class GruposComponent implements OnInit {
       this.nameSearch,
       this.orderGrupo,
       this.orderName
-      ).subscribe( (resp:GrupoTable)=>{
-        this.grupoTable= resp;
-        this.count = resp.count;
-        this.grupos = resp.grupos;
-    })
+      ).subscribe( 
+        (resp:GrupoTable)=>{
+          this.grupoTable= resp;
+          this.count = resp.count;
+          this.grupos = resp.grupos;
+        },
+        null,
+        ()=>{this.loaded = true;}
+      )
   }
 
   /**
@@ -133,6 +172,7 @@ export class GruposComponent implements OnInit {
    * @param n Page number
    */
   public setItemPerPage(n:number):void {
+    this.p = 1;
     this.itemsPerPage = n;
   }
 
@@ -145,9 +185,9 @@ export class GruposComponent implements OnInit {
   }
 
   /**
-   * Remove User
+   * Remove Accounting group
    * 
-   * @param id Id user
+   * @param id Id group
    */
   public removeGroup(id:string):void {
    
@@ -161,13 +201,22 @@ export class GruposComponent implements OnInit {
       
       if(resp.value) {
         this._grupos.deleteGrupo(id).subscribe(
-          (resp)=>{
-            Swal.fire({
-            icon:'info',
-            title:'Eliminado correctamente',
-            timer:1000
-            })
-            this.getGrupos();
+          (resp:any)=>{
+            if (resp.ok){
+              Swal.fire({
+              icon:'info',
+              title:'Eliminado correctamente',
+              timer:1000
+              })
+              this.getGrupos();
+            } else {
+              Swal.fire({
+                icon:'warning',
+                title: 'No es posible eliminar el grupo',
+                text: 'Contiene subgrupos contables',
+                timer:1500
+              })
+            }
           },
           ()=>{
             Swal.fire({

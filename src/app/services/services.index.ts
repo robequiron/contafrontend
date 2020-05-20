@@ -1,3 +1,4 @@
+export { SubgruposService } from './subgrupos/subgrupos.service';
 export { GruposService } from './grupos/grupos.service';
 export { UserService } from './users/user.service';
 export { ConfigService } from './config/config.service';

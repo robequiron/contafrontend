@@ -60,6 +60,13 @@
             <code>src/app/services/config/config.service.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Services for requests with server - Config</p>
+
+            </p>
 
 
 
@@ -75,6 +82,10 @@
                 <tr>
                     <td class="col-md-4">
                         <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#classTable">classTable</a>
+                            </li>
                             <li>
                                     <span class="modifier">Public</span>
                                 <a href="#limit">limit</a>
@@ -93,6 +104,10 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
+                                <a href="#getclassTable">getclassTable</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#getLimitTable">getLimitTable</a>
                             </li>
                         </ul>
@@ -107,30 +122,55 @@
     </table>
 </section>
 
-            <section>
-    <h3 id="constructor">Constructor</h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-<code>constructor()</code>
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/services/config/config.service.ts:11</a></div>
-                            </td>
-                        </tr>
-
-            </tbody>
-        </table>
-</section>
 
             <section>
     
     <h3 id="methods">
         Methods
     </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getclassTable"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            getclassTable
+                        </b>
+                        <a href="#getclassTable"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getclassTable()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="44"
+                            class="link-to-prism">src/app/services/config/config.service.ts:44</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get class Table</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -155,14 +195,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="16"
-                            class="link-to-prism">src/app/services/config/config.service.ts:16</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="38"
+                            class="link-to-prism">src/app/services/config/config.service.ts:38</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Get records to show in the grid</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
@@ -178,6 +220,53 @@
         <h3 id="inputs">
             Properties
         </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="classTable"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            classTable</b>
+                            <a href="#classTable"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&quot;table table-striped table-bordered table-vcenter&quot;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/services/config/config.service.ts:29</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Config class table</p>
+<div><pre class="line-numbers"><code class="language-none"> - Table                
+ Available Table Classes:
+ &#39;table&#39;             - basic table
+ &#39;table-bordered&#39;    - table with full borders
+ &#39;table-borderless&#39;  - table with no borders
+ &#39;table-striped&#39;     - striped table
+ &#39;table-condensed&#39;   - table with smaller top and bottom cell padding
+ &#39;table-hover&#39;       - rows highlighted on mouse hover
+ &#39;table-vcenter&#39;     - middle align content vertically                                         </code></pre></div></div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
@@ -204,10 +293,16 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/services/config/config.service.ts:11</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/services/config/config.service.ts:15</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Item number config</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -218,7 +313,9 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
-
+/**
+ * Services for requests with server - Config
+ */
 @Injectable({
   providedIn: &#x27;root&#x27;
 })
@@ -226,15 +323,42 @@ export class ConfigService {
   //TODO:Establecer configuración general y por usuario
   //TODO:Grabar grupos contables por defecto
 
-
+  /**
+   * Item number config
+   */
   public limit:number&#x3D;5;
-
+  /**
+   * Config class table
+   * 
+   *     - Table				
+   *     Available Table Classes:
+   *     &#x27;table&#x27;             - basic table
+   *     &#x27;table-bordered&#x27;    - table with full borders
+   *     &#x27;table-borderless&#x27;  - table with no borders
+   *     &#x27;table-striped&#x27;     - striped table
+   *     &#x27;table-condensed&#x27;   - table with smaller top and bottom cell padding
+   *     &#x27;table-hover&#x27;       - rows highlighted on mouse hover
+   *     &#x27;table-vcenter&#x27;     - middle align content vertically						                 
+   */
+  public classTable:string &#x3D;&quot;table table-striped table-bordered table-vcenter&quot;; 
+  /**
+   * @ignore
+   */
   constructor() { }
 
-
+  /**
+   * Get records to show in the grid
+   */
   public getLimitTable() {
     return this.limit;
   }
+  /** 
+  * Get class Table
+  */
+  public getclassTable() {
+    return this.classTable;
+  }
+
 }
 </code></pre>
     </div>

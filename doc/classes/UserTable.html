@@ -133,6 +133,8 @@
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Model table user</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -141,6 +143,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -155,6 +158,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <code><p>Number records</p>
+</code>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>from</td>
@@ -167,6 +174,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <code><p>From record</p>
+</code>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>limit</td>
@@ -179,6 +190,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <code><p>Limit records</p>
+</code>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>users</td>
@@ -191,6 +206,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <code><p>Model user</p>
+</code>
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -227,10 +246,15 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/models/tables/users.model.ts:9</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/models/tables/users.model.ts:14</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description">Number records</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -255,10 +279,15 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/models/tables/users.model.ts:10</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/models/tables/users.model.ts:15</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description">From record</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -283,10 +312,15 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/models/tables/users.model.ts:11</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/models/tables/users.model.ts:16</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description">Limit records</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -311,10 +345,15 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/models/tables/users.model.ts:12</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/models/tables/users.model.ts:17</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description">Model user</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -332,8 +371,13 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export class UserTable {
     /**
-     * @Ignore 
-     * */
+     * Model table user
+     * 
+     * @param count Number records
+     * @param from From record
+     * @param limit Limit records
+     * @param users  Model user
+     */
     constructor(
         public count:number,
         public from:number,

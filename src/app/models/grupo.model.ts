@@ -6,8 +6,8 @@ export class Grupo {
      * Model user
      * 
      * @param name Name accounting group
-     * @param grupo Email user
-     * @param _id Identifier acoounting group
+     * @param grupo Number group
+     * @param _id Identifier accounting group
      */
     constructor(
         public name:String,

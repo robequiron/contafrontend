@@ -7,6 +7,7 @@ import { LoginGuardGuard } from './guards/login-guard.guard';
 import { UserService } from './users/user.service';
 import { ConfigService } from './config/config.service';
 import { GruposService } from './grupos/grupos.service';
+import { SubgruposService } from './subgrupos/subgrupos.service';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { GruposService } from './grupos/grupos.service';
     LoginGuardGuard,
     UserService,
     ConfigService,
-    GruposService
+    GruposService,
+    SubgruposService,
   ]
 })
 export class ServicesModule { }

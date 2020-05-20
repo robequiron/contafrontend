@@ -89,6 +89,10 @@
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
+                                <a href="#getFindGroup">getFindGroup</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#getGrupo">getGrupo</a>
                             </li>
                             <li>
@@ -196,8 +200,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="68"
-                            class="link-to-prism">src/app/services/grupos/grupos.service.ts:68</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="80"
+                            class="link-to-prism">src/app/services/grupos/grupos.service.ts:80</a></div>
                 </td>
             </tr>
 
@@ -255,6 +259,85 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="getFindGroup"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            getFindGroup
+                        </b>
+                        <a href="#getFindGroup"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getFindGroup(grupo: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="51"
+                            class="link-to-prism">src/app/services/grupos/grupos.service.ts:51</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>GetOne accounting group</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>grupo</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Identifier id group</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="getGrupo"></a>
                     <span class="name">
                         <b>
@@ -283,7 +366,7 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Load accounting group</p>
+                    <div class="io-description"><p>Load accounting group for identifier</p>
 </div>
 
                     <div class="io-description">
@@ -456,15 +539,15 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="51"
-                            class="link-to-prism">src/app/services/grupos/grupos.service.ts:51</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="63"
+                            class="link-to-prism">src/app/services/grupos/grupos.service.ts:63</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Create new accounting group</p>
+                    <div class="io-description"><p>Create or update accounting group</p>
 </div>
 
                     <div class="io-description">
@@ -550,7 +633,7 @@ export class GruposService {
   }
 
   /**
-   * Load accounting group
+   * Load accounting group for identifier
    */
   public getGrupo(id:String) {
     let token &#x3D; localStorage.getItem(&#x27;token&#x27;);
@@ -561,8 +644,20 @@ export class GruposService {
       })
     )
   }
+
   /**
-   * Create new accounting group
+   * GetOne accounting group
+   * 
+   * @param grupo Identifier id group
+   */
+  public getFindGroup(grupo:number) {
+    let token &#x3D; localStorage.getItem(&#x27;token&#x27;);
+    let url &#x3D; URL_SERVICIOS + &#x60;/grupo/grupo?grupo&#x3D;${grupo}&amp;token&#x3D;${token}&#x60;;
+    return this.http.get(url);
+  }
+
+  /**
+   * Create or update accounting group
    * 
    * @param grupo Accounting group
    */

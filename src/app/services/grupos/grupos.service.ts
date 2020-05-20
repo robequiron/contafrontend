@@ -31,7 +31,7 @@ export class GruposService {
   }
 
   /**
-   * Load accounting group
+   * Load accounting group for identifier
    */
   public getGrupo(id:String) {
     let token = localStorage.getItem('token');
@@ -42,8 +42,20 @@ export class GruposService {
       })
     )
   }
+
   /**
-   * Create new accounting group
+   * GetOne accounting group
+   * 
+   * @param grupo Identifier id group
+   */
+  public getFindGroup(grupo:number) {
+    let token = localStorage.getItem('token');
+    let url = URL_SERVICIOS + `/grupo/grupo?grupo=${grupo}&token=${token}`;
+    return this.http.get(url);
+  }
+
+  /**
+   * Create or update accounting group
    * 
    * @param grupo Accounting group
    */

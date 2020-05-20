@@ -1,0 +1,1328 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>frontend documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/readthedocs.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">frontend documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>SubgrupoComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/pages/subgrupos/subgrupo.component.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Component to modify or create nuew accounting subgroup</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-subgrupo</code></td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./subgrupo.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#aForm">aForm</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#eForm">eForm</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#grupo">grupo</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#subgrupo">subgrupo</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#title">title</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#cancel">cancel</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#grabar">grabar</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#loadSubgroup">loadSubgroup</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#newSubgroup">newSubgroup</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#onFocusOut">onFocusOut</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#setFocus">setFocus</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(_grupoService: <a href="../injectables/GruposService.html">GruposService</a>, _subgrupoService: <a href="../injectables/SubgruposService.html">SubgruposService</a>, route: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, activatedRoute: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/pages/subgrupos/subgrupo.component.ts:48</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Constructor</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>_grupoService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/GruposService.html" target="_self" >GruposService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><p>Accounting group Service</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>_subgrupoService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SubgruposService.html" target="_self" >SubgruposService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><p>Accounting subgroup Service</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>route</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>activatedRoute</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><p>Active Route</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="cancel"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            cancel
+                        </b>
+                        <a href="#cancel"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>cancel()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="161"
+                            class="link-to-prism">src/app/pages/subgrupos/subgrupo.component.ts:161</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Cancel form subgroup</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="grabar"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            grabar
+                        </b>
+                        <a href="#grabar"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>grabar(f: <a href="https://angular.io/api/forms/NgForm" target="_blank">NgForm</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="114"
+                            class="link-to-prism">src/app/pages/subgrupos/subgrupo.component.ts:114</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Create or update accounting subgroup</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>f</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/forms/NgForm" target="_blank" >NgForm</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Object Form</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadSubgroup"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            loadSubgroup
+                        </b>
+                        <a href="#loadSubgroup"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>loadSubgroup(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="97"
+                            class="link-to-prism">src/app/pages/subgrupos/subgrupo.component.ts:97</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Load data accounting group</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank" >String</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Identifier accounting subgroup</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="newSubgroup"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            newSubgroup
+                        </b>
+                        <a href="#newSubgroup"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>newSubgroup()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="149"
+                            class="link-to-prism">src/app/pages/subgrupos/subgrupo.component.ts:149</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Reset inputs subgroup</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onFocusOut"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            onFocusOut
+                        </b>
+                        <a href="#onFocusOut"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onFocusOut(e: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="170"
+                            class="link-to-prism">src/app/pages/subgrupos/subgrupo.component.ts:170</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Form field validation</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Object form</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setFocus"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            setFocus
+                        </b>
+                        <a href="#setFocus"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setFocus(el: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="84"
+                            class="link-to-prism">src/app/pages/subgrupos/subgrupo.component.ts:84</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Set Focus element input</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>el</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Element name</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="aForm"></a>
+                        <span class="name">
+                            <b>
+                            aForm</b>
+                            <a href="#aForm"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(&#x27;aForm&#x27;, {static: true})<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/pages/subgrupos/subgrupo.component.ts:22</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Element Form</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="eForm"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            eForm</b>
+                            <a href="#eForm"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    eName:false,
+    eGrupo:false,
+    eSubGrupo:false,
+    eSubGrupoUnique:false,
+  }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/pages/subgrupos/subgrupo.component.ts:43</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Object error form</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="grupo"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            grupo</b>
+                            <a href="#grupo"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/Grupo.html" target="_self" >Grupo</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new Grupo(&#x27;&#x27;,null)</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/pages/subgrupos/subgrupo.component.ts:33</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Accounting group model</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="subgrupo"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            subgrupo</b>
+                            <a href="#subgrupo"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/Subgrupo.html" target="_self" >Subgrupo</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new Subgrupo(&#x27;&#x27;,null,&#x27;&#x27;,&#x27;&#x27;)</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/pages/subgrupos/subgrupo.component.ts:27</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Accounting subgroup model</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="title"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            title</b>
+                            <a href="#title"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank" >String</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&quot;Subgrupos contables&quot;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/pages/subgrupos/subgrupo.component.ts:38</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Form title</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, ViewChild, ElementRef } from &#x27;@angular/core&#x27;;
+import { Subgrupo } from &#x27;src/app/models/subgrupo.model&#x27;;
+import { GruposService, SubgruposService } from &#x27;src/app/services/services.index&#x27;;
+import { ActivatedRoute, Router } from &#x27;@angular/router&#x27;;
+import { NgForm } from &#x27;@angular/forms&#x27;;
+import { Grupo } from &#x27;src/app/models/grupo.model&#x27;;
+import Swal from &#x27;sweetalert2&#x27;;
+
+
+/**
+ * Component to modify or create nuew accounting subgroup
+ */
+@Component({
+  selector: &#x27;app-subgrupo&#x27;,
+  templateUrl: &#x27;./subgrupo.component.html&#x27;,
+  styles: []
+})
+export class SubgrupoComponent implements OnInit {
+  /**
+   * Element Form
+   */
+  @ViewChild(&#x27;aForm&#x27;, {static:true}) aForm: ElementRef;
+  
+  /**
+   * Accounting subgroup model
+   */
+  public subgrupo:Subgrupo &#x3D; new Subgrupo(&#x27;&#x27;,null,&#x27;&#x27;,&#x27;&#x27;);
+
+
+  /**
+   * Accounting group model
+   */
+  public grupo:Grupo &#x3D; new Grupo(&#x27;&#x27;,null);
+
+  /**
+   * Form title
+   */
+  public title:String &#x3D; &quot;Subgrupos contables&quot;;
+
+  /** 
+   * Object error form
+  */
+  public eForm &#x3D; {
+    eName:false,
+    eGrupo:false,
+    eSubGrupo:false,
+    eSubGrupoUnique:false,
+  }
+
+  /**
+   * Constructor
+   * 
+   * @param _grupoService Accounting group Service
+   * @param _subgrupoService Accounting subgroup Service
+   * @param activatedRoute Active Route
+   */
+
+  constructor(
+    private _grupoService : GruposService,
+    private _subgrupoService : SubgruposService,
+    private route: Router,
+    private activatedRoute : ActivatedRoute,
+  ) { 
+    activatedRoute.params.subscribe( params &#x3D;&gt; {
+      let id &#x3D; params[&#x27;id&#x27;];
+      if(id!&#x3D;&#x3D;&#x27;nuevo&#x27;){
+        this.loadSubgroup(id);
+      }
+    })
+  }
+
+  /**
+   * @ignore
+   */
+  ngOnInit() {
+    this.setFocus(&#x27;subgrupo&#x27;);
+  }
+
+  /**
+   * Set Focus element input
+   * 
+   * @param el Element name
+   */
+  public setFocus(el:string){
+    const ele &#x3D; this.aForm.nativeElement[el];
+    if(ele){
+      ele.focus();
+    }
+  }
+
+  /**
+   * Load data accounting group
+   * 
+   * @param id Identifier accounting subgroup
+   * 
+   */
+  public loadSubgroup(id:String){
+    this._subgrupoService.getSubgrupo(id)
+    .subscribe( (resp:any)&#x3D;&gt; {
+      this.grupo &#x3D; resp.subgrupo.grupo;
+      this.subgrupo.name &#x3D; resp.subgrupo.name;
+      this.subgrupo._id &#x3D; resp.subgrupo._id;
+      this.subgrupo.subgrupo &#x3D; resp.subgrupo.subgrupo;
+      this.subgrupo.grupo &#x3D; this.grupo._id;
+    })
+  }
+
+
+  /**
+   * Create or update accounting subgroup
+   * 
+   * @param f Object Form
+   */
+  public grabar(f:NgForm){
+    if(f.valid) {
+      if (this.eForm.eGrupo) {
+        this.eForm.eGrupo &#x3D; true;
+        this.eForm.eSubGrupo &#x3D;true;
+      } else {
+        this.subgrupo._id &#x3D; f.form.controls._id.value;
+        this.subgrupo.grupo &#x3D; this.grupo._id;
+        this.subgrupo.name &#x3D; this.subgrupo.name.toUpperCase();
+        this._subgrupoService.saveSubgrupo(this.subgrupo)
+        .subscribe(
+          (resp:any) &#x3D;&gt; {
+          this.subgrupo &#x3D;resp.subgrupo;
+          Swal.fire({
+            icon:&#x27;info&#x27;,
+            title:&#x27;Subgrupo grabado correctamente&#x27;,
+            timer:1500
+          })
+          this.setFocus(&#x27;subgrupo&#x27;);
+          },
+          (err) &#x3D;&gt; {
+            if(err.error.error.error.errors.subgrupo.kind&#x3D;&#x3D;&#x3D;&quot;unique&quot;) {
+              this.eForm.eSubGrupo &#x3D; true;
+              this.eForm.eSubGrupoUnique &#x3D; true;
+            }
+          }
+        )
+      }
+    }
+  }
+
+
+  /**
+   * Reset inputs subgroup
+   */
+  public newSubgroup(){
+    this.grupo._id&#x3D; &#x27;&#x27;;
+    this.grupo.name&#x3D;&#x27;&#x27;;
+    this.subgrupo._id &#x3D; &#x27;&#x27;;
+    this.subgrupo.grupo &#x3D; &#x27;&#x27;;
+    this.subgrupo.name &#x3D; &#x27;&#x27;;
+    this.subgrupo.subgrupo &#x3D; null;
+  }
+
+  /**
+   * Cancel form subgroup
+   */
+  public cancel() {
+    this.route.navigate([&#x27;/subgrupos&#x27;]);
+  }
+
+  /**
+   * Form field validation
+   * 
+   * @param e Object form
+   */
+  public onFocusOut(e:any) {
+    if (e.subgrupo.touched &amp;&amp; !e.subgrupo.valid) {
+      this.eForm.eSubGrupoUnique &#x3D; false;
+      return this.eForm.eSubGrupo &#x3D; true;
+    } else {
+      this.eForm.eSubGrupoUnique &#x3D; false;
+      if (e.subgrupo.value&gt;99 || e.subgrupo.value&lt;10) {
+        return this.eForm.eSubGrupo &#x3D; true;
+      } else {
+        this._grupoService.getFindGroup(Math.trunc(e.subgrupo.value / 10))
+          .subscribe( (resp:any) &#x3D;&gt; {
+            
+            
+            if(resp.grupo) {
+              this.grupo &#x3D; resp.grupo;
+              this.eForm.eSubGrupo &#x3D; false;
+              this.eForm.eGrupo &#x3D;false;
+              
+            } else {
+              this.grupo.name &#x3D; &quot;&quot;;
+              this.eForm.eSubGrupo &#x3D; true;
+              return this.eForm.eGrupo &#x3D; true;
+            }
+            
+          })
+      }
+    }
+
+    if (e.name.touched &amp;&amp; !e.name.valid) {
+      return this.eForm.eName&#x3D; true;
+    } else {
+      this.eForm.eName &#x3D; false;
+    }
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;block animated fadeIn&quot;&gt;
+    &lt;!------------------------------------------------------
+    - Title form										                 
+    -------------------------------------------------------&gt;
+    &lt;div class&#x3D;&quot;block-title&quot;&gt;
+        &lt;div class&#x3D;&quot;block-options pull-right&quot;&gt;
+            &lt;a (click)&#x3D;&quot;newSubgroup()&quot; class&#x3D;&quot;btn btn-effect-ripple btn-default&quot; data-toggle&#x3D;&quot;tooltip&quot; title&#x3D;&quot;&quot; style&#x3D;&quot;overflow: hidden; position: relative;&quot; data-original-title&#x3D;&quot;Nuevo grupo&quot;&gt;
+                &lt;i class&#x3D;&quot;fa fa-plus&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;h2&gt;{{title}}&lt;/h2&gt;
+    &lt;/div&gt;
+   
+
+    &lt;!------------------------------------------------------
+    - Conten form										                 
+    -------------------------------------------------------&gt;
+    &lt;form class&#x3D;&quot;form-horizontal form-bordered&quot; #f&#x3D;&quot;ngForm&quot; #aForm  (ngSubmit)&#x3D;&quot;grabar(f)&quot;&gt;
+        
+        &lt;div class&#x3D;&quot;form-group&quot; &gt;
+            &lt;label class&#x3D;&quot;col-md-3 control-label&quot; for&#x3D;&quot;id&quot;&gt;Id&lt;/label&gt;
+            &lt;div class&#x3D;&quot;col-md-5&quot;&gt;
+                &lt;input type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;subgrupo._id&quot; name&#x3D;&quot;_id&quot; class&#x3D;&quot;form-control&quot; disabled&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class&#x3D;&quot;form-group&quot; [ngClass]&#x3D;&quot;eForm.eSubGrupo ? &#x27;has-error&#x27; : &#x27;&#x27; &quot;&gt;
+            &lt;label class&#x3D;&quot;col-md-3 control-label&quot; for&#x3D;&quot;subgrupo&quot;&gt;Subgrupo&lt;/label&gt;
+            &lt;div class&#x3D;&quot;col-md-5&quot;&gt;
+                &lt;input  class&#x3D;&quot;form-control&quot; type&#x3D;&quot;number&quot; name&#x3D;&quot;subgrupo&quot; [(ngModel)]&#x3D;&quot;subgrupo.subgrupo&quot;
+                placeholder&#x3D;&quot;Subgrupo contable&quot; 
+                min&#x3D;&quot;10&quot;
+                max&#x3D;&quot;99&quot;
+                required
+                (keydown.control.n)&#x3D;&quot;newSubgroup()&quot; 
+                (focusout)&#x3D;onFocusOut(f.form.controls)
+                (keydown.esc)&#x3D;&quot;cancel()&quot;&gt;
+                &lt;h5&gt;{{grupo.name}}&lt;/h5&gt;
+                &lt;span class&#x3D;&quot;help-block&quot; *ngIf&#x3D;&quot;eForm.eSubGrupo &amp;&amp; !eForm.eSubGrupoUnique &amp;&amp; !eForm.eGrupo&quot;&gt;
+                    Es necesario un número para el subgrupo Contable &lt;br&gt;
+                    Debe estar entre 10 y 90
+                &lt;/span&gt;
+                &lt;span class&#x3D;&quot;help-block&quot; *ngIf&#x3D;&quot;eForm.eSubGrupo &amp;&amp; eForm.eSubGrupoUnique&quot;&gt;
+                    El subgrupo contable ya existe
+                &lt;/span&gt;
+                &lt;span class&#x3D;&quot;help-block&quot; *ngIf&#x3D;&quot;eForm.eSubGrupo &amp;&amp; eForm.eGrupo&quot;&gt;
+                    El grupo contable no existe
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;div class&#x3D;&quot;form-group&quot; [ngClass]&#x3D;&quot;eForm.eName ? &#x27;has-error&#x27; : &#x27;&#x27; &quot;&gt;
+            &lt;label class&#x3D;&quot;col-md-3 control-label&quot; for&#x3D;&quot;name&quot;&gt;Nombre del subgrupo&lt;/label&gt;
+            &lt;div class&#x3D;&quot;col-md-5&quot;&gt;
+                &lt;input class&#x3D;&quot;form-control&quot; type&#x3D;&quot;text&quot; name&#x3D;&quot;name&quot; [(ngModel)]&#x3D;&quot;subgrupo.name&quot;
+                placeholder&#x3D;&quot;Nombre del grupo contable&quot; 
+                maxlength&#x3D;&quot;90&quot; minlength&#x3D;&quot;3&quot;
+                required 
+                (focusout)&#x3D;onFocusOut(f.form.controls)
+                (keydown.control.n)&#x3D;&quot;newSubgroup()&quot;
+                (keydown.esc)&#x3D;&quot;cancel()&quot;&gt;
+                &lt;span class&#x3D;&quot;help-block&quot; *ngIf&#x3D;&quot;eForm.eName&quot;&gt;
+                    Es necesario un nombre para el subgrupo contable. Debe contener de 3 a 90 caracteres
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+
+        &lt;div class&#x3D;&quot;form-group form-actions&quot;&gt;
+            &lt;div class&#x3D;&quot;col-md-9 col-md-offset-3&quot;&gt;
+                &lt;button 
+                class&#x3D;&quot;btn btn-effect-ripple btn-primary&quot; style&#x3D;&quot;overflow: hidden; position: relative;&quot;
+                [disabled]&#x3D;&quot;f.form.invalid&quot;
+                &gt;
+                &lt;span *ngIf&#x3D;&quot;!this.subgrupo._id&quot;&gt;Nuevo&lt;/span&gt;    
+                &lt;span *ngIf&#x3D;&quot;this.subgrupo._id&quot;&gt;Modificar&lt;/span&gt;    
+                
+                &lt;/button&gt;
+               
+                &lt;button 
+                [routerLink]&#x3D;&quot;[&#x27;/subgrupos&#x27;]&quot; 
+                (keydown.esc)&#x3D;&quot;cancel()&quot;
+                type&#x3D;&quot;reset&quot; class&#x3D;&quot;btn btn-effect-ripple btn-danger&quot; 
+                style&#x3D;&quot;overflow: hidden; position: relative;&quot;&gt;
+                Cancelar
+                &lt;/button&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+    &lt;!-- END Horizontal Form Content   --&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="block animated fadeIn">    <!------------------------------------------------------    - Title form										                     ------------------------------------------------------->    <div class="block-title">        <div class="block-options pull-right">            <a (click)="newSubgroup()" class="btn btn-effect-ripple btn-default" data-toggle="tooltip" title="" style="overflow: hidden; position: relative;" data-original-title="Nuevo grupo">                <i class="fa fa-plus"></i>            </a>        </div>        <h2>{{title}}</h2>    </div>       <!------------------------------------------------------    - Conten form										                     ------------------------------------------------------->    <form class="form-horizontal form-bordered" #f="ngForm" #aForm  (ngSubmit)="grabar(f)">                <div class="form-group" >            <label class="col-md-3 control-label" for="id">Id</label>            <div class="col-md-5">                <input type="text" [(ngModel)]="subgrupo._id" name="_id" class="form-control" disabled>            </div>        </div>        <div class="form-group" [ngClass]="eForm.eSubGrupo ? \'has-error\' : \'\' ">            <label class="col-md-3 control-label" for="subgrupo">Subgrupo</label>            <div class="col-md-5">                <input  class="form-control" type="number" name="subgrupo" [(ngModel)]="subgrupo.subgrupo"                placeholder="Subgrupo contable"                 min="10"                max="99"                required                (keydown.control.n)="newSubgroup()"                 (focusout)=onFocusOut(f.form.controls)                (keydown.esc)="cancel()">                <h5>{{grupo.name}}</h5>                <span class="help-block" *ngIf="eForm.eSubGrupo && !eForm.eSubGrupoUnique && !eForm.eGrupo">                    Es necesario un número para el subgrupo Contable <br>                    Debe estar entre 10 y 90                </span>                <span class="help-block" *ngIf="eForm.eSubGrupo && eForm.eSubGrupoUnique">                    El subgrupo contable ya existe                </span>                <span class="help-block" *ngIf="eForm.eSubGrupo && eForm.eGrupo">                    El grupo contable no existe                </span>            </div>        </div>                <div class="form-group" [ngClass]="eForm.eName ? \'has-error\' : \'\' ">            <label class="col-md-3 control-label" for="name">Nombre del subgrupo</label>            <div class="col-md-5">                <input class="form-control" type="text" name="name" [(ngModel)]="subgrupo.name"                placeholder="Nombre del grupo contable"                 maxlength="90" minlength="3"                required                 (focusout)=onFocusOut(f.form.controls)                (keydown.control.n)="newSubgroup()"                (keydown.esc)="cancel()">                <span class="help-block" *ngIf="eForm.eName">                    Es necesario un nombre para el subgrupo contable. Debe contener de 3 a 90 caracteres                </span>            </div>        </div>        <div class="form-group form-actions">            <div class="col-md-9 col-md-offset-3">                <button                 class="btn btn-effect-ripple btn-primary" style="overflow: hidden; position: relative;"                [disabled]="f.form.invalid"                >                <span *ngIf="!this.subgrupo._id">Nuevo</span>                    <span *ngIf="this.subgrupo._id">Modificar</span>                                    </button>                               <button                 [routerLink]="[\'/subgrupos\']"                 (keydown.esc)="cancel()"                type="reset" class="btn btn-effect-ripple btn-danger"                 style="overflow: hidden; position: relative;">                Cancelar                </button>            </div>        </div>    </form>    <!-- END Horizontal Form Content   --></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ColorthemeComponent', 'selector': 'app-colortheme'},{'name': 'ConfigComponent', 'selector': 'app-config'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'GrupoComponent', 'selector': 'app-grupo'},{'name': 'GruposComponent', 'selector': 'app-grupos'},{'name': 'LoadTableComponent', 'selector': 'app-load-table'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PagesComponent', 'selector': 'app-pages'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'SidebarfooterComponent', 'selector': 'app-sidebarfooter'},{'name': 'SubgrupoComponent', 'selector': 'app-subgrupo'},{'name': 'SubgruposComponent', 'selector': 'app-subgrupos'},{'name': 'UserComponent', 'selector': 'app-user'},{'name': 'UsersComponent', 'selector': 'app-users'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'SubgrupoComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'SubgrupoComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

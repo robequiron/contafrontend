@@ -1,0 +1,92 @@
+<div class="block animated fadeIn">
+    <!------------------------------------------------------
+    - Title form										                 
+    ------------------------------------------------------->
+    <div class="block-title">
+        <div class="block-options pull-right">
+            <a (click)="newSubgroup()" class="btn btn-effect-ripple btn-default" data-toggle="tooltip" title="" style="overflow: hidden; position: relative;" data-original-title="Nuevo grupo">
+                <i class="fa fa-plus"></i>
+            </a>
+        </div>
+        <h2>{{title}}</h2>
+    </div>
+   
+
+    <!------------------------------------------------------
+    - Conten form										                 
+    ------------------------------------------------------->
+    <form class="form-horizontal form-bordered" #f="ngForm" #aForm  (ngSubmit)="grabar(f)">
+        
+        <div class="form-group" >
+            <label class="col-md-3 control-label" for="id">Id</label>
+            <div class="col-md-5">
+                <input type="text" [(ngModel)]="subgrupo._id" name="_id" class="form-control" disabled>
+            </div>
+        </div>
+
+        <div class="form-group" [ngClass]="eForm.eSubGrupo ? 'has-error' : '' ">
+            <label class="col-md-3 control-label" for="subgrupo">Subgrupo</label>
+            <div class="col-md-5">
+                <input  class="form-control" type="number" name="subgrupo" [(ngModel)]="subgrupo.subgrupo"
+                placeholder="Subgrupo contable" 
+                min="10"
+                max="99"
+                required
+                (keydown.control.n)="newSubgroup()" 
+                (focusout)=onFocusOut(f.form.controls)
+                (keydown.esc)="cancel()">
+                <h5>{{grupo.name}}</h5>
+                <span class="help-block" *ngIf="eForm.eSubGrupo && !eForm.eSubGrupoUnique && !eForm.eGrupo">
+                    Es necesario un número para el subgrupo Contable <br>
+                    Debe estar entre 10 y 90
+                </span>
+                <span class="help-block" *ngIf="eForm.eSubGrupo && eForm.eSubGrupoUnique">
+                    El subgrupo contable ya existe
+                </span>
+                <span class="help-block" *ngIf="eForm.eSubGrupo && eForm.eGrupo">
+                    El grupo contable no existe
+                </span>
+            </div>
+        </div>
+        
+        <div class="form-group" [ngClass]="eForm.eName ? 'has-error' : '' ">
+            <label class="col-md-3 control-label" for="name">Nombre del subgrupo</label>
+            <div class="col-md-5">
+                <input class="form-control" type="text" name="name" [(ngModel)]="subgrupo.name"
+                placeholder="Nombre del grupo contable" 
+                maxlength="90" minlength="3"
+                required 
+                (focusout)=onFocusOut(f.form.controls)
+                (keydown.control.n)="newSubgroup()"
+                (keydown.esc)="cancel()">
+                <span class="help-block" *ngIf="eForm.eName">
+                    Es necesario un nombre para el subgrupo contable. Debe contener de 3 a 90 caracteres
+                </span>
+            </div>
+        </div>
+
+
+        <div class="form-group form-actions">
+            <div class="col-md-9 col-md-offset-3">
+                <button 
+                class="btn btn-effect-ripple btn-primary" style="overflow: hidden; position: relative;"
+                [disabled]="f.form.invalid"
+                >
+                <span *ngIf="!this.subgrupo._id">Nuevo</span>    
+                <span *ngIf="this.subgrupo._id">Modificar</span>    
+                
+                </button>
+               
+                <button 
+                [routerLink]="['/subgrupos']" 
+                (keydown.esc)="cancel()"
+                type="reset" class="btn btn-effect-ripple btn-danger" 
+                style="overflow: hidden; position: relative;">
+                Cancelar
+                </button>
+
+            </div>
+        </div>
+    </form>
+    <!-- END Horizontal Form Content   -->
+</div>

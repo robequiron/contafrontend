@@ -15,7 +15,7 @@
     <!------------------------------------------------------
     - Conten form										                 
     ------------------------------------------------------->
-    <form class="form-horizontal form-bordered" #f="ngForm" (ngSubmit)="grabar(f)">
+    <form class="form-horizontal form-bordered" #f="ngForm" #aForm (ngSubmit)="grabar(f)">
         
         <div class="form-group" >
             <label class="col-md-3 control-label" for="id">Id</label>
@@ -31,6 +31,8 @@
                 placeholder="Grupo contable" 
                 max="9"
                 required 
+                (keydown.control.n)="newGroup()"
+                (keydown.esc)="cancel()"
                 (focusout)=onFocusOut(f.form.controls)>
                 <span class="help-block" *ngIf="eForm.eGrupo && !eForm.eGrupoUnique">
                     Es necesario un número para el grupo Contable <br>
@@ -49,6 +51,8 @@
                 placeholder="Nombre del grupo contable" 
                 maxlength="80" minlength="3"
                 required 
+                (keydown.control.n)="newGroup()"
+                (keydown.esc)="cancel()"
                 (focusout)=onFocusOut(f.form.controls)>
                 <span class="help-block" *ngIf="eForm.eName">
                     Es necesario un nombre para el grupo contable. Debe contener de 3 a 80 caracteres
@@ -63,7 +67,9 @@
                 class="btn btn-effect-ripple btn-primary" style="overflow: hidden; position: relative;"
                 [disabled]="f.form.invalid"
                 >Grabar</button>
-                <button [routerLink]="['/grupos']" type="reset" class="btn btn-effect-ripple btn-danger" style="overflow: hidden; position: relative;">Cancelar</button>
+                <button 
+                (keydown.esc)="cancel()"
+                [routerLink]="['/grupos']" type="reset" class="btn btn-effect-ripple btn-danger" style="overflow: hidden; position: relative;">Cancelar</button>
             </div>
         </div>
     </form>

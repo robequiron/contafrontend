@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Grupo } from 'src/app/models/grupo.model';
 import { GruposService } from 'src/app/services/services.index';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 import Swal from 'sweetalert2';
 
@@ -15,6 +15,13 @@ import Swal from 'sweetalert2';
 })
 export class GrupoComponent implements OnInit {
 
+  /**
+   * Element Form
+   */
+  @ViewChild('aForm', {static:true}) aForm:ElementRef;
+
+
+  
   /**
    * Accounting group model
    */
@@ -37,12 +44,14 @@ export class GrupoComponent implements OnInit {
   /**
    * Constructor
    * 
-   * @param _grupoService Accounting Service
+   * @param _grupoService Accounting group Service
+   * @param route Router
    * @param activatedRoutes ActiveRoute
    */
 
   constructor(
     private _grupoService:GruposService,
+    private router: Router,
     private activatedRoutes:ActivatedRoute,
   ) { 
 
@@ -58,7 +67,21 @@ export class GrupoComponent implements OnInit {
    * @ignore
    */
   ngOnInit() {
+    this.setFocus('grupo');
   }
+
+  /**
+   * Set Focus element input
+   * 
+   * @param el Element name
+   */
+  public setFocus(el:string){
+    const ele = this.aForm.nativeElement[el];
+    if(ele){
+      ele.focus();
+    }
+  }
+
 
   /**
    * Load data accounting group
@@ -85,13 +108,16 @@ export class GrupoComponent implements OnInit {
         this.grupo._id = f.form.controls._id.value;
         this.grupo.name = this.grupo.name.toUpperCase();
 
+
         this._grupoService.saveGrupo(this.grupo).subscribe( 
           (resp:any)=>{
+            this.grupo = resp.grupo;
             Swal.fire({
               icon:'info',
               title: 'Grupo grabado correctamente',
               timer: 1500 
             })
+            this.setFocus('grupo')
           },
           (err)=>{
             if(err.error.error.error.errors.grupo.kind==="unique") {
@@ -105,12 +131,19 @@ export class GrupoComponent implements OnInit {
   }
 
   /**
-   * New group
+   * Reset inputs group
    */
   public newGroup(){
     this.grupo._id = '';
     this.grupo.name = '';
     this.grupo.grupo = null;
+  }
+
+  /**
+   * Cancel form subgroup
+   */
+  public cancel() {
+    this.router.navigate(['/grupos']);
   }
 
   /**

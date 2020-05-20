@@ -16,6 +16,15 @@ export class UsersComponent implements OnInit {
   //TODO:Establecer orden de aparición
   
   /**
+   * Data loaded
+   */
+  public loaded:boolean = false;
+  /**
+   * Class table
+   */
+  public classTable:string ="";
+
+  /**
    * Table title
    */
   public title:String= "Usuarios";
@@ -73,6 +82,7 @@ export class UsersComponent implements OnInit {
    */
   public getConfig() {
     this.itemsPerPage = this._config.getLimitTable();
+    this.classTable = this._config.getclassTable();
   }
 
   /**
@@ -126,10 +136,15 @@ export class UsersComponent implements OnInit {
    * Get Users
    */  
   public getUsers(){
-    this._users.getUsers(this.nameSearch,this.emailSearch).subscribe((resp:UserTable)=>{
+    this._users.getUsers(this.nameSearch,this.emailSearch)
+    .subscribe(
+      (resp:UserTable)=>{
       this.count = resp.count;
       this.users= resp.users;  
-    })
+     },
+     null,
+     ()=>{this.loaded=true;}
+    )
   }
 
   /**

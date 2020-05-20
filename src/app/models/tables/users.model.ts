@@ -3,8 +3,13 @@
  */
 export class UserTable {
     /**
-     * @Ignore 
-     * */
+     * Model table user
+     * 
+     * @param count Number records
+     * @param from From record
+     * @param limit Limit records
+     * @param users  Model user
+     */
     constructor(
         public count:number,
         public from:number,

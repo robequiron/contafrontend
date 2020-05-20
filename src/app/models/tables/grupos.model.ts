@@ -1,9 +1,18 @@
 import { Grupo } from '../grupo.model';
+/**
+ * Table model of accounting group
+ */
 
 export class GrupoTable {
     /**
-    * @Ignore 
-    * */
+     * Model table group
+     * 
+     * @param count Total number of records
+     * @param grupos Model groups
+     * @param ok State
+     * @param orderGrupo Order default
+     * @param orderName Order default
+     */
     constructor(
         public count:number,
         public grupos:Grupo,

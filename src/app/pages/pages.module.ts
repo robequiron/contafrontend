@@ -11,6 +11,12 @@ import { UserComponent } from './users/user.component';
 import { NgSelect2Module } from 'ng-select2';
 import { GruposComponent } from './grupos/grupos.component';
 import { GrupoComponent } from './grupos/grupo.component';
+import { SubgruposComponent } from './subgrupos/subgrupos.component';
+import { SubgrupoComponent } from './subgrupos/subgrupo.component';
+import { LoadTableComponent } from './tables/load-table.component';
+import { NotfoundComponent } from './tables/notfound.component';
+import { SubcuentasComponent } from './subcuentas/subcuentas.component';
+import { SubcuentaComponent } from './subcuentas/subcuenta.component';
 
 
 
@@ -22,7 +28,13 @@ import { GrupoComponent } from './grupos/grupo.component';
     UsersComponent,
     UserComponent,
     GruposComponent,
-    GrupoComponent
+    GrupoComponent,
+    SubgruposComponent,
+    SubgrupoComponent,
+    LoadTableComponent,
+    NotfoundComponent,
+    SubcuentasComponent,
+    SubcuentaComponent,
   ],
   
   imports: [

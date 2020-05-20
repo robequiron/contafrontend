@@ -1,10 +1,16 @@
 import { Injectable } from '@angular/core';
 
+/**
+ * Menu Sidebar Service
+ */
+
 @Injectable({
   providedIn: 'root'
 })
 export class MenuSidebarService {
-
+  /**
+   * Object menu sidebar
+   */
   menus:any = [
     { title:"Escritorio", url:'/dashboard' , icon:"gi gi-compass sidebar-nav-icon"},
     { title:"Configuración",  url:'', icon:"gi gi-user sidebar-nav-icon",
@@ -28,14 +34,18 @@ export class MenuSidebarService {
             {title:"Nuevo", url:"/grupo/nuevo"},
           ]
         },
-        {title:"Subgrupos", url:"/elemets", 
+        {title:"Subgrupos", url:"", 
          items:[
-           {title:"Blocks", url:"/"},
-           {title:"Typography", url:"/typo"},
+           {title:"Consulta", url:"/subgrupos"},
+           {title:"Nuevo", url:"/subgrupo/nuevo"},
          ]
         },
-        {title:"Forms", url:"/subelemets"},
-        {title:"Icon Packs", url:"/iconelemet"},
+        {title:"Subcuentas", url:"", 
+         items:[
+           {title:"Consulta", url:"/subcuentas"},
+           {title:"Nuevo", url:"/subcuenta/nuevo"},
+         ]
+        },
       ]
     },
     { title:"User Interface", url:'', icon:"fa fa-rocket ",
@@ -53,6 +63,8 @@ export class MenuSidebarService {
     },
   ]
 
-
+  /**
+   * Ignore
+   */
   constructor() { }
 }

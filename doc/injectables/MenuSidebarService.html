@@ -60,6 +60,13 @@
             <code>src/app/services/menuSidebar/menu-sidebar.service.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Menu Sidebar Service</p>
+
+            </p>
 
 
 
@@ -102,10 +109,16 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/app/services/menuSidebar/menu-sidebar.service.ts:54</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/app/services/menuSidebar/menu-sidebar.service.ts:64</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Ignore</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -159,14 +172,18 @@
             {title:&quot;Nuevo&quot;, url:&quot;/grupo/nuevo&quot;},
           ]
         },
-        {title:&quot;Subgrupos&quot;, url:&quot;/elemets&quot;, 
+        {title:&quot;Subgrupos&quot;, url:&quot;&quot;, 
          items:[
-           {title:&quot;Blocks&quot;, url:&quot;/&quot;},
-           {title:&quot;Typography&quot;, url:&quot;/typo&quot;},
+           {title:&quot;Consulta&quot;, url:&quot;/subgrupos&quot;},
+           {title:&quot;Nuevo&quot;, url:&quot;/subgrupo/nuevo&quot;},
          ]
         },
-        {title:&quot;Forms&quot;, url:&quot;/subelemets&quot;},
-        {title:&quot;Icon Packs&quot;, url:&quot;/iconelemet&quot;},
+        {title:&quot;Subcuentas&quot;, url:&quot;&quot;, 
+         items:[
+           {title:&quot;Consulta&quot;, url:&quot;/subcuentas&quot;},
+           {title:&quot;Nuevo&quot;, url:&quot;/subcuenta/nuevo&quot;},
+         ]
+        },
       ]
     },
     { title:&quot;User Interface&quot;, url:&#x27;&#x27;, icon:&quot;fa fa-rocket &quot;,
@@ -187,10 +204,16 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/services/menuSidebar/menu-sidebar.service.ts:8</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/services/menuSidebar/menu-sidebar.service.ts:14</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Object menu sidebar</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -202,11 +225,17 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
 
+/**
+ * Menu Sidebar Service
+ */
+
 @Injectable({
   providedIn: &#x27;root&#x27;
 })
 export class MenuSidebarService {
-
+  /**
+   * Object menu sidebar
+   */
   menus:any &#x3D; [
     { title:&quot;Escritorio&quot;, url:&#x27;/dashboard&#x27; , icon:&quot;gi gi-compass sidebar-nav-icon&quot;},
     { title:&quot;Configuración&quot;,  url:&#x27;&#x27;, icon:&quot;gi gi-user sidebar-nav-icon&quot;,
@@ -230,14 +259,18 @@ export class MenuSidebarService {
             {title:&quot;Nuevo&quot;, url:&quot;/grupo/nuevo&quot;},
           ]
         },
-        {title:&quot;Subgrupos&quot;, url:&quot;/elemets&quot;, 
+        {title:&quot;Subgrupos&quot;, url:&quot;&quot;, 
          items:[
-           {title:&quot;Blocks&quot;, url:&quot;/&quot;},
-           {title:&quot;Typography&quot;, url:&quot;/typo&quot;},
+           {title:&quot;Consulta&quot;, url:&quot;/subgrupos&quot;},
+           {title:&quot;Nuevo&quot;, url:&quot;/subgrupo/nuevo&quot;},
          ]
         },
-        {title:&quot;Forms&quot;, url:&quot;/subelemets&quot;},
-        {title:&quot;Icon Packs&quot;, url:&quot;/iconelemet&quot;},
+        {title:&quot;Subcuentas&quot;, url:&quot;&quot;, 
+         items:[
+           {title:&quot;Consulta&quot;, url:&quot;/subcuentas&quot;},
+           {title:&quot;Nuevo&quot;, url:&quot;/subcuenta/nuevo&quot;},
+         ]
+        },
       ]
     },
     { title:&quot;User Interface&quot;, url:&#x27;&#x27;, icon:&quot;fa fa-rocket &quot;,
@@ -255,7 +288,9 @@ export class MenuSidebarService {
     },
   ]
 
-
+  /**
+   * Ignore
+   */
   constructor() { }
 }
 </code></pre>
