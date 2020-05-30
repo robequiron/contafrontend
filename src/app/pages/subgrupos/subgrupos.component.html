@@ -59,7 +59,7 @@
             ------------------------------------------------------->  
             <thead>
                 <tr>
-                    <th class="th-order" style="width: 120px;" (click)="orderby('subgrupo')">Grupos
+                    <th class="th-order" style="width: 120px;" (click)="orderby('subgrupo')">Subgrupo
                         <div class="pull-right" [ngSwitch]="orderSubgrupo">
                             <i *ngSwitchCase="1" class="fa fa-sort-numeric-asc"></i>
                             <i *ngSwitchCase="-1" class="fa fa-sort-numeric-desc"></i>
@@ -116,7 +116,7 @@
                         <span class="input-group-addon"><i class="fa fa-book"></i></span>
                         <input type="text" name="nameSearch" class="form-control" placeholder="Nombre del grupo..."
                         #focusSearch
-                        (keydown.control.n)="newSubgrupo()"
+                        (keydown.control.i)="newSubgrupo()"
                         (keydown.enter)="getSubgrupos()" 
                         [(ngModel)]="nameSearch" 
                         >

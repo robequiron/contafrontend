@@ -20,7 +20,8 @@ export class MenuSidebarService {
             {title:"Consulta", url:"/users"},
             {title:"Nuevo", url:"/user/nuevo"}
           ]
-        }
+        },
+        {title:"General", url:"/config"},
       ]
     },
 

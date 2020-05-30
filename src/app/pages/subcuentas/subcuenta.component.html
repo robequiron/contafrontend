@@ -1,1 +1,83 @@
-<p>subcuenta works!</p>
+<div class="block animated fadeIn">
+    <!------------------------------------------------------
+    - Title form										                 
+    ------------------------------------------------------->
+    <div class="block-title">
+        <div class="block-options pull-right">
+            <a (click)="newSubcuenta()" class="btn btn-effect-ripple btn-default" data-toggle="tooltip" title="" style="overflow: hidden; position: relative;" data-original-title="Nuevo grupo">
+                <i class="fa fa-plus"></i>
+            </a>
+        </div>
+        <h2>{{title}}</h2>
+    </div>
+   
+
+    <!------------------------------------------------------
+    - Conten form										                 
+    ------------------------------------------------------->
+    <form class="form-horizontal form-bordered" #f="ngForm" #aForm (ngSubmit)="grabar(f)">
+        
+        <div class="form-group" >
+            <label class="col-md-3 control-label" for="id">Id</label>
+            <div class="col-md-5">
+                <input type="text" [(ngModel)]="subcuenta._id" name="_id" class="form-control" disabled>
+            </div>
+        </div>
+
+        <div class="form-group" [ngClass]="eForm.eSubcuenta ? 'has-error' : '' ">
+            <label class="col-md-3 control-label" for="subcuenta">Subcuenta</label>
+            <div class="col-md-5">
+                <input  class="form-control" type="number" name="subcuenta" [(ngModel)]="subcuenta.subcuenta"
+                placeholder="Subcuenta contable" 
+                min="100"
+                max="9999"
+                required 
+                (keydown.control.i)="newSubcuenta()"
+                (keydown.esc)="cancel()"
+                (focusout)=onFocusOut(f.form.controls)>
+                <h5>{{subgrupo.name}}</h5>
+                <span class="help-block" *ngIf="eForm.eSubcuenta && !eForm.eSubcuentaUnique && !eForm.eSubgrupo">
+                    Es necesario un número para la subcuenta contable <br>
+                    Debe estar entre 100 y 9999
+                </span>
+                <span class="help-block" *ngIf="eForm.eSubcuenta && eForm.eSubcuentaUnique">
+                    La subcuenta contable ya existe
+                </span>
+                <span class="help-block" *ngIf="eForm.eSubcuenta && eForm.eSubgrupo">
+                    El subgrupo contable no existe
+                </span>
+            </div>
+        </div>
+        
+        <div class="form-group" [ngClass]="eForm.eName ? 'has-error' : '' ">
+            <label class="col-md-3 control-label" for="name">Nombre de la subcuenta contable</label>
+            <div class="col-md-5">
+                <input class="form-control" type="text" name="name" [(ngModel)]="subcuenta.name"
+                placeholder="Nombre del subcuenta contable" 
+                maxlength="90" minlength="3"
+                required 
+                (keydown.control.i)="newSubcuenta()"
+                (keydown.esc)="cancel()"
+                (focusout)=onFocusOut(f.form.controls)>
+                <span class="help-block" *ngIf="eForm.eName">
+                    Es necesario un nombre para la subcuenta contable. Debe contener de 3 a 90 caracteres
+                </span>
+            </div>
+        </div>
+
+
+
+        <div class="form-group form-actions">
+            <div class="col-md-9 col-md-offset-3">
+                <button 
+                class="btn btn-effect-ripple btn-primary" style="overflow: hidden; position: relative;"
+                [disabled]="f.form.invalid"
+                >Grabar</button>
+                <button 
+                (keydown.esc)="cancel()"
+                [routerLink]="['/subcuentas']" type="reset" class="btn btn-effect-ripple btn-danger" style="overflow: hidden; position: relative;">Cancelar</button>
+            </div>
+        </div>
+    </form>
+    <!-- END Horizontal Form Content   -->
+</div>

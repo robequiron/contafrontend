@@ -37,25 +37,44 @@ export class SubgruposService {
     let url = URL_SERVICIOS + `/subgrupo/${id}?token=${token}`;
     return this.http.get(url);
   }
-
+  /**
+   * Get registration by accounting subgroup
+   * 
+   * @param subgrupo Identifier number subgroup
+   */
+  public getFindGroup(subgrupo:number) {
+    let token = localStorage.getItem('token');
+    let url = URL_SERVICIOS + `/subgrupo/subgrupo?subgrupo=${subgrupo}&token=${token}`;
+    return this.http.get(url);
+  }
 
   /**
    * Create or update accounting subgroup 
    * 
-   * @param subgrupo 
+   * @param subgrupo Subgrupo model
    */
   public saveSubgrupo(subgrupo:Subgrupo){
     let token= localStorage.getItem('token');
 
     if(subgrupo._id) {
       let url = URL_SERVICIOS + `/subgrupo/${subgrupo._id}?token=${token}`
-      console.log(url)
       return this.http.put(url,subgrupo);
     } else {
       let url = URL_SERVICIOS + `/subgrupo?token=${token}`;
       return this.http.post(url,subgrupo);
     }
   
+  }
+
+  /**
+   * Delete accounting subgroup
+   * 
+   * @param id Identify subgroup
+   */
+  public deleteSubgrupo(id:String){
+    let token = localStorage.getItem('token');
+    let url = URL_SERVICIOS + `/subgrupo/${id}?token=${token}`;
+    return this.http.delete(url);
   }
 
 

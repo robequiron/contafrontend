@@ -21,7 +21,7 @@ const pagesRoutes: Routes = [
     component:PagesComponent,
     canActivate:[LoginGuardGuard],
     children: [
-      {path: 'config', component:ConfigComponent, data:{titulo:"Configuración"}},
+      {path:'config', component:ConfigComponent, data:{titulo:"Configuración"}},
       {path:'users', component:UsersComponent, data:{titulo:"Usuarios"}},
       {path:'user', component:UserComponent, data:{titulo:"Usuario"}},
       {path:'user/:id', component:UserComponent, data:{titulo:"Edición usuario"}},

@@ -7,8 +7,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { UsersComponent } from './users/users.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { RoundceilPipe } from '../pipes/roundceil.pipe';
-import { UserComponent } from './users/user.component';
 import { NgSelect2Module } from 'ng-select2';
+
+
+import { UserComponent } from './users/user.component';
 import { GruposComponent } from './grupos/grupos.component';
 import { GrupoComponent } from './grupos/grupo.component';
 import { SubgruposComponent } from './subgrupos/subgrupos.component';
@@ -17,6 +19,7 @@ import { LoadTableComponent } from './tables/load-table.component';
 import { NotfoundComponent } from './tables/notfound.component';
 import { SubcuentasComponent } from './subcuentas/subcuentas.component';
 import { SubcuentaComponent } from './subcuentas/subcuenta.component';
+import { ContabilidadComponent } from './config/contabilidad.component';
 
 
 
@@ -35,6 +38,7 @@ import { SubcuentaComponent } from './subcuentas/subcuenta.component';
     NotfoundComponent,
     SubcuentasComponent,
     SubcuentaComponent,
+    ContabilidadComponent,
   ],
   
   imports: [

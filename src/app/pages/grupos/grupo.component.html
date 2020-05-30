@@ -31,7 +31,7 @@
                 placeholder="Grupo contable" 
                 max="9"
                 required 
-                (keydown.control.n)="newGroup()"
+                (keydown.control.i)="newGroup()"
                 (keydown.esc)="cancel()"
                 (focusout)=onFocusOut(f.form.controls)>
                 <span class="help-block" *ngIf="eForm.eGrupo && !eForm.eGrupoUnique">
@@ -51,7 +51,7 @@
                 placeholder="Nombre del grupo contable" 
                 maxlength="80" minlength="3"
                 required 
-                (keydown.control.n)="newGroup()"
+                (keydown.control.i)="newGroup()"
                 (keydown.esc)="cancel()"
                 (focusout)=onFocusOut(f.form.controls)>
                 <span class="help-block" *ngIf="eForm.eName">

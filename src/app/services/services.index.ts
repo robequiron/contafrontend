@@ -1,3 +1,4 @@
+export { SubcuentasService } from './subcuentas/subcuentas.service';
 export { SubgruposService } from './subgrupos/subgrupos.service';
 export { GruposService } from './grupos/grupos.service';
 export { UserService } from './users/user.service';

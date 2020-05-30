@@ -32,6 +32,8 @@ export class GruposService {
 
   /**
    * Load accounting group for identifier
+   * 
+   * @param id Identify group
    */
   public getGrupo(id:String) {
     let token = localStorage.getItem('token');
@@ -44,9 +46,9 @@ export class GruposService {
   }
 
   /**
-   * GetOne accounting group
+   * Get registration by accounting group
    * 
-   * @param grupo Identifier id group
+   * @param grupo Identifier number group
    */
   public getFindGroup(grupo:number) {
     let token = localStorage.getItem('token');

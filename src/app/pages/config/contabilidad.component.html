@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-md-9 text-right">
+        <p><strong>¿Desea crear el plan contable por defecto?</strong></p>
+        <span *ngIf="insertedData">
+            <i class="fa fa-spinner fa-spin text-primary"></i>
+            Insertando plan contable...
+        </span>
+        <p>
+            <span [routerLink]="['/grupos']" class="badge">Grupos contables:  {{countGrupos || 0}}</span>
+            <span [routerLink]="['/subgrupos']" class="badge ml-5">Subgrupos contables:  {{countSubgrupos || 0}}</span>
+            <span [routerLink]="['/subcuentas']" class="badge ml-5">Subcuentas contables:  {{countSubcuentas || 0}}</span>
+
+        </p>
+    </div>
+    <div class="col-md-3">
+        <button (click)="crearGrupos() "type="button" class="btn btn-primary" [disabled]="countGrupos>0">Crear</button>
+    </div>
+</div>

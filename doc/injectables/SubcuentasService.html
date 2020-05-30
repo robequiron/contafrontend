@@ -39,7 +39,7 @@
 
 <ol class="breadcrumb">
   <li>Injectables</li>
-  <li>GruposService</li>
+  <li>SubcuentasService</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -57,14 +57,14 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/services/grupos/grupos.service.ts</code>
+            <code>src/app/services/subcuentas/subcuentas.service.ts</code>
         </p>
 
             <p class="comment">
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>Services for requests with server - Grupos</p>
+                <p>Services for request with serve - Subcuentas</p>
 
             </p>
 
@@ -74,6 +74,21 @@
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#cuentaBalance">cuentaBalance</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -85,23 +100,15 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#deleteGrupo">deleteGrupo</a>
+                                <a href="#consultaBalance">consultaBalance</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#getFindGroup">getFindGroup</a>
+                                <a href="#getSubcuentas">getSubcuentas</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#getGrupo">getGrupo</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Public</span>
-                                <a href="#getGrupos">getGrupos</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Public</span>
-                                <a href="#saveGrupo">saveGrupo</a>
+                                <a href="#saveSubcuenta">saveSubcuenta</a>
                             </li>
                         </ul>
                     </td>
@@ -126,13 +133,13 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/services/grupos/grupos.service.ts:13</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/services/subcuentas/subcuentas.service.ts:17</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
-                            <div class="io-description"><p>Constructor grupo services</p>
+                            <div class="io-description"><p>Constructor subgrupo services</p>
 </div>
                             <div>
                                     <b>Parameters :</b>
@@ -180,36 +187,34 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="deleteGrupo"></a>
+                    <a name="consultaBalance"></a>
                     <span class="name">
                         <b>
                             <span class="modifier">Public</span>
-                            deleteGrupo
+                            consultaBalance
                         </b>
-                        <a href="#deleteGrupo"><span class="icon ion-ios-link"></span></a>
+                        <a href="#consultaBalance"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>deleteGrupo(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    <code>consultaBalance(subcuenta: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, balance: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="80"
-                            class="link-to-prism">src/app/services/grupos/grupos.service.ts:80</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="45"
+                            class="link-to-prism">src/app/services/subcuentas/subcuentas.service.ts:45</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Delete accounting group</p>
-</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -219,91 +224,11 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
-                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>id</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                    <td>
-                                        <p>Identifer accounting group</p>
-
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="getFindGroup"></a>
-                    <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            getFindGroup
-                        </b>
-                        <a href="#getFindGroup"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>getFindGroup(grupo: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="51"
-                            class="link-to-prism">src/app/services/grupos/grupos.service.ts:51</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Get registration by accounting group</p>
-</div>
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                    <td>Description</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>grupo</td>
+                                    <td>subcuenta</td>
                                     <td>
                                                 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
                                     </td>
@@ -313,77 +238,11 @@
                                     </td>
 
 
-                                    <td>
-                                        <p>Identifier number group</p>
-
-                                    </td>
                                 </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="getGrupo"></a>
-                    <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            getGrupo
-                        </b>
-                        <a href="#getGrupo"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>getGrupo(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a>)</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="36"
-                            class="link-to-prism">src/app/services/grupos/grupos.service.ts:36</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Load accounting group for identifier</p>
-</div>
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
                                 <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>id</td>
+                                    <td>balance</td>
                                     <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank" >String</a></code>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
                                     </td>
 
                                     <td>
@@ -412,36 +271,34 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="getGrupos"></a>
+                    <a name="getSubcuentas"></a>
                     <span class="name">
                         <b>
                             <span class="modifier">Public</span>
-                            getGrupos
+                            getSubcuentas
                         </b>
-                        <a href="#getGrupos"><span class="icon ion-ios-link"></span></a>
+                        <a href="#getSubcuentas"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>getGrupos(name: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a>, orderGrupo: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, orderName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                    <code>getSubcuentas(name: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a>, subcuenta: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, orderSubcuenta: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, orderName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="27"
-                            class="link-to-prism">src/app/services/grupos/grupos.service.ts:27</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="52"
+                            class="link-to-prism">src/app/services/subcuentas/subcuentas.service.ts:52</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Get accounting group</p>
-</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -451,7 +308,6 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
-                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -466,13 +322,9 @@
                                     </td>
 
 
-                                    <td>
-                                        <p>Accounting group</p>
-
-                                    </td>
                                 </tr>
                                 <tr>
-                                    <td>orderGrupo</td>
+                                    <td>subcuenta</td>
                                     <td>
                                                 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
                                     </td>
@@ -482,8 +334,18 @@
                                     </td>
 
 
+                                </tr>
+                                <tr>
+                                    <td>orderSubcuenta</td>
                                     <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
                                     </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
                                 </tr>
                                 <tr>
                                     <td>orderName</td>
@@ -496,8 +358,6 @@
                                     </td>
 
 
-                                    <td>
-                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -519,35 +379,35 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="saveGrupo"></a>
+                    <a name="saveSubcuenta"></a>
                     <span class="name">
                         <b>
                             <span class="modifier">Public</span>
-                            saveGrupo
+                            saveSubcuenta
                         </b>
-                        <a href="#saveGrupo"><span class="icon ion-ios-link"></span></a>
+                        <a href="#saveSubcuenta"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>saveGrupo(grupo: <a href="../classes/Grupo.html">Grupo</a>)</code>
+                    <code>saveSubcuenta(subcuenta: <a href="../classes/Subcuenta.html">Subcuenta</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="63"
-                            class="link-to-prism">src/app/services/grupos/grupos.service.ts:63</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="66"
+                            class="link-to-prism">src/app/services/subcuentas/subcuentas.service.ts:66</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Create or update accounting group</p>
+                    <div class="io-description"><p>Create or update subaccount</p>
 </div>
 
                     <div class="io-description">
@@ -563,9 +423,9 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>grupo</td>
+                                    <td>subcuenta</td>
                                     <td>
-                                                <code><a href="../classes/Grupo.html" target="_self" >Grupo</a></code>
+                                                <code><a href="../classes/Subcuenta.html" target="_self" >Subcuenta</a></code>
                                     </td>
 
                                     <td>
@@ -574,7 +434,7 @@
 
 
                                     <td>
-                                        <p>Accounting group</p>
+                                        <p>Subcuenta model </p>
 
                                     </td>
                                 </tr>
@@ -595,6 +455,55 @@
         </tbody>
     </table>
 </section>
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="cuentaBalance"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            cuentaBalance</b>
+                            <a href="#cuentaBalance"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+    {tipo:&quot;ACTIVO&quot;,
+     subcuentas:[572,570]
+    },
+    {tipo:&quot;PASIVO&quot;,
+     subcuentas:[100,101,102]
+    },
+    {tipo:&quot;PYG&quot;,
+     subcuentas:[600,700]
+    }
+  ]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/services/subcuentas/subcuentas.service.ts:32</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
 
     </div>
 
@@ -602,90 +511,85 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
 import { HttpClient } from &#x27;@angular/common/http&#x27;;
+import { Subcuenta } from &#x27;src/app/models/subcuenta.model&#x27;;
 import { URL_SERVICIOS } from &#x27;src/app/config/config&#x27;;
-import { Grupo } from &#x27;src/app/models/grupo.model&#x27;;
-import { map } from &#x27;rxjs/operators&#x27;;
+import { ActivationEnd } from &#x27;@angular/router&#x27;;
+import { Observable, from, of } from &#x27;rxjs&#x27;;
+import { filter, map, tap } from &#x27;rxjs/operators&#x27;;
+import { format } from &#x27;url&#x27;;
 
 /**
- * Services for requests with server - Grupos
+ * Services for request with serve - Subcuentas
  */
+
 @Injectable({
   providedIn: &#x27;root&#x27;
 })
-export class GruposService {
+export class SubcuentasService {
+
 
   /**
-   * Constructor grupo services
+   * Constructor subgrupo services
    * 
    * @param http Service HttpClient
    */
-  constructor(private http:HttpClient) { }
 
-  /**
-   * Get accounting group
-   * 
-   * @param name Accounting group
-   */
-  public getGrupos(name:String, orderGrupo:number,orderName:number){
-    let token &#x3D; localStorage.getItem(&#x27;token&#x27;);
-    let url &#x3D; URL_SERVICIOS + &#x60;/grupo?name&#x3D;${name}&amp;orderName&#x3D;${orderName}&amp;orderGrupo&#x3D;${orderGrupo}&amp;token&#x3D;${token}&#x60;;
-    return this.http.get(url);
-  }
 
-  /**
-   * Load accounting group for identifier
-   */
-  public getGrupo(id:String) {
-    let token &#x3D; localStorage.getItem(&#x27;token&#x27;);
-    let url &#x3D; URL_SERVICIOS + &#x60;/grupo/${id}?token&#x3D;${token}&#x60;;
-    return this.http.get(url).pipe(
-      map( (resp:any)&#x3D;&gt;{
-        return resp.grupo;
-      })
-    )
-  }
+  constructor(private http: HttpClient) { }
 
-  /**
-   * Get registration by accounting group
-   * 
-   * @param grupo Identifier number group
-   */
-  public getFindGroup(grupo:number) {
-    let token &#x3D; localStorage.getItem(&#x27;token&#x27;);
-    let url &#x3D; URL_SERVICIOS + &#x60;/grupo/grupo?grupo&#x3D;${grupo}&amp;token&#x3D;${token}&#x60;;
-    return this.http.get(url);
-  }
 
-  /**
-   * Create or update accounting group
-   * 
-   * @param grupo Accounting group
-   */
 
-  public saveGrupo(grupo:Grupo) {
-    let token&#x3D; localStorage.getItem(&#x27;token&#x27;);
-    
-    if (grupo._id) {
-      let url &#x3D; URL_SERVICIOS + &#x60;/grupo/${grupo._id}?token&#x3D;${token}&#x60;;
-      return this.http.put(url,grupo);
-    } else {
-      let url &#x3D; URL_SERVICIOS + &#x60;/grupo?token&#x3D;${token}&#x60;;
-      return this.http.post(url, grupo);
+
+  public cuentaBalance &#x3D; [
+    {tipo:&quot;ACTIVO&quot;,
+     subcuentas:[572,570]
+    },
+    {tipo:&quot;PASIVO&quot;,
+     subcuentas:[100,101,102]
+    },
+    {tipo:&quot;PYG&quot;,
+     subcuentas:[600,700]
     }
-  }
-  /**
-   * Delete accounting group
-   * 
-   * @param id Identifer accounting group
-   */
+  ]
 
-  public deleteGrupo(id:string) {
-    let token &#x3D; localStorage.getItem(&#x27;token&#x27;);
-    let url &#x3D; URL_SERVICIOS + &#x60;/grupo/${id}?token&#x3D;${token}&#x60;;
-    return this.http.delete(url);
+  
+  public consultaBalance(subcuenta:number,balance:string) {
+      return from(this.cuentaBalance).pipe(
+        filter(resp&#x3D;&gt; resp.tipo&#x3D;&#x3D;&#x3D;balance),
+        map(resp&#x3D;&gt;resp.subcuentas)
+      )
   }
+
+  public getSubcuentas(name:String,subcuenta:number, orderSubcuenta:number, orderName:number) {
+    let token &#x3D; localStorage.getItem(&#x27;token&#x27;);
+    if (subcuenta&#x3D;&#x3D;&#x3D;null) {
+      subcuenta &#x3D; 0;
+    }
+    let url &#x3D; URL_SERVICIOS + &#x60;/subcuenta?name&#x3D;${name}&amp;subcuenta&#x3D;${subcuenta}&amp;orderSubcuenta&#x3D;${orderSubcuenta}&amp;orderName&#x3D;${orderName}&amp;token&#x3D;${token}&#x60;;
+    return this.http.get(url);
+  }
+
+  /**
+   * Create or update subaccount
+   * 
+   * @param subcuenta Subcuenta model 
+   */
+  public saveSubcuenta(subcuenta:Subcuenta) {
+      let token &#x3D; localStorage.getItem(&#x27;token&#x27;);
+      if (subcuenta._id) {
+        let url &#x3D; URL_SERVICIOS + &#x60;/subcuenta/${subcuenta._id}?token&#x3D;${token}&#x60;;
+        return this.http.put(url, subcuenta);
+      } else {
+        let url &#x3D; URL_SERVICIOS + &#x60;/subcuenta?token&#x3D;${token}&#x60;;
+        return this.http.post(url,subcuenta);
+      }
+  }
+
+
 
 }
+
+
 </code></pre>
     </div>
 
@@ -719,7 +623,7 @@ export class GruposService {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
-            var COMPODOC_CURRENT_PAGE_URL = 'GruposService.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'SubcuentasService.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

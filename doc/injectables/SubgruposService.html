@@ -85,6 +85,10 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
+                                <a href="#getFindGroup">getFindGroup</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#getSubgrupo">getSubgrupo</a>
                             </li>
                             <li>
@@ -168,6 +172,85 @@
     <h3 id="methods">
         Methods
     </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getFindGroup"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            getFindGroup
+                        </b>
+                        <a href="#getFindGroup"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getFindGroup(subgrupo: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="45"
+                            class="link-to-prism">src/app/services/subgrupos/subgrupos.service.ts:45</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get registration by accounting subgroup</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>subgrupo</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Identifier number subgroup</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -369,8 +452,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="47"
-                            class="link-to-prism">src/app/services/subgrupos/subgrupos.service.ts:47</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="59"
+                            class="link-to-prism">src/app/services/subgrupos/subgrupos.service.ts:59</a></div>
                 </td>
             </tr>
 
@@ -388,6 +471,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -402,6 +486,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Subgrupo model</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -464,19 +552,30 @@ export class SubgruposService {
     let url &#x3D; URL_SERVICIOS + &#x60;/subgrupo/${id}?token&#x3D;${token}&#x60;;
     return this.http.get(url);
   }
+  /**
+   * Get registration by accounting subgroup
+   * 
+   * @param subgrupo Identifier number subgroup
+   */
+  public getFindGroup(subgrupo:number) {
+    let token &#x3D; localStorage.getItem(&#x27;token&#x27;);
+    let url &#x3D; URL_SERVICIOS + &#x60;/subgrupo/subgrupo?subgrupo&#x3D;${subgrupo}&amp;token&#x3D;${token}&#x60;;
+    return this.http.get(url);
+  }
+
+  
 
 
   /**
    * Create or update accounting subgroup 
    * 
-   * @param subgrupo 
+   * @param subgrupo Subgrupo model
    */
   public saveSubgrupo(subgrupo:Subgrupo){
     let token&#x3D; localStorage.getItem(&#x27;token&#x27;);
 
     if(subgrupo._id) {
       let url &#x3D; URL_SERVICIOS + &#x60;/subgrupo/${subgrupo._id}?token&#x3D;${token}&#x60;
-      console.log(url)
       return this.http.put(url,subgrupo);
     } else {
       let url &#x3D; URL_SERVICIOS + &#x60;/subgrupo?token&#x3D;${token}&#x60;;

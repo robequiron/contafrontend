@@ -94,7 +94,6 @@ export class SubgruposComponent implements OnInit {
     private _config : ConfigService,
     private router: Router
   ) {}
-
   /**
    * @ignore
    */
@@ -188,7 +187,7 @@ export class SubgruposComponent implements OnInit {
    }
    this.getSubgrupos();
   }
-  //TODO:Eliminar subgrupos contables. Pendiente de subcuentas contables
+  
   /**
    * Remove Accounting subgroup
    * 
@@ -203,16 +202,26 @@ export class SubgruposComponent implements OnInit {
       showCancelButton:true,
       showConfirmButton:true,
     }).then(resp=>{
-      /*
+      
       if(resp.value) {
-        this._grupos.deleteGrupo(id).subscribe(
-          (resp)=>{
-            Swal.fire({
-            icon:'info',
-            title:'Eliminado correctamente',
-            timer:1000
-            })
-            this.getGrupos();
+        this._subgrupos.deleteSubgrupo(id).subscribe(
+          (resp:any)=>{
+            if (resp.ok) {
+              Swal.fire({
+              icon:'info',
+              title:'Eliminado correctamente',
+              timer:1000
+              })
+              this.getSubgrupos();
+            } else {
+              Swal.fire({
+                icon:'warning',
+                title:'No se a podido eliminar',
+                text:'El grupo contiene subcuentas',
+                timer:1500
+              })
+            }
+            this.setFocus();
           },
           ()=>{
             Swal.fire({
@@ -221,7 +230,7 @@ export class SubgruposComponent implements OnInit {
             text: 'Al eliminar el grupo',
             })
           })
-      }*/
+      }
     })
     
   }

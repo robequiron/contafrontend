@@ -8,7 +8,7 @@ import Swal from 'sweetalert2';
 
 
 /**
- * Component to modify or create nuew accounting subgroup
+ * Component to modify or create new accounting subgroup
  */
 @Component({
   selector: 'app-subgrupo',
@@ -120,6 +120,7 @@ export class SubgrupoComponent implements OnInit {
         this.subgrupo._id = f.form.controls._id.value;
         this.subgrupo.grupo = this.grupo._id;
         this.subgrupo.name = this.subgrupo.name.toUpperCase();
+        
         this._subgrupoService.saveSubgrupo(this.subgrupo)
         .subscribe(
           (resp:any) => {

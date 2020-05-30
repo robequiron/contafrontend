@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { URL_SERVICIOS } from 'src/app/config/config';
+import { HttpClient } from '@angular/common/http';
 /**
  * Services for requests with server - Config
  */
@@ -7,7 +9,6 @@ import { Injectable } from '@angular/core';
 })
 export class ConfigService {
   //TODO:Establecer configuración general y por usuario
-  //TODO:Grabar grupos contables por defecto
 
   /**
    * Item number config
@@ -30,7 +31,7 @@ export class ConfigService {
   /**
    * @ignore
    */
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
   /**
    * Get records to show in the grid
@@ -43,6 +44,15 @@ export class ConfigService {
   */
   public getclassTable() {
     return this.classTable;
+  }
+  
+  /**
+   * insert data by default of accounting groups and subgroups
+   */
+  public getGrupos(){
+    let token = localStorage.getItem('token');
+    let url = URL_SERVICIOS + `/cBalance/grupos?token=${token}`
+    return this.http.get(url);
   }
 
 }

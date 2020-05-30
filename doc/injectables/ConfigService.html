@@ -108,6 +108,10 @@
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
+                                <a href="#getGrupos">getGrupos</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#getLimitTable">getLimitTable</a>
                             </li>
                         </ul>
@@ -152,8 +156,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="44"
-                            class="link-to-prism">src/app/services/config/config.service.ts:44</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="45"
+                            class="link-to-prism">src/app/services/config/config.service.ts:45</a></div>
                 </td>
             </tr>
 
@@ -165,6 +169,49 @@
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getGrupos"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            getGrupos
+                        </b>
+                        <a href="#getGrupos"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getGrupos()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="52"
+                            class="link-to-prism">src/app/services/config/config.service.ts:52</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>insert data by default of accounting groups and subgroups</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
                     </div>
                 </td>
@@ -195,8 +242,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="38"
-                            class="link-to-prism">src/app/services/config/config.service.ts:38</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="39"
+                            class="link-to-prism">src/app/services/config/config.service.ts:39</a></div>
                 </td>
             </tr>
 
@@ -246,7 +293,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/services/config/config.service.ts:29</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/services/config/config.service.ts:30</a></div>
                             </td>
                         </tr>
 
@@ -293,7 +340,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/services/config/config.service.ts:15</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/services/config/config.service.ts:16</a></div>
                             </td>
                         </tr>
 
@@ -313,6 +360,8 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+import { URL_SERVICIOS } from &#x27;src/app/config/config&#x27;;
+import { HttpClient } from &#x27;@angular/common/http&#x27;;
 /**
  * Services for requests with server - Config
  */
@@ -321,7 +370,6 @@
 })
 export class ConfigService {
   //TODO:Establecer configuración general y por usuario
-  //TODO:Grabar grupos contables por defecto
 
   /**
    * Item number config
@@ -344,7 +392,7 @@ export class ConfigService {
   /**
    * @ignore
    */
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
   /**
    * Get records to show in the grid
@@ -357,6 +405,15 @@ export class ConfigService {
   */
   public getclassTable() {
     return this.classTable;
+  }
+  
+  /**
+   * insert data by default of accounting groups and subgroups
+   */
+  public getGrupos(){
+    let token &#x3D; localStorage.getItem(&#x27;token&#x27;);
+    let url &#x3D; URL_SERVICIOS + &#x60;/cBalance/grupos?token&#x3D;${token}&#x60;
+    return this.http.get(url);
   }
 
 }

@@ -32,7 +32,7 @@
                 min="10"
                 max="99"
                 required
-                (keydown.control.n)="newSubgroup()" 
+                (keydown.control.i)="newSubgroup()" 
                 (focusout)=onFocusOut(f.form.controls)
                 (keydown.esc)="cancel()">
                 <h5>{{grupo.name}}</h5>
@@ -57,7 +57,7 @@
                 maxlength="90" minlength="3"
                 required 
                 (focusout)=onFocusOut(f.form.controls)
-                (keydown.control.n)="newSubgroup()"
+                (keydown.control.i)="newSubgroup()"
                 (keydown.esc)="cancel()">
                 <span class="help-block" *ngIf="eForm.eName">
                     Es necesario un nombre para el subgrupo contable. Debe contener de 3 a 90 caracteres
