@@ -25,7 +25,7 @@ import { CuentaComponent } from './cuentas/cuenta.component';
 import { TaxComponent } from './config/tax.component';
 import { TaxformComponent } from './config/taxform.component';
 import { TaxporformComponent } from './config/taxporform.component';
-
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 
 @NgModule({
@@ -49,6 +49,9 @@ import { TaxporformComponent } from './config/taxporform.component';
     TaxComponent,
     TaxformComponent,
     TaxporformComponent,
+    
+    
+    
   ],
   
   imports: [
@@ -56,8 +59,8 @@ import { TaxporformComponent } from './config/taxporform.component';
     CommonModule,
     FormsModule,
     NgxPaginationModule,
-    NgSelect2Module
-  
+    NgSelect2Module,
+    BsDatepickerModule.forRoot()
   ]
 })
 export class PagesModule { }

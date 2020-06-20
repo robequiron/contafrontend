@@ -24,6 +24,7 @@ import { ServicesModule } from './services/services.module';
 import { PagesModule } from './pages/pages.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { InterceptorService } from './services/interceptors/interceptor.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,8 @@ import { InterceptorService } from './services/interceptors/interceptor.service'
     HttpClientModule,
     PAGES_ROUTES,
     APP_ROUTES,
+    BrowserAnimationsModule,
+
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS,
