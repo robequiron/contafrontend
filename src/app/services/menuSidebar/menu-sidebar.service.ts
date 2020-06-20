@@ -47,6 +47,12 @@ export class MenuSidebarService {
            {title:"Nuevo", url:"/subcuenta/nuevo"},
          ]
         },
+        {title:"Cuentas", url:"", 
+         items:[
+           {title:"Consulta", url:"/cuentas"},
+           {title:"Nuevo", url:"/cuenta/nuevo"},
+         ]
+        },
       ]
     },
     { title:"User Interface", url:'', icon:"fa fa-rocket ",

@@ -20,6 +20,11 @@ import { NotfoundComponent } from './tables/notfound.component';
 import { SubcuentasComponent } from './subcuentas/subcuentas.component';
 import { SubcuentaComponent } from './subcuentas/subcuenta.component';
 import { ContabilidadComponent } from './config/contabilidad.component';
+import { CuentasComponent } from './cuentas/cuentas.component';
+import { CuentaComponent } from './cuentas/cuenta.component';
+import { TaxComponent } from './config/tax.component';
+import { TaxformComponent } from './config/taxform.component';
+import { TaxporformComponent } from './config/taxporform.component';
 
 
 
@@ -39,6 +44,11 @@ import { ContabilidadComponent } from './config/contabilidad.component';
     SubcuentasComponent,
     SubcuentaComponent,
     ContabilidadComponent,
+    CuentasComponent,
+    CuentaComponent,
+    TaxComponent,
+    TaxformComponent,
+    TaxporformComponent,
   ],
   
   imports: [

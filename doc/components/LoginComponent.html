@@ -62,6 +62,13 @@
     <code>src/app/login/login.component.ts</code>
 </p>
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Component check that the user is logged in correctly</p>
+
+    </p>
 
 
     <p class="comment">
@@ -147,9 +154,6 @@
                                     <span class="modifier">Public</span>
                                 <a href="#login">login</a>
                             </li>
-                            <li>
-                                <a href="#ngOnInit">ngOnInit</a>
-                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -173,12 +177,14 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/login/login.component.ts:18</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/login/login.component.ts:28</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Constructor</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -187,6 +193,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -201,6 +208,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <code><p>Inyect UsuarioService</p>
+</code>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>router</td>
@@ -213,6 +224,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <code><p>Router</p>
+</code>
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -256,14 +271,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="33"
-                            class="link-to-prism">src/app/login/login.component.ts:33</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="56"
+                            class="link-to-prism">src/app/login/login.component.ts:56</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Validate form and redirect user</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -273,6 +290,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -287,6 +305,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>NgForm</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -299,45 +321,6 @@
                     </div>
                     <div class="io-description">
                         
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="ngOnInit"></a>
-                    <span class="name">
-                        <b>
-                            ngOnInit
-                        </b>
-                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>ngOnInit()</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="26"
-                            class="link-to-prism">src/app/login/login.component.ts:26</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
                     </div>
                 </td>
             </tr>
@@ -370,10 +353,16 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/login/login.component.ts:18</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/login/login.component.ts:28</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Email</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -403,10 +392,16 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/login/login.component.ts:17</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/login/login.component.ts:23</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>remember me</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -425,6 +420,9 @@ import { UsuarioService } from &#x27;../services/services.index&#x27;;
 
 import Swal from &#x27;sweetalert2&#x27;;
 
+/**
+ * Component check that the user is logged in correctly
+ */
 @Component({
   selector: &#x27;app-login&#x27;,
   templateUrl: &#x27;./login.component.html&#x27;,
@@ -432,15 +430,30 @@ import Swal from &#x27;sweetalert2&#x27;;
 })
 export class LoginComponent implements OnInit {
 
+  /**
+   * remember me
+   */
   public recuerdame: boolean &#x3D; false;
+
+  /**
+   * Email
+   */
   public email: string;
 
+  /**
+   * Constructor
+   * 
+   * @param _usuarioService Inyect UsuarioService
+   * @param router Router
+   */
   constructor(
     private _usuarioService: UsuarioService, 
     private router:Router
   ) { }
     
-
+  /**
+   * @ignore
+   */
   ngOnInit() {
     this.email &#x3D; localStorage.getItem(&#x27;email&#x27;) || &#x27;&#x27;;
     if(this.email.length &gt; 2) {
@@ -448,6 +461,11 @@ export class LoginComponent implements OnInit {
     }
   }
 
+  /**
+   * Validate form and redirect user
+   * 
+   * @param forma NgForm
+   */
   public login(forma: NgForm) {
     /*&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;
     /	If the form is invalid											   
@@ -573,7 +591,7 @@ export class LoginComponent implements OnInit {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><!-- Login Container --><div id="login-container">    <!-- Login Header -->    <h1 class="h2 text-light text-center push-top-bottom animation-slideDown">        <i class="fa fa-cube"></i> <strong>Bienvenido a ContaUI</strong>    </h1>    <!-- END Login Header -->    <!-- Login Block -->    <div class="block animation-fadeInQuickInv">        <!-- Login Title -->        <div class="block-title">            <div class="block-options pull-right">                <a href="page_ready_reminder.html" class="btn btn-effect-ripple btn-primary" data-toggle="tooltip" data-placement="left" title="¿Olvidó su contraseña?"><i class="fa fa-exclamation-circle"></i></a>                <a href="page_ready_register.html" class="btn btn-effect-ripple btn-primary" data-toggle="tooltip" data-placement="left" title="Crear una nueva cuenta"><i class="fa fa-plus"></i></a>            </div>            <h2>Logearse</h2>        </div>        <!-- END Login Title -->        <!-- Login Form   ngNativeValidate -->        <form  #f="ngForm" class="form-horizontal" (ngSubmit)="login(f)">            <div class="form-group">                <div class="col-xs-12">                    <input [ngModel]=email name="email" type="email" class="form-control" required placeholder="Email..">                </div>            </div>            <div class="form-group">                <div class="col-xs-12">                    <input  ngModel name="password" type="password"  class="form-control" placeholder="Contraseña" autocomplete="on">                </div>            </div>            <div class="form-group form-actions">                <div class="col-xs-8">                    <label class="csscheckbox csscheckbox-primary">                        <input [(ngModel)]="recuerdame" name="recuerdame" type="checkbox">                        <span></span>                    </label>                    ¿Recordar?                </div>                <div class="col-xs-4 text-right">                    <button  class="btn btn-effect-ripple btn-sm btn-primary"><i class="fa fa-check"></i> Iniciar</button>                </div>            </div>        </form>        <!-- END Login Form -->    </div>    <!-- END Login Block -->    <!-- Footer -->    <footer class="text-muted text-center animation-pullUp">        <small><span id="year-copy"></span> &copy; <a href="http://goo.gl/RcsdAh" target="_blank">AppUI 2.1</a></small>    </footer>    <!-- END Footer --></div><!-- END Login Container --></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ColorthemeComponent', 'selector': 'app-colortheme'},{'name': 'ConfigComponent', 'selector': 'app-config'},{'name': 'ContabilidadComponent', 'selector': 'app-contabilidad'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'GrupoComponent', 'selector': 'app-grupo'},{'name': 'GruposComponent', 'selector': 'app-grupos'},{'name': 'LoadTableComponent', 'selector': 'app-load-table'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NotfoundComponent', 'selector': 'app-notfound'},{'name': 'PagesComponent', 'selector': 'app-pages'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'SidebarfooterComponent', 'selector': 'app-sidebarfooter'},{'name': 'SubcuentaComponent', 'selector': 'app-subcuenta'},{'name': 'SubcuentasComponent', 'selector': 'app-subcuentas'},{'name': 'SubgrupoComponent', 'selector': 'app-subgrupo'},{'name': 'SubgruposComponent', 'selector': 'app-subgrupos'},{'name': 'UserComponent', 'selector': 'app-user'},{'name': 'UsersComponent', 'selector': 'app-users'}];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ColorthemeComponent', 'selector': 'app-colortheme'},{'name': 'ConfigComponent', 'selector': 'app-config'},{'name': 'ContabilidadComponent', 'selector': 'app-contabilidad'},{'name': 'CuentaComponent', 'selector': 'app-cuenta'},{'name': 'CuentasComponent', 'selector': 'app-cuentas'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'GrupoComponent', 'selector': 'app-grupo'},{'name': 'GruposComponent', 'selector': 'app-grupos'},{'name': 'LoadTableComponent', 'selector': 'app-load-table'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NotfoundComponent', 'selector': 'app-notfound'},{'name': 'PagesComponent', 'selector': 'app-pages'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'SidebarfooterComponent', 'selector': 'app-sidebarfooter'},{'name': 'SubcuentaComponent', 'selector': 'app-subcuenta'},{'name': 'SubcuentasComponent', 'selector': 'app-subcuentas'},{'name': 'SubgrupoComponent', 'selector': 'app-subgrupo'},{'name': 'SubgruposComponent', 'selector': 'app-subgrupos'},{'name': 'TaxComponent', 'selector': 'app-tax'},{'name': 'TaxformComponent', 'selector': 'app-taxform'},{'name': 'UserComponent', 'selector': 'app-user'},{'name': 'UsersComponent', 'selector': 'app-users'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'LoginComponent'};
 </script>

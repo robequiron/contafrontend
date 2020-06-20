@@ -69,6 +69,7 @@ export class SubcuentasComponent implements OnInit {
    * Search subcuenta
    */
   public subcuentaSearch: number=null;
+
   /**
    * Subaccount total
    */
@@ -85,6 +86,7 @@ export class SubcuentasComponent implements OnInit {
   public orderName: number = 0;
 
   /**
+   * Constructor
    * 
    * @param _subgrupos Inyect SubgrupoService
    * @param _subcuentas Inyect SubCuentasService
@@ -158,6 +160,7 @@ export class SubcuentasComponent implements OnInit {
     this.subcuentaSearch = null;
     this.getSubCuentas();
   }
+
   /**
   * Loads default from tables		
   */
@@ -191,7 +194,7 @@ export class SubcuentasComponent implements OnInit {
    this.getSubCuentas();
   }
 
-    /**
+   /**
    * Remove Accounting subgroup
    * 
    * @param id Id subgroup
@@ -214,6 +217,7 @@ export class SubcuentasComponent implements OnInit {
             timer:1000
             })
             this.setFocus();
+            this.clearSearch();
             this.getSubCuentas();
           },
           ()=>{

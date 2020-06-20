@@ -12,6 +12,8 @@ import { SubgruposComponent } from './subgrupos/subgrupos.component';
 import { SubgrupoComponent } from './subgrupos/subgrupo.component';
 import { SubcuentasComponent } from './subcuentas/subcuentas.component';
 import { SubcuentaComponent } from './subcuentas/subcuenta.component';
+import { CuentaComponent } from './cuentas/cuenta.component';
+import { CuentasComponent } from './cuentas/cuentas.component';
 
 /**
  * Routes child pages
@@ -31,6 +33,8 @@ const pagesRoutes: Routes = [
       {path:'subgrupo/:id', component:SubgrupoComponent, data:{titulo:"Edición subgrupo contable"}},
       {path:'subcuentas', component:SubcuentasComponent, data:{titulo:"Subcuentas contables"}},
       {path:'subcuenta/:id', component:SubcuentaComponent, data:{titulo:"Edición subcuenta contable"}},
+      {path:'cuentas', component:CuentasComponent, data:{titulo:"Cuentas contables"}},
+      {path:'cuenta/:id', component:CuentaComponent, data:{titulo:"Edición cuenta contable"}},
       {path: 'dashboard', component:DashboardComponent, data:{titulo:"Escritorio"}},
       { path:'', redirectTo:'/dashboard', pathMatch:'full'},
     ] 

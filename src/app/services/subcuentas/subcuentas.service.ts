@@ -27,7 +27,7 @@ export class SubcuentasService {
   /**
    * Load accounting account for identifier
    * 
-   * @param id Ide
+   * @param id Identifier subaccount
    */
   public getSubcuenta(id:string){
     let token = localStorage.getItem('token');
@@ -68,6 +68,24 @@ export class SubcuentasService {
         return this.http.post(url,subcuenta);
       }
   }
+
+  /**
+   * Get registration by accounting subaccount
+   * 
+   * @param id Identifier number subaccount
+   */
+  public getFindSubcuenta(subcuenta:number) {
+    let token = localStorage.getItem('token');
+    let url = URL_SERVICIOS + `/subcuenta/subcuenta?subcuenta=${subcuenta}&token=${token}`;
+    return this.http.get(url);
+  }
+
+
+  /**
+   * Delete accounting subaccount
+   * 
+   * @param id Identify subaccount
+   */
 
   public deleteSubcuenta(id:String) {
     let token = localStorage.getItem('token');

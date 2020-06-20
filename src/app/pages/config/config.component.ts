@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+
+/**
+ * Show General application settings
+ */
 @Component({
   selector: 'app-config',
   templateUrl: './config.component.html',
@@ -7,15 +11,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConfigComponent implements OnInit {
 
-  public title:string ="Configuración general"
-
+  /**
+   * Navbar
+   */
   public navbar = [
-    {title:"Datos empresa", active:true},
+    {title:"Datos empresa", active:false},
     {title:"Contabilidad" , active:false},
+    {title:"Impuestos", active:true}
   ]
-
+  /**
+   * Constructor
+   */
   constructor() { }
 
+  /**
+   * @ignore
+   */
   ngOnInit() {
  
   }
@@ -25,7 +36,6 @@ export class ConfigComponent implements OnInit {
  * 
  * @param i: Identify tag
  */ 
-
   public setnavbar(i:number) {
     this.navbar.forEach(navbar => {navbar.active=false;});
     this.navbar[i].active=true;

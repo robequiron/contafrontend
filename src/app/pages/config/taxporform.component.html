@@ -1,0 +1,60 @@
+<form  class="form-horizontal form-bordered" #f="ngForm" (ngSubmit)="grabar(f)">
+    <div class="form-group" >
+        <label class="col-md-3 control-label" for="id">Id</label>
+        <div class="col-md-5">
+            <input type="text" [(ngModel)]="tax_id" name="tax_id" class="form-control" disabled>
+            <input type="text" [(ngModel)]="porEdit._id" name="_id" class="form-control" disabled>
+        </div>
+    </div>   
+    <div class="form-group" [ngClass]="eForm.eName ? 'has-error' : ''">
+        <label class="col-md-3 control-label" for="name">Nombre del impuesto</label>
+        <div class="col-md-9">
+            <input 
+            type="text"
+            name="name" 
+            required
+            class="form-control"
+            (focusout)=onFocusOut(f.form.controls)
+            (keydown.esc)="cancel()"
+            [(ngModel)]="porEdit.name"
+            >
+            <span class="help-block" *ngIf="eForm.eName">Es obligatorio el nombre del imuesto</span>
+        </div>
+    </div>
+    <div class="form-group" [ngClass]="eForm.ePorcentaje ? 'has-error' : ''">
+        <label class="col-md-3 control-label" for="porcentaje">Porcentaje</label>
+        <div class="col-md-3">
+            <input 
+            type="number"  
+            name="porcentaje" 
+            max="9"
+            required
+            class="form-control"
+            (focusout)=onFocusOut(f.form.controls)
+            (keydown.esc)="cancel()"
+            [(ngModel)]="porEdit.porcentaje"
+            >
+            <span class="help-block" *ngIf="eForm.ePorcentaje">Es obligatorio un número de impuesto. Entre 1 y 9</span>
+            <span class="help-block" *ngIf="eForm.ePorcentaje">El identificador ya existe</span>
+        </div>
+    </div>
+
+    
+    <div class="form-group form-actions">
+        <div class="col-md-9 col-md-offset-3">
+            <button 
+            class="btn btn-effect-ripple btn-primary" style="overflow: hidden; position: relative;"
+            [disabled]="f.form.invalid"
+            (keydown.esc)="cancel()">
+            Grabar
+            </button>
+
+            <button 
+            class="btn btn-effect-ripple btn-danger" style="overflow: hidden; position: relative;"
+            (click)="cancel()"
+            type="reset">
+            Cancelar
+            </button>
+        </div>
+    </div>
+</form>

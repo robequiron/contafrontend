@@ -7,6 +7,9 @@ import { UsuarioService } from '../services/services.index';
 
 import Swal from 'sweetalert2';
 
+/**
+ * Component check that the user is logged in correctly
+ */
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -14,15 +17,30 @@ import Swal from 'sweetalert2';
 })
 export class LoginComponent implements OnInit {
 
+  /**
+   * remember me
+   */
   public recuerdame: boolean = false;
+
+  /**
+   * Email
+   */
   public email: string;
 
+  /**
+   * Constructor
+   * 
+   * @param _usuarioService Inyect UsuarioService
+   * @param router Router
+   */
   constructor(
     private _usuarioService: UsuarioService, 
     private router:Router
   ) { }
     
-
+  /**
+   * @ignore
+   */
   ngOnInit() {
     this.email = localStorage.getItem('email') || '';
     if(this.email.length > 2) {
@@ -30,6 +48,11 @@ export class LoginComponent implements OnInit {
     }
   }
 
+  /**
+   * Validate form and redirect user
+   * 
+   * @param forma NgForm
+   */
   public login(forma: NgForm) {
     /*================================================
     /	If the form is invalid											   

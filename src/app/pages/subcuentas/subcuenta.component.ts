@@ -9,7 +9,6 @@ import Swal from 'sweetalert2';
 /**
  * Component to modify or create new accounting subaccount
  */
-
 @Component({
   selector: 'app-subcuenta',
   templateUrl: './subcuenta.component.html',
@@ -142,8 +141,6 @@ export class SubcuentaComponent implements OnInit {
           })
         },
         (err)=>{
-          
-          console.log(err)
           if(err.error.error.error.errors.subcuenta.kind==="unique") {
             this.eForm.eSubcuenta = true;
             this.eForm.eSubcuentaUnique= true;
@@ -153,6 +150,10 @@ export class SubcuentaComponent implements OnInit {
     }
   }
 
+
+  /**
+   * Reset input subaccount
+   */
   public newSubcuenta(){
       this.subcuenta._id='';
       this.subcuenta.name='';

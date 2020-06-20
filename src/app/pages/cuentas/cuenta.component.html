@@ -1,0 +1,86 @@
+<div class="block animated fadeIn">
+    <!------------------------------------------------------
+    - Title form										                 
+    ------------------------------------------------------->
+    <div class="block-title">
+        <div class="block-options pull-right">
+            <a (click)="newCuenta()" class="btn btn-effect-ripple btn-default" data-toggle="tooltip" title="" style="overflow: hidden; position: relative;" data-original-title="Nuevo grupo">
+                <i class="fa fa-plus"></i>
+            </a>
+        </div>
+        <h2>{{title}}</h2>
+    </div>
+   
+
+    <!------------------------------------------------------
+    - Conten form										                 
+    ------------------------------------------------------->
+    <form class="form-horizontal form-bordered" #f="ngForm" #aForm (ngSubmit)="grabar(f)">
+        
+        <div class="form-group" >
+            <label class="col-md-3 control-label" for="id">Id</label>
+            <div class="col-md-5">
+                <input type="text" [(ngModel)]="cuenta._id" name="_id" class="form-control" disabled>
+            </div>
+        </div>
+
+        <div class="form-group" [ngClass]="eForm.eCuenta ? 'has-error' : '' ">
+            <label class="col-md-3 control-label" for="cuenta">Cuenta</label>
+            <div class="col-md-5">
+                <input  class="form-control" type="number" name="cuenta" [(ngModel)]="cuenta.cuenta"
+                placeholder="Cuenta contable" 
+                min="10000000"
+                max="99999999"
+                required
+                pattern="^[0-9]+"
+                (keydown.control.i)="newCuenta()"
+                (keydown.esc)="cancel()"
+                (focusout)="onFocusOut(f.form.controls)"
+                >
+                <span class="help-block" *ngIf="eForm.eCuenta && !eForm.eCuentaUnique && !eForm.eSubcuenta">
+                    Es necesario un número para la cuenta Contable <br>
+                    Debe estar entre 10000000 y 99999999. <br>
+                    No puede contener decimales
+                </span>
+                <span class="help-block" *ngIf="eForm.eCuenta && eForm.eCuentaUnique">
+                    La cuenta contable ya existe
+                </span>
+                <span class="help-block" *ngIf="eForm.eCuenta && eForm.eSubcuenta">
+                    La subcuenta no existe
+                </span>
+                <span>{{subcuenta.name}}</span>
+            </div>
+        </div>
+        
+        <div class="form-group" [ngClass]="eForm.eName ? 'has-error' : '' ">
+            <label class="col-md-3 control-label" for="name">Nombre de la cuenta</label>
+            <div class="col-md-5">
+                <input class="form-control" type="text" name="name" 
+                [(ngModel)]="cuenta.name"
+                placeholder="Nombre de la cuenta conbtable" 
+                maxlength="100" minlength="3"
+                required 
+                (keydown.control.i)="newCuenta()"
+                (keydown.esc)="cancel()"
+                (focusout)=onFocusOut(f.form.controls)>
+                <span class="help-block" *ngIf="eForm.eName">
+                    Es necesario un nombre para la cuenta contable. Debe contener de 3 a 100 caracteres
+                </span>
+            </div>
+        </div>
+
+
+        <div class="form-group form-actions">
+            <div class="col-md-9 col-md-offset-3">
+                <button 
+                class="btn btn-effect-ripple btn-primary" style="overflow: hidden; position: relative;"
+                [disabled]="f.form.invalid"
+                >Grabar</button>
+                <button 
+                (keydown.esc)="cancel()"
+                [routerLink]="['/cuentas']" type="reset" class="btn btn-effect-ripple btn-danger" style="overflow: hidden; position: relative;">Cancelar</button>
+            </div>
+        </div>
+    </form>
+    <!-- END Horizontal Form Content   -->
+</div>

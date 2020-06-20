@@ -8,12 +8,16 @@ import { UserService } from './users/user.service';
 import { ConfigService } from './config/config.service';
 import { GruposService } from './grupos/grupos.service';
 import { SubgruposService } from './subgrupos/subgrupos.service';
+import { CuentasService } from './cuentas/cuentas.service';
+import { CuentaPipe } from '../pipes/cuenta.pipe';
+import { TaxesService } from './taxes/taxes.service';
 
 
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule
+    CommonModule,
+    
   ],
   providers: [
     ColorThemeService,
@@ -24,6 +28,9 @@ import { SubgruposService } from './subgrupos/subgrupos.service';
     ConfigService,
     GruposService,
     SubgruposService,
+    CuentasService,
+    CuentaPipe,
+    TaxesService
   ]
 })
 export class ServicesModule { }

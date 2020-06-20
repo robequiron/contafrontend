@@ -1,16 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RoundceilPipe } from './roundceil.pipe';
+import { CuentaPipe } from './cuenta.pipe';
 
 @NgModule({
   declarations: [
-  RoundceilPipe
+  RoundceilPipe,
+  CuentaPipe,
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    RoundceilPipe
+    RoundceilPipe,
+    CuentaPipe
+
   ]
 })
 export class PipesModule { }
