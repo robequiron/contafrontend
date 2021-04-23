@@ -51,8 +51,18 @@ export class ConfigService {
    */
   public getGrupos(){
     let token = localStorage.getItem('token');
-    let url = URL_SERVICIOS + `/cBalance/grupos?token=${token}`
+    let url = URL_SERVICIOS + `/cBalance/grupos?token=${token}`;
     return this.http.get(url);
   }
+
+  /**
+   * insert data by default of way
+   */
+  public getVias(){
+    let token = localStorage.getItem('token');
+    let url = URL_SERVICIOS + `/cgeneral/vias?token=${token}`;
+    return this.http.get(url);
+  }
+
 
 }

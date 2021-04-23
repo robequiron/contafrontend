@@ -1,4 +1,8 @@
+import { HttpClient } from '@angular/common/http';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { GrupoComponent } from './grupo.component';
 
@@ -8,7 +12,8 @@ describe('GrupoComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GrupoComponent ]
+      declarations: [ GrupoComponent ],
+      imports:[FormsModule,RouterTestingModule,HttpClientTestingModule]
     })
     .compileComponents();
   }));

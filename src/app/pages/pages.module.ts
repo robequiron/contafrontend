@@ -22,10 +22,12 @@ import { SubcuentaComponent } from './subcuentas/subcuenta.component';
 import { ContabilidadComponent } from './config/contabilidad.component';
 import { CuentasComponent } from './cuentas/cuentas.component';
 import { CuentaComponent } from './cuentas/cuenta.component';
-import { TaxComponent } from './config/tax.component';
-import { TaxformComponent } from './config/taxform.component';
-import { TaxporformComponent } from './config/taxporform.component';
+import { TaxComponent } from './config/tax/tax.component';
+import { TaxformComponent } from './config/tax/taxform.component';
+import { TaxporformComponent } from './config/tax/taxporform.component';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { ViasComponent } from './config/vias/vias.component';
+import { ViaComponent } from './config/vias/via.component';
 
 
 @NgModule({
@@ -49,6 +51,8 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
     TaxComponent,
     TaxformComponent,
     TaxporformComponent,
+    ViasComponent,
+    ViaComponent,
     
     
     

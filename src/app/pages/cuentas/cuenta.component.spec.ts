@@ -1,4 +1,8 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
+import { RouterTestingModule } from '@angular/router/testing';
+import { CuentaPipe } from 'src/app/pipes/cuenta.pipe';
 
 import { CuentaComponent } from './cuenta.component';
 
@@ -8,7 +12,9 @@ describe('CuentaComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CuentaComponent ]
+      declarations: [ CuentaComponent ],
+      imports: [FormsModule,RouterTestingModule,HttpClientTestingModule],
+      providers: [CuentaPipe]
     })
     .compileComponents();
   }));

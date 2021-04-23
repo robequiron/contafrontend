@@ -11,9 +11,44 @@
 
     <!-- Tabs Content -->
     <div class="tab-content">
+        
         <div class="tab-pane" [ngClass]="navbar[0].active ? 'active' : '' " >Block Tabs..</div>
         <div class="tab-pane" [ngClass]="navbar[1].active ? 'active' : '' " ><app-contabilidad></app-contabilidad></div>
         <div class="tab-pane" [ngClass]="navbar[2].active ? 'active' : '' " ><app-tax></app-tax></div>
+        <div class="tab-pane" [ngClass]="navbar[3].active ? 'active' : '' " >
+            <div class="row">
+                <div class="block-section">
+                    <div class="form-group" >
+                        <label class="col-md-3 control-label" for="roles">Tabla de parámetros a visualizar</label>
+                        <div class="col-md-5">
+                            <ng-select2 [data]="param" name="rol"
+                            
+                            [(ngModel)]="visParamGeneral"
+                            [placeholder]="'Parametro'"
+                            (change)="visform()"
+                            [width]="100+'%'"
+                            >
+                            </ng-select2>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-10">
+                <div class="col-md-12">
+                    <app-vias 
+                        *ngIf="visParamGeneral==='Vías' && !visForm"
+                        (resViaForm)="ViaForm($event)"
+                        
+                    ></app-vias>
+                    <app-via *ngIf="visParamGeneral==='Vías' && visForm">
+                        (resForm)="closeForm($event)"
+                    </app-via>
+                </div>
+            </div>
+            
+            
+        </div>
         <div class="tab-pane" id="block-tabs-settings">Settings..</div>
     </div>
     <!-- END Tabs Content -->

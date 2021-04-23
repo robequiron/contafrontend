@@ -1,3 +1,4 @@
+export { ViasService } from './generales/vias.service';
 export { GruposService } from './grupos/grupos.service';
 export { ColorThemeService } from "./colorTheme/color-theme.service";
 export { ConfigService } from './config/config.service';

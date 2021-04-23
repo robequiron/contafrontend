@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output,EventEmitter } from '@angular/core';
-import {Porcentaje } from '../../models/porcentaje.model';
+import {Porcentaje } from '../../../models/porcentaje.model';
 import { NgForm } from '@angular/forms';
 import { Tax } from 'src/app/models/tax.model';
 import { TaxesService } from 'src/app/services/services.index';

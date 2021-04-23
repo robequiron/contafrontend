@@ -23,7 +23,7 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+             
               "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
               "src/styles.css"
             ],
@@ -89,7 +89,14 @@
               "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              
+              "src/assets/js/vendor/jquery.min.js",
+              "src/assets/js/vendor/bootstrap.min.js",
+              "src/assets/js/vendor/modernizr-2.8.3.min.js",
+              "src/assets/js/app.js",
+              "src/assets/js/plugins.js"
+            ]
           }
         },
         "lint": {

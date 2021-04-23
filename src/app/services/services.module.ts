@@ -11,6 +11,7 @@ import { SubgruposService } from './subgrupos/subgrupos.service';
 import { CuentasService } from './cuentas/cuentas.service';
 import { CuentaPipe } from '../pipes/cuenta.pipe';
 import { TaxesService } from './taxes/taxes.service';
+import { ViasService } from './generales/vias.service';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { TaxesService } from './taxes/taxes.service';
     SubgruposService,
     CuentasService,
     CuentaPipe,
-    TaxesService
+    TaxesService,
+    ViasService
   ]
 })
 export class ServicesModule { }
