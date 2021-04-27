@@ -1,4 +1,5 @@
 node_modules
 proyecto_front.graffle
+coverage
 src/assets/css
 .DS_Store

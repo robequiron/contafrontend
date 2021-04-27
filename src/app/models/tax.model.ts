@@ -9,13 +9,13 @@ export class Tax {
      * @param taxnumber Number identifier tax
      * @param name Name tax
      * @param _id Identifier tax
-     * @param porcentaje Array list percentage
+     * @param porcentajes Array list percentage
      */
     constructor(
         public taxnumber:Number,
         public name:String,
         public _id?:String,
-        public porcentaje?:Porcentaje,
+        public porcentajes?:Porcentaje,
     ){}
 }
 

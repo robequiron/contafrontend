@@ -30,7 +30,7 @@
             
             <div class="table-responsive">
                 <!-- Partial Responsive Content -->
-                <table class="table table-striped table-borderless table-vcenter">
+                <table class="table table-striped table-bordered table-vcenter">
                     <thead>
                         <tr>
                             <th style="width: 90px;">Id</th>
@@ -39,20 +39,20 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <ng-container *ngFor="let tax of taxes">
+                         <ng-container *ngFor="let tax of taxes">
                             <tr [ngClass]="over===tax._id ? 'success' : taxSelect._id===tax._id ? 'info' : '' "
                                 (click)="selectTr(tax)"
                                 (mouseover)="overTr(tax._id)"
                                 (mouseout)="overTr('')"
                             >
                                 <td><strong>{{tax.taxnumber}}</strong></td>
-                                <td>{{tax.name}} {{tax.porcentaje.count}}</td>
+                                <td>{{tax.name}} <!--{{tax.porcentajes.count || 0}}--></td>
                                 <td class="text-center">
                                     <a (click)="editTax(tax)"   class="btn btn-effect-ripple btn-xs btn-success"  ><i class="fa fa-pencil"></i></a>
                                     <a href="javascript:void(0)"   class="btn btn-effect-ripple btn-xs btn-danger"  ><i class="fa fa-times"></i></a>
                                 </td>
                             </tr>
-                        </ng-container>
+                        </ng-container> 
                     </tbody>
                 </table>
                 <!-- END Partial Responsive Content -->

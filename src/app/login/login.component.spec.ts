@@ -55,6 +55,8 @@ describe('LoginComponent', () => {
 
 
   })
+
+
   it('La variable localStorage no tiene un email', () =>{
     localStorage.setItem('email','');
     component.ngOnInit();
@@ -62,7 +64,6 @@ describe('LoginComponent', () => {
 
 
   })
-
 
 
   it('El formulario email es invalido',()=>{
@@ -151,4 +152,8 @@ describe('LoginComponent', () => {
     )
     
   })
+
+
+
+
 });

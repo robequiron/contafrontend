@@ -19,7 +19,7 @@
         <!-- END Login Title -->
 
         <!-- Login Form   ngNativeValidate -->
-        <form  #f="ngForm" class="form-horizontal" (ngSubmit)="login(f)">
+        <form  #f="ngForm" class="form-horizontal" (ngSubmit)="login(f)" autocomplete="off">
             <div class="form-group">
                 <div class="col-xs-12">
                     <input [ngModel]=email name="email" type="email" class="form-control" required placeholder="Email..">

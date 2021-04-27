@@ -12,7 +12,9 @@
     <!-- Tabs Content -->
     <div class="tab-content">
         
-        <div class="tab-pane" [ngClass]="navbar[0].active ? 'active' : '' " >Block Tabs..</div>
+        <div class="tab-pane" [ngClass]="navbar[0].active ? 'active' : '' " >
+           <app-general></app-general>
+        </div>
         <div class="tab-pane" [ngClass]="navbar[1].active ? 'active' : '' " ><app-contabilidad></app-contabilidad></div>
         <div class="tab-pane" [ngClass]="navbar[2].active ? 'active' : '' " ><app-tax></app-tax></div>
         <div class="tab-pane" [ngClass]="navbar[3].active ? 'active' : '' " >

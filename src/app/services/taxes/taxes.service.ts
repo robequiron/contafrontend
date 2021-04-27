@@ -49,17 +49,17 @@ export class TaxesService {
   public savePorcentaje(id:String, porcentaje:Porcentaje) {
     let token = localStorage.getItem('token');
     if (porcentaje._id) {
-      let url = URL_SERVICIOS + `/tax/${id}/porcentaje/${porcentaje._id}?token=${token}`;
+      let url = URL_SERVICIOS + `/tax/${id}/porcentajes/${porcentaje._id}?token=${token}`;
       return this.http.put(url,porcentaje);
     } else {
-      let url = URL_SERVICIOS + `/tax/${id}/porcentaje?token=${token}`;
+      let url = URL_SERVICIOS + `/tax/${id}/porcentajes?token=${token}`;
       return this.http.post(url,porcentaje);
     }
   }
 
   public deletePorcentaje(id:String, idpor:String) {
     let token = localStorage.getItem('token');
-    let url = URL_SERVICIOS + `/tax/${id}/porcentaje/${idpor}?token=${token}`;
+    let url = URL_SERVICIOS + `/tax/${id}/porcentajes/${idpor}?token=${token}`;
     return this.http.delete(url);
   }
 

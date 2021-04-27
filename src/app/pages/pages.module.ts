@@ -28,6 +28,8 @@ import { TaxporformComponent } from './config/tax/taxporform.component';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { ViasComponent } from './config/vias/vias.component';
 import { ViaComponent } from './config/vias/via.component';
+import { GeneralComponent } from './config/general/general.component';
+import { ConfigModule } from './config/config.module';
 
 
 @NgModule({
@@ -53,6 +55,7 @@ import { ViaComponent } from './config/vias/via.component';
     TaxporformComponent,
     ViasComponent,
     ViaComponent,
+   
     
     
     
@@ -62,6 +65,7 @@ import { ViaComponent } from './config/vias/via.component';
     PAGES_ROUTES,
     CommonModule,
     FormsModule,
+    ConfigModule,
     NgxPaginationModule,
     NgSelect2Module,
     BsDatepickerModule.forRoot()

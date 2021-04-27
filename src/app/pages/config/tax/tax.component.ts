@@ -110,6 +110,7 @@ export class TaxComponent implements OnInit {
   public getTaxes() {
     this._taxService.getTaxes().subscribe(
       (resp:TaxTable)=>{
+        console.log(resp)
         if (resp.ok) {
           this.taxes = resp.taxes;
         }
@@ -203,7 +204,7 @@ export class TaxComponent implements OnInit {
 
   public selectTr(tax:Tax){
     this.taxSelect = tax;
-    this.porcentajes = tax.porcentaje;
+    this.porcentajes = tax.porcentajes;
   }
 
   /**
