@@ -16,10 +16,10 @@ export class ConfigComponent implements OnInit {
    * Navbar
    */
   public navbar = [
-    {title:"Datos empresa", active:false},
+    {title:"Datos empresa", active:true},
     {title:"Contabilidad" , active:false},
     {title:"Impuestos", active:false},
-    {title:"Parámetros generales", active:true,}
+    {title:"Parámetros generales", active:false,}
   ]
 
  public param= ["Vías"]; 
@@ -49,8 +49,12 @@ export class ConfigComponent implements OnInit {
  * @param i: Identify tag
  */ 
   public setnavbar(i:number) {
-    this.navbar.forEach(navbar => {navbar.active=false;});
-    this.navbar[i].active=true;
+    try {
+      this.navbar.forEach(navbar => {navbar.active=false;});
+      this.navbar[i].active=true;
+    } catch (error) {
+      console.warn("Error setnavbar in config.component chech with the administrator ")
+    }
   }
 
   public visform() {

@@ -3,7 +3,7 @@
     <div class="block-title">
         <ul class="nav nav-tabs" data-toggle="tabs">
             <ng-container *ngFor="let nav of navbar; let i=index">
-                <li [ngClass]="nav.active ? 'active' : '' "><a (click)="setnavbar(i)">{{nav.title}}</a></li>
+                <li [ngClass]="nav.active ? 'active' : '' "><a (click)="setnavbar(null)">{{nav.title}}</a></li>
             </ng-container>
         </ul>
     </div>
@@ -12,9 +12,7 @@
     <!-- Tabs Content -->
     <div class="tab-content">
         
-        <div class="tab-pane" [ngClass]="navbar[0].active ? 'active' : '' " >
-           <app-general></app-general>
-        </div>
+        <div class="tab-pane" [ngClass]="navbar[0].active ? 'active' : '' " ><app-general></app-general></div>
         <div class="tab-pane" [ngClass]="navbar[1].active ? 'active' : '' " ><app-contabilidad></app-contabilidad></div>
         <div class="tab-pane" [ngClass]="navbar[2].active ? 'active' : '' " ><app-tax></app-tax></div>
         <div class="tab-pane" [ngClass]="navbar[3].active ? 'active' : '' " >

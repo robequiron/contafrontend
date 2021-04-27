@@ -11,6 +11,7 @@ import { NotfoundComponent } from '../tables/notfound.component';
 
 import { ConfigComponent } from './config.component';
 import { ContabilidadComponent } from './contabilidad.component';
+import { GeneralComponent } from './general/general.component';
 import { TaxComponent } from './tax/tax.component';
 import { TaxformComponent } from './tax/taxform.component';
 import { TaxporformComponent } from './tax/taxporform.component';
@@ -24,7 +25,7 @@ describe('ConfigComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ ConfigComponent,ContabilidadComponent,TaxComponent,TaxformComponent,
-      ViasComponent,ViaComponent, TaxporformComponent,NotfoundComponent,LoadTableComponent
+      ViasComponent,ViaComponent, TaxporformComponent,NotfoundComponent,LoadTableComponent,GeneralComponent
       ],
       imports: [FormsModule,NgxPaginationModule,NgSelect2Module,RouterTestingModule,PipesModule,HttpClientTestingModule],
       providers:[RoundceilPipe]
