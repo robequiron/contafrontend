@@ -43,7 +43,7 @@
 
 <ol class="breadcrumb">
   <li>Classes</li>
-  <li>Tax</li>
+  <li>ViaTable</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -61,14 +61,14 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/models/tax.model.ts</code>
+            <code>src/app/models/tables/vias.model.ts</code>
         </p>
 
             <p class="comment">
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>Model tax </p>
+                <p>Table model way</p>
 
             </p>
 
@@ -89,21 +89,19 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
-                                    <span class="modifier">Optional</span>
-                                <a href="#_id">_id</a>
+                                <a href="#count">count</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#name">name</a>
+                                <a href="#ok">ok</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                    <span class="modifier">Optional</span>
-                                <a href="#porcentaje">porcentaje</a>
+                                <a href="#orderName">orderName</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#taxnumber">taxnumber</a>
+                                <a href="#vias">vias</a>
                             </li>
                         </ul>
                     </td>
@@ -124,19 +122,17 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(taxnumber: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">Number</a>, name: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a>, _id?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a>, porcentaje?: <a href="../classes/Porcentaje.html">Porcentaje</a>)</code>
+<code>constructor(count: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, vias: <a href="../classes/Via.html">Via</a>, ok: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>, orderName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="5" class="link-to-prism">src/app/models/tax.model.ts:5</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="5" class="link-to-prism">src/app/models/tables/vias.model.ts:5</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
-                            <div class="io-description"><p>Constructor</p>
-</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -150,10 +146,10 @@
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                        <td>taxnumber</td>
+                                                        <td>count</td>
                                                   
                                                         <td>
-                                                                        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank" >Number</a></code>
+                                                                        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -161,15 +157,15 @@
                                                     </td>
                                                     
                                                         <td>
-                                                                <code><p>Number identifier tax</p>
+                                                                <code><p>Total number of records</p>
 </code>
                                                         </td>
                                                 </tr>
                                                 <tr>
-                                                        <td>name</td>
+                                                        <td>vias</td>
                                                   
                                                         <td>
-                                                                        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank" >String</a></code>
+                                                                        <code><a href="../classes/Via.html" target="_self" >Via</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -177,39 +173,39 @@
                                                     </td>
                                                     
                                                         <td>
-                                                                <code><p>Name tax</p>
+                                                                <code><p>Model ways</p>
 </code>
                                                         </td>
                                                 </tr>
                                                 <tr>
-                                                        <td>_id</td>
+                                                        <td>ok</td>
                                                   
                                                         <td>
-                                                                        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank" >String</a></code>
+                                                                        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
                                                         </td>
                                                   
                                                     <td>
-                                                            Yes
+                                                            No
                                                     </td>
                                                     
                                                         <td>
-                                                                <code><p>Identifier tax</p>
+                                                                <code><p>State</p>
 </code>
                                                         </td>
                                                 </tr>
                                                 <tr>
-                                                        <td>porcentaje</td>
+                                                        <td>orderName</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../classes/Porcentaje.html" target="_self" >Porcentaje</a></code>
+                                                                        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
                                                         </td>
                                                   
                                                     <td>
-                                                            Yes
+                                                            No
                                                     </td>
                                                     
                                                         <td>
-                                                                <code><p>Array list percentage</p>
+                                                                <code><p>Order default</p>
 </code>
                                                         </td>
                                                 </tr>
@@ -231,31 +227,30 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="_id"></a>
+                        <a name="count"></a>
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
-                                <span class="modifier">Optional</span>
-                            _id</b>
-                            <a href="#_id"><span class="icon ion-ios-link"></span></a>
+                            count</b>
+                            <a href="#count"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank" >String</a></code>
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/models/tax.model.ts:17</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/models/tables/vias.model.ts:14</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
-                        <div class="io-description">Identifier tax</div>
+                        <div class="io-description">Total number of records</div>
                     </td>
                 </tr>
 
@@ -265,30 +260,30 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="name"></a>
+                        <a name="ok"></a>
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
-                            name</b>
-                            <a href="#name"><span class="icon ion-ios-link"></span></a>
+                            ok</b>
+                            <a href="#ok"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank" >String</a></code>
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/models/tax.model.ts:16</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/models/tables/vias.model.ts:16</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
-                        <div class="io-description">Name tax</div>
+                        <div class="io-description">State</div>
                     </td>
                 </tr>
 
@@ -298,31 +293,35 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="porcentaje"></a>
+                        <a name="orderName"></a>
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
-                                <span class="modifier">Optional</span>
-                            porcentaje</b>
-                            <a href="#porcentaje"><span class="icon ion-ios-link"></span></a>
+                            orderName</b>
+                            <a href="#orderName"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="../classes/Porcentaje.html" target="_self" >Porcentaje</a></code>
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>0</code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/models/tax.model.ts:18</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/models/tables/vias.model.ts:17</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
-                        <div class="io-description">Array list percentage</div>
+                        <div class="io-description">Order default</div>
                     </td>
                 </tr>
 
@@ -332,30 +331,30 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="taxnumber"></a>
+                        <a name="vias"></a>
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
-                            taxnumber</b>
-                            <a href="#taxnumber"><span class="icon ion-ios-link"></span></a>
+                            vias</b>
+                            <a href="#vias"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank" >Number</a></code>
+                            <i>Type : </i>        <code><a href="../classes/Via.html" target="_self" >Via</a></code>
 
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/models/tax.model.ts:15</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/models/tables/vias.model.ts:15</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
-                        <div class="io-description">Number identifier tax</div>
+                        <div class="io-description">Model ways</div>
                     </td>
                 </tr>
 
@@ -373,27 +372,25 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Porcentaje } from &#x27;./porcentaje.model&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Via } from &#x27;../via.model&#x27;;
 /**
- * Model tax 
+ * Table model way
  */
-export class Tax {
+ export class  ViaTable {
     /**
-     * Constructor
      * 
-     * @param taxnumber Number identifier tax
-     * @param name Name tax
-     * @param _id Identifier tax
-     * @param porcentaje Array list percentage
+     * @param count Total number of records
+     * @param vias Model ways
+     * @param ok State
+     * @param orderName Order default
      */
     constructor(
-        public taxnumber:Number,
-        public name:String,
-        public _id?:String,
-        public porcentaje?:Porcentaje,
-    ){}
-}
-
+        public count: number,
+        public vias: Via,
+        public ok:boolean,
+        public orderName: number &#x3D; 0,
+     ) {}
+ }
 </code></pre>
     </div>
 </div>
@@ -422,7 +419,7 @@ export class Tax {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
-            var COMPODOC_CURRENT_PAGE_URL = 'Tax.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'ViaTable.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

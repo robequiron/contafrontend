@@ -114,6 +114,10 @@
                                     <span class="modifier">Public</span>
                                 <a href="#getLimitTable">getLimitTable</a>
                             </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getVias">getVias</a>
+                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -255,6 +259,49 @@
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getVias"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            getVias
+                        </b>
+                        <a href="#getVias"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getVias()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="61"
+                            class="link-to-prism">src/app/services/config/config.service.ts:61</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>insert data by default of way</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
                     </div>
                 </td>
@@ -412,9 +459,19 @@ export class ConfigService {
    */
   public getGrupos(){
     let token &#x3D; localStorage.getItem(&#x27;token&#x27;);
-    let url &#x3D; URL_SERVICIOS + &#x60;/cBalance/grupos?token&#x3D;${token}&#x60;
+    let url &#x3D; URL_SERVICIOS + &#x60;/cBalance/grupos?token&#x3D;${token}&#x60;;
     return this.http.get(url);
   }
+
+  /**
+   * insert data by default of way
+   */
+  public getVias(){
+    let token &#x3D; localStorage.getItem(&#x27;token&#x27;);
+    let url &#x3D; URL_SERVICIOS + &#x60;/cgeneral/vias?token&#x3D;${token}&#x60;;
+    return this.http.get(url);
+  }
+
 
 }
 </code></pre>

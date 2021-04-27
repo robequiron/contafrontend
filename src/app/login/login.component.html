@@ -11,8 +11,8 @@
         <!-- Login Title -->
         <div class="block-title">
             <div class="block-options pull-right">
-                <a href="page_ready_reminder.html" class="btn btn-effect-ripple btn-primary" data-toggle="tooltip" data-placement="left" title="¿Olvidó su contraseña?"><i class="fa fa-exclamation-circle"></i></a>
-                <a href="page_ready_register.html" class="btn btn-effect-ripple btn-primary" data-toggle="tooltip" data-placement="left" title="Crear una nueva cuenta"><i class="fa fa-plus"></i></a>
+                <a  class="btn btn-effect-ripple btn-primary" data-toggle="tooltip" data-placement="left" title="¿Olvidó su contraseña?"><i class="fa fa-exclamation-circle"></i></a>
+                <a  class="btn btn-effect-ripple btn-primary" data-toggle="tooltip" data-placement="left" title="Crear una nueva cuenta"><i class="fa fa-plus"></i></a>
             </div>
             <h2>Logearse</h2>
         </div>
@@ -27,8 +27,15 @@
             </div>
             <div class="form-group">
                 <div class="col-xs-12">
-                    <input  ngModel name="password" type="password"  class="form-control" placeholder="Contraseña" autocomplete="on">
+                    <input  [ngModel]  name="password" type="password"  class="form-control" placeholder="Contraseña" autocomplete="on">
                 </div>
+            </div>
+
+            <div class="alert alert-warning alert-dismissable animation-pullDown" 
+                *ngIf="error">
+                <button type="button" class="close">&times;</button>
+                <h4><strong>Success</strong></h4>
+                <p>El usuario ó la contraseña son incorrectas</p>
             </div>
 
 
@@ -51,7 +58,7 @@
 
     <!-- Footer -->
     <footer class="text-muted text-center animation-pullUp">
-        <small><span id="year-copy"></span> &copy; <a href="http://goo.gl/RcsdAh" target="_blank">AppUI 2.1</a></small>
+        <small><span id="year-copy"></span> &copy; <a href="http://goo.gl/RcsdAh" target="_blank">Roberto Guerra - IRA</a></small>
     </footer>
     <!-- END Footer -->
 </div>

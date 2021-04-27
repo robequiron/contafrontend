@@ -28,7 +28,7 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content interceptor">
+               <div class="content injectable">
                    <div class="content-data">
 
 
@@ -37,10 +37,9 @@
 
 
 
-
 <ol class="breadcrumb">
-  <li>Interceptors</li>
-  <li>InterceptorService</li>
+  <li>Injectables</li>
+  <li>ViasService</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -58,8 +57,16 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/services/interceptors/interceptor.service.ts</code>
+            <code>src/app/services/generales/vias.service.ts</code>
         </p>
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Services for request with server - Ways</p>
+
+            </p>
 
 
 
@@ -77,11 +84,8 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#handleError">handleError</a>
-                            </li>
-                            <li>
-                                <a href="#intercept">intercept</a>
+                                    <span class="modifier">Public</span>
+                                <a href="#getVias">getVias</a>
                             </li>
                         </ul>
                     </td>
@@ -101,15 +105,52 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor()</code>
+<code>constructor(http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/services/interceptors/interceptor.service.ts:10</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/services/generales/vias.service.ts:12</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Constructor way services</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>http</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><p>Service HttpClient</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -123,28 +164,28 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="handleError"></a>
+                    <a name="getVias"></a>
                     <span class="name">
                         <b>
-                            <span class="modifier">Private</span>
-                            handleError
+                            <span class="modifier">Public</span>
+                            getVias
                         </b>
-                        <a href="#handleError"><span class="icon ion-ios-link"></span></a>
+                        <a href="#getVias"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>handleError(error: <a href="https://angular.io/api/common/http/HttpErrorResponse" target="_blank">HttpErrorResponse</a>)</code>
+                    <code>getVias(nameSearch: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, orderName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="26"
-                            class="link-to-prism">src/app/services/interceptors/interceptor.service.ts:26</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="21"
+                            class="link-to-prism">src/app/services/generales/vias.service.ts:21</a></div>
                 </td>
             </tr>
 
@@ -164,9 +205,21 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>error</td>
+                                    <td>nameSearch</td>
                                     <td>
-                                                <code><a href="https://angular.io/api/common/http/HttpErrorResponse" target="_blank" >HttpErrorResponse</a></code>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>orderName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
                                     </td>
 
                                     <td>
@@ -191,88 +244,6 @@
             </tr>
         </tbody>
     </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="intercept"></a>
-                    <span class="name">
-                        <b>
-                            intercept
-                        </b>
-                        <a href="#intercept"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>intercept(req: HttpRequest<any>, next: <a href="https://angular.io/api/common/http/HttpHandler" target="_blank">HttpHandler</a>)</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="13"
-                            class="link-to-prism">src/app/services/interceptors/interceptor.service.ts:13</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>req</td>
-                                    <td>
-                                            <code>HttpRequest&lt;any&gt;</code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-                                    <td>next</td>
-                                    <td>
-                                                <code><a href="https://angular.io/api/common/http/HttpHandler" target="_blank" >HttpHandler</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>    <code>Observable&lt;HttpEvent&lt;any&gt;&gt;</code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
 </section>
 
     </div>
@@ -280,48 +251,37 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
-import { HttpInterceptor, HttpRequest,HttpHandler,HttpEvent, HttpErrorResponse } from &#x27;@angular/common/http&#x27;;
-import {Observable, throwError} from &#x27;rxjs&#x27;
-import Swal from &#x27;sweetalert2&#x27;;
-import { catchError } from &#x27;rxjs/operators&#x27;;
+import { HttpRequest, HttpClient } from &#x27;@angular/common/http&#x27;;
+import { URL_SERVICIOS } from &#x27;src/app/config/config&#x27;;
+
+/**
+ * Services for request with server - Ways
+ */
 
 @Injectable({
   providedIn: &#x27;root&#x27;
 })
-export class InterceptorService implements HttpInterceptor {
-
-  constructor() { }
-  intercept(req: HttpRequest&lt;any&gt;,next: HttpHandler): Observable&lt;HttpEvent&lt;any&gt;&gt; {
-    
-    return next.handle(req).pipe(
-     
-      catchError(this.handleError)
-    );
-    
-  }
+export class ViasService {
+  /**
+   * Constructor way services
+   * 
+   * @param http Service HttpClient
+   */
+  constructor(private http:HttpClient) { }
 
 
-  /*&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;
-  /	Handle error											   
-  /&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;*/
-  private handleError (error: HttpErrorResponse) {
-     if (error.status&#x3D;&#x3D;401) {
-      Swal.fire({
-        icon: &#x27;warning&#x27;,
-        title: &#x27;Error 401&#x27;,
-        text: &#x27;Error de autentificación&#x27;,
-        showConfirmButton: false,
-        timer: 2500
-      })
-     } 
-     
-    return throwError(error);
+  public getVias(nameSearch: string, orderName: number) {
+    let token &#x3D; localStorage.getItem(&#x27;token&#x27;);
+    let url &#x3D; URL_SERVICIOS + &#x60;/via?name&#x3D;${nameSearch}&amp;orderName&#x3D;${orderName}&amp;token&#x3D;${token}&#x60;;
+    return this.http.get(url);
   }
 
 }
 </code></pre>
     </div>
+
 </div>
+
 
 
 
@@ -349,8 +309,8 @@ export class InterceptorService implements HttpInterceptor {
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'interceptor';
-            var COMPODOC_CURRENT_PAGE_URL = 'InterceptorService.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'ViasService.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

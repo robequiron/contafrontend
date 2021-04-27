@@ -3,7 +3,6 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Usuario } from 'src/app/models/usuario.model';
 import { URL_SERVICIOS } from 'src/app/config/config';
 import { map, catchError } from 'rxjs/operators'
-import { throwError } from 'rxjs';
 
 
 @Injectable({
@@ -56,24 +55,24 @@ export class UsuarioService {
   /*================================================
   /	Login user											   
   /================================================*/
-  public login(usuario:Usuario, recordar: boolean = false) {
+  public login(usuario:Usuario, recordar: boolean) {
     if (recordar) {
       localStorage.setItem('email', usuario.email.toString());
     } else {
       localStorage.removeItem('email');
     }
     
-    let url = URL_SERVICIOS + '/login';
-    return this.http.post(url,usuario).pipe(
+    
+    return this.http.post( URL_SERVICIOS + '/login',usuario).pipe(
       map( (resp:any)=>{
-
         localStorage.setItem('id', resp.id);
         localStorage.setItem('token', resp.token);
         localStorage.setItem('usuario', JSON.stringify(resp.usuario));
         return true;
-      })
+      }),
     )
   }
+
 
 
 

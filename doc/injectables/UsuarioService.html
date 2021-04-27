@@ -136,7 +136,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/services/usuario/usuario.service.ts:15</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/services/usuario/usuario.service.ts:14</a></div>
                             </td>
                         </tr>
 
@@ -203,8 +203,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="46"
-                            class="link-to-prism">src/app/services/usuario/usuario.service.ts:46</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="45"
+                            class="link-to-prism">src/app/services/usuario/usuario.service.ts:45</a></div>
                 </td>
             </tr>
 
@@ -244,8 +244,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="21"
-                            class="link-to-prism">src/app/services/usuario/usuario.service.ts:21</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="20"
+                            class="link-to-prism">src/app/services/usuario/usuario.service.ts:20</a></div>
                 </td>
             </tr>
 
@@ -285,8 +285,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="28"
-                            class="link-to-prism">src/app/services/usuario/usuario.service.ts:28</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="27"
+                            class="link-to-prism">src/app/services/usuario/usuario.service.ts:27</a></div>
                 </td>
             </tr>
 
@@ -326,8 +326,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="59"
-                            class="link-to-prism">src/app/services/usuario/usuario.service.ts:59</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="58"
+                            class="link-to-prism">src/app/services/usuario/usuario.service.ts:58</a></div>
                 </td>
             </tr>
 
@@ -419,7 +419,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/services/usuario/usuario.service.ts:17</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/services/usuario/usuario.service.ts:16</a></div>
                             </td>
                         </tr>
 
@@ -446,7 +446,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/services/usuario/usuario.service.ts:15</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/services/usuario/usuario.service.ts:14</a></div>
                             </td>
                         </tr>
 
@@ -473,7 +473,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/services/usuario/usuario.service.ts:14</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/services/usuario/usuario.service.ts:13</a></div>
                             </td>
                         </tr>
 
@@ -491,7 +491,6 @@ import { HttpClient, HttpErrorResponse } from &#x27;@angular/common/http&#x27;;
 import { Usuario } from &#x27;src/app/models/usuario.model&#x27;;
 import { URL_SERVICIOS } from &#x27;src/app/config/config&#x27;;
 import { map, catchError } from &#x27;rxjs/operators&#x27;
-import { throwError } from &#x27;rxjs&#x27;;
 
 
 @Injectable({
@@ -551,15 +550,14 @@ export class UsuarioService {
       localStorage.removeItem(&#x27;email&#x27;);
     }
     
-    let url &#x3D; URL_SERVICIOS + &#x27;/login&#x27;;
-    return this.http.post(url,usuario).pipe(
+    
+    return this.http.post( URL_SERVICIOS + &#x27;/login&#x27;,usuario).pipe(
       map( (resp:any)&#x3D;&gt;{
-
         localStorage.setItem(&#x27;id&#x27;, resp.id);
         localStorage.setItem(&#x27;token&#x27;, resp.token);
         localStorage.setItem(&#x27;usuario&#x27;, JSON.stringify(resp.usuario));
         return true;
-      })
+      }),
     )
   }
 

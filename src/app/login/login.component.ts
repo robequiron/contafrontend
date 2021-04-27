@@ -1,10 +1,8 @@
 import { Component, OnInit, } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-
 import { Usuario } from '../models/usuario.model';
 import { UsuarioService } from '../services/services.index';
-
 import Swal from 'sweetalert2';
 
 /**
@@ -28,6 +26,13 @@ export class LoginComponent implements OnInit {
   public email: string;
 
   /**
+   * Error form
+   */
+  public error:boolean=false;
+
+  public errorIn:boolean=false;
+
+  /**
    * Constructor
    * 
    * @param _usuarioService Inyect UsuarioService
@@ -45,6 +50,8 @@ export class LoginComponent implements OnInit {
     this.email = localStorage.getItem('email') || '';
     if(this.email.length > 2) {
       this.recuerdame = true;
+    } else {
+      this.recuerdame = false;
     }
   }
 
@@ -66,6 +73,8 @@ export class LoginComponent implements OnInit {
     /================================================*/
     let usuario = new Usuario(null, forma.value.email, forma.value.password);
 
+    
+    
     /*================================================
     /	We subcribe to the login services											   
     /================================================*/
@@ -76,12 +85,11 @@ export class LoginComponent implements OnInit {
           this.router.navigate(['/dashboard']);
         } 
     },
-      () => {
-        Swal.fire({
-        icon:'warning',
-        title:'Error',
-        text: "Usuario o/y password incorrecto",
-        })
+      (e) => {
+        this.error = true;
+        setTimeout(() => {
+          this.error = false;
+        }, 2000);
       }
     )
   }
