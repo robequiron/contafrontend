@@ -51,9 +51,11 @@ export class ConfigComponent implements OnInit {
   public setnavbar(i:number) {
     try {
       this.navbar.forEach(navbar => {navbar.active=false;});
-      this.navbar[i].active=true;
+      console.log(i)
+      console.log(this.navbar)
+      //this.navbar[i].active=true;
     } catch (error) {
-      console.warn("Error setnavbar in config.component chech with the administrator ")
+      console.warn("Error setnavbar in config.component chech with the administrator ", error)
     }
   }
 
