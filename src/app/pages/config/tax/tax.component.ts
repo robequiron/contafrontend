@@ -3,7 +3,6 @@ import { TaxesService } from 'src/app/services/services.index';
 import { Tax } from 'src/app/models/tax.model';
 import { Porcentaje, _iPorcentaje} from 'src/app/models/porcentaje.model';
 import { TaxTable } from 'src/app/models/tables/taxes.model';
-import { from } from 'rxjs';
 import Swal from 'sweetalert2';
 /**
  * Component show taxes
@@ -90,7 +89,8 @@ export class TaxComponent implements OnInit {
   public visibleTaxPorForm: boolean = false;
 
   /**
-   * 
+   * Contructor
+   * @constructor
    * @param _taxService 
    */
 
@@ -145,7 +145,7 @@ export class TaxComponent implements OnInit {
    */
   public newTax() {
     this.taxEdit._id="";
-    this.taxEdit.taxnumber=null;
+    this.taxEdit.code=null;
     this.taxEdit.name = "";
     this.visibleTaxForm = true;
   }
@@ -154,7 +154,7 @@ export class TaxComponent implements OnInit {
    * New Tax percentage
    */
   public newTaxPor() {
-    if (this.taxSelect.taxnumber===null) {
+    if (this.taxSelect.code===null) {
       Swal.fire({
         title:'Debe seleccionar un impuesto',
         icon: 'warning',
@@ -204,7 +204,7 @@ export class TaxComponent implements OnInit {
 
   public selectTr(tax:Tax){
     this.taxSelect = tax;
-    this.porcentajes = tax.porcentajes;
+    this.porcentajes = tax.percentages;
   }
 
   /**

@@ -767,7 +767,7 @@ export class TaxporformComponent implements OnInit {
     console.log(f);
     
     this.porEdit.name &#x3D; f.form.value.name;
-    this.porEdit.porcentaje &#x3D; f.form.value.porcentaje;
+    this.porEdit.percentage &#x3D; f.form.value.porcentaje;
     this.tax._id &#x3D; f.form.controls.tax_id.value;
     
 
@@ -778,7 +778,7 @@ export class TaxporformComponent implements OnInit {
         
         if (resp.ok) {
           if (resp.create){
-            return resp.tax.porcentaje[&#x27;0&#x27;];
+            return resp.tax.percentages[&#x27;0&#x27;];
           } else {
             
           } 
@@ -860,8 +860,10 @@ export class TaxporformComponent implements OnInit {
         <pre class="line-numbers"><code class="language-html">&lt;form  class&#x3D;&quot;form-horizontal form-bordered&quot; #f&#x3D;&quot;ngForm&quot; (ngSubmit)&#x3D;&quot;grabar(f)&quot;&gt;
     &lt;div class&#x3D;&quot;form-group&quot; &gt;
         &lt;label class&#x3D;&quot;col-md-3 control-label&quot; for&#x3D;&quot;id&quot;&gt;Id&lt;/label&gt;
-        &lt;div class&#x3D;&quot;col-md-5&quot;&gt;
+        &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
             &lt;input type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;tax_id&quot; name&#x3D;&quot;tax_id&quot; class&#x3D;&quot;form-control&quot; disabled&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
             &lt;input type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;porEdit._id&quot; name&#x3D;&quot;_id&quot; class&#x3D;&quot;form-control&quot; disabled&gt;
         &lt;/div&gt;
     &lt;/div&gt;   
@@ -881,12 +883,7 @@ export class TaxporformComponent implements OnInit {
         &lt;/div&gt;
     &lt;/div&gt;
 
-    &lt;div class&#x3D;&quot;col-xs-12 col-12 col-md-4 form-group&quot;&gt;
-        &lt;input type&#x3D;&quot;text&quot;
-               placeholder&#x3D;&quot;Daterangepicker&quot;
-               class&#x3D;&quot;form-control&quot;
-               bsDaterangepicker&gt;
-      &lt;/div&gt;
+  
 
   
 
@@ -958,8 +955,8 @@ export class TaxporformComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><form  class="form-horizontal form-bordered" #f="ngForm" (ngSubmit)="grabar(f)">    <div class="form-group" >        <label class="col-md-3 control-label" for="id">Id</label>        <div class="col-md-5">            <input type="text" [(ngModel)]="tax_id" name="tax_id" class="form-control" disabled>            <input type="text" [(ngModel)]="porEdit._id" name="_id" class="form-control" disabled>        </div>    </div>       <div class="form-group" [ngClass]="eForm.eName ? \'has-error\' : \'\'">        <label class="col-md-3 control-label" for="name">Nombre del impuesto</label>        <div class="col-md-9">            <input             type="text"            name="name"             required            class="form-control"            (focusout)=onFocusOut(f.form.controls)            (keydown.esc)="cancel()"            [(ngModel)]="porEdit.name"            >            <span class="help-block" *ngIf="eForm.eName">Es obligatorio el nombre del imuesto</span>        </div>    </div>    <div class="col-xs-12 col-12 col-md-4 form-group">        <input type="text"               placeholder="Daterangepicker"               class="form-control"               bsDaterangepicker>      </div>      <div class="form-group" [ngClass]="eForm.ePorcentaje ? \'has-error\' : \'\'">        <label class="col-md-3 control-label" for="porcentaje">Porcentaje</label>        <div class="col-md-3">            <input             type="number"              name="porcentaje"             max="9"            required            class="form-control"            (focusout)=onFocusOut(f.form.controls)            (keydown.esc)="cancel()"            [(ngModel)]="porEdit.porcentaje"            >            <span class="help-block" *ngIf="eForm.ePorcentaje">Es obligatorio un número de impuesto. Entre 1 y 9</span>            <span class="help-block" *ngIf="eForm.ePorcentaje">El identificador ya existe</span>        </div>    </div>        <div class="form-group form-actions">        <div class="col-md-9 col-md-offset-3">            <button             class="btn btn-effect-ripple btn-primary" style="overflow: hidden; position: relative;"            [disabled]="f.form.invalid"            (keydown.esc)="cancel()">            Grabar            </button>            <button             class="btn btn-effect-ripple btn-danger" style="overflow: hidden; position: relative;"            (click)="cancel()"            type="reset">            Cancelar            </button>        </div>    </div></form></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ColorthemeComponent', 'selector': 'app-colortheme'},{'name': 'ConfigComponent', 'selector': 'app-config'},{'name': 'ContabilidadComponent', 'selector': 'app-contabilidad'},{'name': 'CuentaComponent', 'selector': 'app-cuenta'},{'name': 'CuentasComponent', 'selector': 'app-cuentas'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'GrupoComponent', 'selector': 'app-grupo'},{'name': 'GruposComponent', 'selector': 'app-grupos'},{'name': 'LoadTableComponent', 'selector': 'app-load-table'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NotfoundComponent', 'selector': 'app-notfound'},{'name': 'PagesComponent', 'selector': 'app-pages'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'SidebarfooterComponent', 'selector': 'app-sidebarfooter'},{'name': 'SubcuentaComponent', 'selector': 'app-subcuenta'},{'name': 'SubcuentasComponent', 'selector': 'app-subcuentas'},{'name': 'SubgrupoComponent', 'selector': 'app-subgrupo'},{'name': 'SubgruposComponent', 'selector': 'app-subgrupos'},{'name': 'TaxComponent', 'selector': 'app-tax'},{'name': 'TaxformComponent', 'selector': 'app-taxform'},{'name': 'TaxporformComponent', 'selector': 'app-taxporform'},{'name': 'UserComponent', 'selector': 'app-user'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'ViaComponent', 'selector': 'app-via'},{'name': 'ViasComponent', 'selector': 'app-vias'}];
+        var COMPONENT_TEMPLATE = '<div><form  class="form-horizontal form-bordered" #f="ngForm" (ngSubmit)="grabar(f)">    <div class="form-group" >        <label class="col-md-3 control-label" for="id">Id</label>        <div class="col-md-4">            <input type="text" [(ngModel)]="tax_id" name="tax_id" class="form-control" disabled>        </div>        <div class="col-md-4">            <input type="text" [(ngModel)]="porEdit._id" name="_id" class="form-control" disabled>        </div>    </div>       <div class="form-group" [ngClass]="eForm.eName ? \'has-error\' : \'\'">        <label class="col-md-3 control-label" for="name">Nombre del impuesto</label>        <div class="col-md-9">            <input             type="text"            name="name"             required            class="form-control"            (focusout)=onFocusOut(f.form.controls)            (keydown.esc)="cancel()"            [(ngModel)]="porEdit.name"            >            <span class="help-block" *ngIf="eForm.eName">Es obligatorio el nombre del imuesto</span>        </div>    </div>        <div class="form-group" [ngClass]="eForm.ePorcentaje ? \'has-error\' : \'\'">        <label class="col-md-3 control-label" for="porcentaje">Porcentaje</label>        <div class="col-md-3">            <input             type="number"              name="porcentaje"             max="9"            required            class="form-control"            (focusout)=onFocusOut(f.form.controls)            (keydown.esc)="cancel()"            [(ngModel)]="porEdit.porcentaje"            >            <span class="help-block" *ngIf="eForm.ePorcentaje">Es obligatorio un número de impuesto. Entre 1 y 9</span>            <span class="help-block" *ngIf="eForm.ePorcentaje">El identificador ya existe</span>        </div>    </div>        <div class="form-group form-actions">        <div class="col-md-9 col-md-offset-3">            <button             class="btn btn-effect-ripple btn-primary" style="overflow: hidden; position: relative;"            [disabled]="f.form.invalid"            (keydown.esc)="cancel()">            Grabar            </button>            <button             class="btn btn-effect-ripple btn-danger" style="overflow: hidden; position: relative;"            (click)="cancel()"            type="reset">            Cancelar            </button>        </div>    </div></form></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ColorthemeComponent', 'selector': 'app-colortheme'},{'name': 'ConfigComponent', 'selector': 'app-config'},{'name': 'ContabilidadComponent', 'selector': 'app-contabilidad'},{'name': 'CuentaComponent', 'selector': 'app-cuenta'},{'name': 'CuentasComponent', 'selector': 'app-cuentas'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'GeneralComponent', 'selector': 'app-general'},{'name': 'GrupoComponent', 'selector': 'app-grupo'},{'name': 'GruposComponent', 'selector': 'app-grupos'},{'name': 'LoadTableComponent', 'selector': 'app-load-table'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NotfoundComponent', 'selector': 'app-notfound'},{'name': 'PagesComponent', 'selector': 'app-pages'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'SidebarfooterComponent', 'selector': 'app-sidebarfooter'},{'name': 'SubcuentaComponent', 'selector': 'app-subcuenta'},{'name': 'SubcuentasComponent', 'selector': 'app-subcuentas'},{'name': 'SubgrupoComponent', 'selector': 'app-subgrupo'},{'name': 'SubgruposComponent', 'selector': 'app-subgrupos'},{'name': 'TaxComponent', 'selector': 'app-tax'},{'name': 'TaxformComponent', 'selector': 'app-taxform'},{'name': 'TaxporformComponent', 'selector': 'app-taxporform'},{'name': 'UserComponent', 'selector': 'app-user'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'ViaComponent', 'selector': 'app-via'},{'name': 'ViasComponent', 'selector': 'app-vias'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'TaxporformComponent'};
 </script>

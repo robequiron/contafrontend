@@ -6,17 +6,17 @@ export class Porcentaje {
      * Constructor
      * 
      * @param name Name of the percentage applied
-     * @param porcentaje Percentage
+     * @param percentage Percentage
      */
     constructor(
         public name:String,
-        public porcentaje: Number,
+        public percentage: Number,
         public _id?:String
     ){}
 
     public setPorcentaje(name:String, porcentaje:Number, _id:String) {
         this.name = name;
-        this.porcentaje = porcentaje;
+        this.percentage = porcentaje;
         this._id = _id;
     }
 }

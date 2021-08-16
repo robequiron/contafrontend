@@ -244,8 +244,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="65"
-                            class="link-to-prism">src/app/pages/config/config.component.ts:65</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="69"
+                            class="link-to-prism">src/app/pages/config/config.component.ts:69</a></div>
                 </td>
             </tr>
 
@@ -395,8 +395,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="61"
-                            class="link-to-prism">src/app/pages/config/config.component.ts:61</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="65"
+                            class="link-to-prism">src/app/pages/config/config.component.ts:65</a></div>
                 </td>
             </tr>
 
@@ -467,8 +467,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="56"
-                            class="link-to-prism">src/app/pages/config/config.component.ts:56</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="60"
+                            class="link-to-prism">src/app/pages/config/config.component.ts:60</a></div>
                 </td>
             </tr>
 
@@ -512,10 +512,10 @@
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>[
-    {title:&quot;Datos empresa&quot;, active:false},
+    {title:&quot;Datos empresa&quot;, active:true},
     {title:&quot;Contabilidad&quot; , active:false},
     {title:&quot;Impuestos&quot;, active:false},
-    {title:&quot;Parámetros generales&quot;, active:true,}
+    {title:&quot;Parámetros generales&quot;, active:false,}
   ]</code>
                         </td>
                     </tr>
@@ -663,10 +663,10 @@ export class ConfigComponent implements OnInit {
    * Navbar
    */
   public navbar &#x3D; [
-    {title:&quot;Datos empresa&quot;, active:false},
+    {title:&quot;Datos empresa&quot;, active:true},
     {title:&quot;Contabilidad&quot; , active:false},
     {title:&quot;Impuestos&quot;, active:false},
-    {title:&quot;Parámetros generales&quot;, active:true,}
+    {title:&quot;Parámetros generales&quot;, active:false,}
   ]
 
  public param&#x3D; [&quot;Vías&quot;]; 
@@ -687,7 +687,7 @@ export class ConfigComponent implements OnInit {
    * @ignore
    */
   ngOnInit() {
- 
+    console.clear();
   }
 
  /**
@@ -696,8 +696,12 @@ export class ConfigComponent implements OnInit {
  * @param i: Identify tag
  */ 
   public setnavbar(i:number) {
-    this.navbar.forEach(navbar &#x3D;&gt; {navbar.active&#x3D;false;});
-    this.navbar[i].active&#x3D;true;
+    try {
+      this.navbar.forEach(navbar &#x3D;&gt; {navbar.active&#x3D;false;});
+      this.navbar[i].active&#x3D;true;
+    } catch (error) {
+      console.warn(&quot;Error setnavbar in config.component chech with the administrator &quot;, error)
+    }
   }
 
   public visform() {
@@ -735,7 +739,11 @@ export class ConfigComponent implements OnInit {
     &lt;!-- Tabs Content --&gt;
     &lt;div class&#x3D;&quot;tab-content&quot;&gt;
         
-        &lt;div class&#x3D;&quot;tab-pane&quot; [ngClass]&#x3D;&quot;navbar[0].active ? &#x27;active&#x27; : &#x27;&#x27; &quot; &gt;Block Tabs..&lt;/div&gt;
+        &lt;div class&#x3D;&quot;tab-pane&quot; 
+            
+        [ngClass]&#x3D;&quot;navbar[0].active ? &#x27;active&#x27; : &#x27;&#x27; &quot; &gt;
+            &lt;app-general&gt; &lt;/app-general&gt;
+        &lt;/div&gt;
         &lt;div class&#x3D;&quot;tab-pane&quot; [ngClass]&#x3D;&quot;navbar[1].active ? &#x27;active&#x27; : &#x27;&#x27; &quot; &gt;&lt;app-contabilidad&gt;&lt;/app-contabilidad&gt;&lt;/div&gt;
         &lt;div class&#x3D;&quot;tab-pane&quot; [ngClass]&#x3D;&quot;navbar[2].active ? &#x27;active&#x27; : &#x27;&#x27; &quot; &gt;&lt;app-tax&gt;&lt;/app-tax&gt;&lt;/div&gt;
         &lt;div class&#x3D;&quot;tab-pane&quot; [ngClass]&#x3D;&quot;navbar[3].active ? &#x27;active&#x27; : &#x27;&#x27; &quot; &gt;
@@ -744,14 +752,14 @@ export class ConfigComponent implements OnInit {
                     &lt;div class&#x3D;&quot;form-group&quot; &gt;
                         &lt;label class&#x3D;&quot;col-md-3 control-label&quot; for&#x3D;&quot;roles&quot;&gt;Tabla de parámetros a visualizar&lt;/label&gt;
                         &lt;div class&#x3D;&quot;col-md-5&quot;&gt;
-                            &lt;ng-select2 [data]&#x3D;&quot;param&quot; name&#x3D;&quot;rol&quot;
+                            &lt;!--&lt;ng-select2 [data]&#x3D;&quot;param&quot; name&#x3D;&quot;rol&quot;
                             
                             [(ngModel)]&#x3D;&quot;visParamGeneral&quot;
                             [placeholder]&#x3D;&quot;&#x27;Parametro&#x27;&quot;
                             (change)&#x3D;&quot;visform()&quot;
                             [width]&#x3D;&quot;100+&#x27;%&#x27;&quot;
                             &gt;
-                            &lt;/ng-select2&gt;
+                            &lt;/ng-select2&gt;--&gt;
                             
                         &lt;/div&gt;
                     &lt;/div&gt;
@@ -806,8 +814,8 @@ export class ConfigComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="block full animated fadeIn">    <!-- Block Tabs Title -->    <div class="block-title">        <ul class="nav nav-tabs" data-toggle="tabs">            <ng-container *ngFor="let nav of navbar; let i=index">                <li [ngClass]="nav.active ? \'active\' : \'\' "><a (click)="setnavbar(i)">{{nav.title}}</a></li>            </ng-container>        </ul>    </div>    <!-- END Block Tabs Title -->    <!-- Tabs Content -->    <div class="tab-content">                <div class="tab-pane" [ngClass]="navbar[0].active ? \'active\' : \'\' " >Block Tabs..</div>        <div class="tab-pane" [ngClass]="navbar[1].active ? \'active\' : \'\' " ><app-contabilidad></app-contabilidad></div>        <div class="tab-pane" [ngClass]="navbar[2].active ? \'active\' : \'\' " ><app-tax></app-tax></div>        <div class="tab-pane" [ngClass]="navbar[3].active ? \'active\' : \'\' " >            <div class="row">                <div class="block-section">                    <div class="form-group" >                        <label class="col-md-3 control-label" for="roles">Tabla de parámetros a visualizar</label>                        <div class="col-md-5">                            <ng-select2 [data]="param" name="rol"                                                        [(ngModel)]="visParamGeneral"                            [placeholder]="\'Parametro\'"                            (change)="visform()"                            [width]="100+\'%\'"                            >                            </ng-select2>                                                    </div>                    </div>                </div>            </div>            <div class="row mt-10">                <div class="col-md-12">                    <app-vias                         *ngIf="visParamGeneral===\'Vías\' && !visForm"                        (resViaForm)="ViaForm($event)"                                            ></app-vias>                    <app-via *ngIf="visParamGeneral===\'Vías\' && visForm">                        (resForm)="closeForm($event)"                    </app-via>                </div>            </div>                                </div>        <div class="tab-pane" id="block-tabs-settings">Settings..</div>    </div>    <!-- END Tabs Content --></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ColorthemeComponent', 'selector': 'app-colortheme'},{'name': 'ConfigComponent', 'selector': 'app-config'},{'name': 'ContabilidadComponent', 'selector': 'app-contabilidad'},{'name': 'CuentaComponent', 'selector': 'app-cuenta'},{'name': 'CuentasComponent', 'selector': 'app-cuentas'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'GrupoComponent', 'selector': 'app-grupo'},{'name': 'GruposComponent', 'selector': 'app-grupos'},{'name': 'LoadTableComponent', 'selector': 'app-load-table'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NotfoundComponent', 'selector': 'app-notfound'},{'name': 'PagesComponent', 'selector': 'app-pages'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'SidebarfooterComponent', 'selector': 'app-sidebarfooter'},{'name': 'SubcuentaComponent', 'selector': 'app-subcuenta'},{'name': 'SubcuentasComponent', 'selector': 'app-subcuentas'},{'name': 'SubgrupoComponent', 'selector': 'app-subgrupo'},{'name': 'SubgruposComponent', 'selector': 'app-subgrupos'},{'name': 'TaxComponent', 'selector': 'app-tax'},{'name': 'TaxformComponent', 'selector': 'app-taxform'},{'name': 'TaxporformComponent', 'selector': 'app-taxporform'},{'name': 'UserComponent', 'selector': 'app-user'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'ViaComponent', 'selector': 'app-via'},{'name': 'ViasComponent', 'selector': 'app-vias'}];
+        var COMPONENT_TEMPLATE = '<div><div class="block full animated fadeIn">    <!-- Block Tabs Title -->    <div class="block-title">        <ul class="nav nav-tabs" data-toggle="tabs">            <ng-container *ngFor="let nav of navbar; let i=index">                <li [ngClass]="nav.active ? \'active\' : \'\' "><a (click)="setnavbar(i)">{{nav.title}}</a></li>            </ng-container>        </ul>    </div>    <!-- END Block Tabs Title -->    <!-- Tabs Content -->    <div class="tab-content">                <div class="tab-pane"                     [ngClass]="navbar[0].active ? \'active\' : \'\' " >            <app-general> </app-general>        </div>        <div class="tab-pane" [ngClass]="navbar[1].active ? \'active\' : \'\' " ><app-contabilidad></app-contabilidad></div>        <div class="tab-pane" [ngClass]="navbar[2].active ? \'active\' : \'\' " ><app-tax></app-tax></div>        <div class="tab-pane" [ngClass]="navbar[3].active ? \'active\' : \'\' " >            <div class="row">                <div class="block-section">                    <div class="form-group" >                        <label class="col-md-3 control-label" for="roles">Tabla de parámetros a visualizar</label>                        <div class="col-md-5">                            <!--<ng-select2 [data]="param" name="rol"                                                        [(ngModel)]="visParamGeneral"                            [placeholder]="\'Parametro\'"                            (change)="visform()"                            [width]="100+\'%\'"                            >                            </ng-select2>-->                                                    </div>                    </div>                </div>            </div>            <div class="row mt-10">                <div class="col-md-12">                    <app-vias                         *ngIf="visParamGeneral===\'Vías\' && !visForm"                        (resViaForm)="ViaForm($event)"                                            ></app-vias>                    <app-via *ngIf="visParamGeneral===\'Vías\' && visForm">                        (resForm)="closeForm($event)"                    </app-via>                </div>            </div>                                </div>        <div class="tab-pane" id="block-tabs-settings">Settings..</div>    </div>    <!-- END Tabs Content --></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ColorthemeComponent', 'selector': 'app-colortheme'},{'name': 'ConfigComponent', 'selector': 'app-config'},{'name': 'ContabilidadComponent', 'selector': 'app-contabilidad'},{'name': 'CuentaComponent', 'selector': 'app-cuenta'},{'name': 'CuentasComponent', 'selector': 'app-cuentas'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'GeneralComponent', 'selector': 'app-general'},{'name': 'GrupoComponent', 'selector': 'app-grupo'},{'name': 'GruposComponent', 'selector': 'app-grupos'},{'name': 'LoadTableComponent', 'selector': 'app-load-table'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NotfoundComponent', 'selector': 'app-notfound'},{'name': 'PagesComponent', 'selector': 'app-pages'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'SidebarfooterComponent', 'selector': 'app-sidebarfooter'},{'name': 'SubcuentaComponent', 'selector': 'app-subcuenta'},{'name': 'SubcuentasComponent', 'selector': 'app-subcuentas'},{'name': 'SubgrupoComponent', 'selector': 'app-subgrupo'},{'name': 'SubgruposComponent', 'selector': 'app-subgrupos'},{'name': 'TaxComponent', 'selector': 'app-tax'},{'name': 'TaxformComponent', 'selector': 'app-taxform'},{'name': 'TaxporformComponent', 'selector': 'app-taxporform'},{'name': 'UserComponent', 'selector': 'app-user'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'ViaComponent', 'selector': 'app-via'},{'name': 'ViasComponent', 'selector': 'app-vias'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ConfigComponent'};
 </script>

@@ -39,6 +39,10 @@ describe('ConfigComponent', () => {
     fixture.detectChanges();
   });
 
+  it ('Set navbar', ()=>{
+    component.setnavbar(1);
+  })
+
   it('should create', () => {
     expect(component).toBeTruthy();
   });

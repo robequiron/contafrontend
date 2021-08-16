@@ -1,21 +1,24 @@
 import { Porcentaje } from './porcentaje.model';
 /**
  * Model tax 
+ * 
+ * Modelo de impuesto
  */
 export class Tax {
     /**
      * Constructor
      * 
-     * @param taxnumber Number identifier tax
+     * @param code Number identifier tax
      * @param name Name tax
      * @param _id Identifier tax
-     * @param porcentajes Array list percentage
+     * @param percentages Array list percentage
      */
     constructor(
-        public taxnumber:Number,
+        public code:Number,
         public name:String,
         public _id?:String,
-        public porcentajes?:Porcentaje,
+        public percentages?:Porcentaje,
     ){}
+    
 }
 

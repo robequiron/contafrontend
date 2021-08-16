@@ -40,7 +40,7 @@ export class ConfigComponent implements OnInit {
    * @ignore
    */
   ngOnInit() {
- 
+    console.clear();
   }
 
  /**
@@ -51,9 +51,7 @@ export class ConfigComponent implements OnInit {
   public setnavbar(i:number) {
     try {
       this.navbar.forEach(navbar => {navbar.active=false;});
-      console.log(i)
-      console.log(this.navbar)
-      //this.navbar[i].active=true;
+      this.navbar[i].active=true;
     } catch (error) {
       console.warn("Error setnavbar in config.component chech with the administrator ", error)
     }

@@ -196,8 +196,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="60"
-                            class="link-to-prism">src/app/services/taxes/taxes.service.ts:60</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="68"
+                            class="link-to-prism">src/app/services/taxes/taxes.service.ts:68</a></div>
                 </td>
             </tr>
 
@@ -323,14 +323,17 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="49"
-                            class="link-to-prism">src/app/services/taxes/taxes.service.ts:49</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="57"
+                            class="link-to-prism">src/app/services/taxes/taxes.service.ts:57</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Create percentage</p>
+<p>Creación porcentajes de impuesto</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -340,6 +343,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -354,6 +358,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Identify tax</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>porcentaje</td>
@@ -366,6 +374,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Percentage</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -515,21 +527,29 @@ export class TaxesService {
       return this.http.post(url,tax);
     }
   }
-
+  /**
+   * Create percentage
+   * 
+   * Creación porcentajes de impuesto
+   * 
+   * @param id Identify tax
+   * @param porcentaje Percentage
+   * @returns 
+   */
   public savePorcentaje(id:String, porcentaje:Porcentaje) {
     let token &#x3D; localStorage.getItem(&#x27;token&#x27;);
     if (porcentaje._id) {
-      let url &#x3D; URL_SERVICIOS + &#x60;/tax/${id}/porcentaje/${porcentaje._id}?token&#x3D;${token}&#x60;;
+      let url &#x3D; URL_SERVICIOS + &#x60;/tax/${id}/porcentajes/${porcentaje._id}?token&#x3D;${token}&#x60;;
       return this.http.put(url,porcentaje);
     } else {
-      let url &#x3D; URL_SERVICIOS + &#x60;/tax/${id}/porcentaje?token&#x3D;${token}&#x60;;
+      let url &#x3D; URL_SERVICIOS + &#x60;/tax/${id}/porcentajes?token&#x3D;${token}&#x60;;
       return this.http.post(url,porcentaje);
     }
   }
 
   public deletePorcentaje(id:String, idpor:String) {
     let token &#x3D; localStorage.getItem(&#x27;token&#x27;);
-    let url &#x3D; URL_SERVICIOS + &#x60;/tax/${id}/porcentaje/${idpor}?token&#x3D;${token}&#x60;;
+    let url &#x3D; URL_SERVICIOS + &#x60;/tax/${id}/porcentajes/${idpor}?token&#x3D;${token}&#x60;;
     return this.http.delete(url);
   }
 

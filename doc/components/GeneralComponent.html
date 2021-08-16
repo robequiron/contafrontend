@@ -36,7 +36,7 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>SidebarfooterComponent</li>
+  <li>GeneralComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -50,6 +50,9 @@
             <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
         </li>
         <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
             <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
         </li>
 </ul>
@@ -59,17 +62,9 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/shared/sidebarfooter/sidebarfooter.component.ts</code>
+    <code>src/app/pages/config/general/general.component.ts</code>
 </p>
 
-    <p class="comment">
-        <h3>Description</h3>
-    </p>
-    <p class="comment">
-        <p>Bottom of the sidebar menu</p>
-<p>Parte inferior del menu sidebar</p>
-
-    </p>
 
 
     <p class="comment">
@@ -97,15 +92,19 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-sidebarfooter</code></td>
+                <td class="col-md-9"><code>app-general</code></td>
             </tr>
 
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./general.component.css</code></td>
+            </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./sidebarfooter.component.html</code></td>
+                <td class="col-md-9"><code>./general.component.html</code></td>
             </tr>
 
 
@@ -119,13 +118,102 @@
     </table>
 </section>
 
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
 
 
 
 
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor()</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/pages/config/general/general.component.ts:8</a></div>
+                            </td>
+                        </tr>
+
+            </tbody>
+        </table>
+</section>
 
 
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="12"
+                            class="link-to-prism">src/app/pages/config/general/general.component.ts:12</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
 
 </div>
 
@@ -133,29 +221,15 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
 
-/**
- * Bottom of the sidebar menu
- * 
- * Parte inferior del menu sidebar
- */
-
 @Component({
-  selector: &#x27;app-sidebarfooter&#x27;,
-  templateUrl: &#x27;./sidebarfooter.component.html&#x27;,
-  styles: []
+  selector: &#x27;app-general&#x27;,
+  templateUrl: &#x27;./general.component.html&#x27;,
+  styleUrls: [&#x27;./general.component.css&#x27;]
 })
-export class SidebarfooterComponent implements OnInit {
+export class GeneralComponent implements OnInit {
 
-  /**
-   * @ignore
-   */
-  
   constructor() { }
 
-  /**
-   * @ignore
-   */
-  
   ngOnInit() {
   }
 
@@ -164,27 +238,16 @@ export class SidebarfooterComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">                &lt;!-- Sidebar Extra Info --&gt;
-                &lt;div id&#x3D;&quot;sidebar-extra-info&quot; class&#x3D;&quot;sidebar-content sidebar-nav-mini-hide&quot;&gt;
-                    &lt;div class&#x3D;&quot;push-bit&quot;&gt;
-                        &lt;span class&#x3D;&quot;pull-right&quot;&gt;
-                            &lt;a href&#x3D;&quot;javascript:void(0)&quot; class&#x3D;&quot;text-muted&quot;&gt;&lt;i class&#x3D;&quot;fa fa-plus&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-                        &lt;/span&gt;
-                        &lt;small&gt;&lt;strong&gt;78 GB&lt;/strong&gt; / 100 GB&lt;/small&gt;
-                    &lt;/div&gt;
-                    &lt;div class&#x3D;&quot;progress progress-mini push-bit&quot;&gt;
-                        &lt;div class&#x3D;&quot;progress-bar progress-bar-primary&quot; role&#x3D;&quot;progressbar&quot; aria-valuenow&#x3D;&quot;78&quot; aria-valuemin&#x3D;&quot;0&quot; aria-valuemax&#x3D;&quot;100&quot; style&#x3D;&quot;width: 78%&quot;&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div class&#x3D;&quot;text-center&quot;&gt;
-                        &lt;small&gt;Crafted with &lt;i class&#x3D;&quot;fa fa-heart text-danger&quot;&gt;&lt;/i&gt; by &lt;a href&#x3D;&quot;http://goo.gl/vNS3I&quot; target&#x3D;&quot;_blank&quot;&gt;pixelcave&lt;/a&gt;&lt;/small&gt;&lt;br&gt;
-                        &lt;small&gt;&lt;span id&#x3D;&quot;year-copy&quot;&gt;&lt;/span&gt; &amp;copy; &lt;a href&#x3D;&quot;http://goo.gl/RcsdAh&quot; target&#x3D;&quot;_blank&quot;&gt;AppUI 2.1&lt;/a&gt;&lt;/small&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-                &lt;!-- END Sidebar Extra Info --&gt;
-             
-                &lt;!-- END Main Sidebar --&gt;</code></pre>
+        <pre class="line-numbers"><code class="language-html">&lt;p&gt;general works!&lt;/p&gt;
+</code></pre>
     </div>
 
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./general.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
 
     <div class="tab-pane fade " id="c-tree">
         <div id="tree-container"></div>
@@ -211,10 +274,10 @@ export class SidebarfooterComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div>                <!-- Sidebar Extra Info -->                <div id="sidebar-extra-info" class="sidebar-content sidebar-nav-mini-hide">                    <div class="push-bit">                        <span class="pull-right">                            <a href="javascript:void(0)" class="text-muted"><i class="fa fa-plus"></i></a>                        </span>                        <small><strong>78 GB</strong> / 100 GB</small>                    </div>                    <div class="progress progress-mini push-bit">                        <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" style="width: 78%"></div>                    </div>                    <div class="text-center">                        <small>Crafted with <i class="fa fa-heart text-danger"></i> by <a href="http://goo.gl/vNS3I" target="_blank">pixelcave</a></small><br>                        <small><span id="year-copy"></span> &copy; <a href="http://goo.gl/RcsdAh" target="_blank">AppUI 2.1</a></small>                    </div>                </div>                <!-- END Sidebar Extra Info -->                             <!-- END Main Sidebar --></div>'
+        var COMPONENT_TEMPLATE = '<div><p>general works!</p></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ColorthemeComponent', 'selector': 'app-colortheme'},{'name': 'ConfigComponent', 'selector': 'app-config'},{'name': 'ContabilidadComponent', 'selector': 'app-contabilidad'},{'name': 'CuentaComponent', 'selector': 'app-cuenta'},{'name': 'CuentasComponent', 'selector': 'app-cuentas'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'GeneralComponent', 'selector': 'app-general'},{'name': 'GrupoComponent', 'selector': 'app-grupo'},{'name': 'GruposComponent', 'selector': 'app-grupos'},{'name': 'LoadTableComponent', 'selector': 'app-load-table'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NotfoundComponent', 'selector': 'app-notfound'},{'name': 'PagesComponent', 'selector': 'app-pages'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'SidebarfooterComponent', 'selector': 'app-sidebarfooter'},{'name': 'SubcuentaComponent', 'selector': 'app-subcuenta'},{'name': 'SubcuentasComponent', 'selector': 'app-subcuentas'},{'name': 'SubgrupoComponent', 'selector': 'app-subgrupo'},{'name': 'SubgruposComponent', 'selector': 'app-subgrupos'},{'name': 'TaxComponent', 'selector': 'app-tax'},{'name': 'TaxformComponent', 'selector': 'app-taxform'},{'name': 'TaxporformComponent', 'selector': 'app-taxporform'},{'name': 'UserComponent', 'selector': 'app-user'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'ViaComponent', 'selector': 'app-via'},{'name': 'ViasComponent', 'selector': 'app-vias'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'SidebarfooterComponent'};
+    var ACTUAL_COMPONENT = {'name': 'GeneralComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -249,7 +312,7 @@ export class SidebarfooterComponent implements OnInit {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'SidebarfooterComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'GeneralComponent.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

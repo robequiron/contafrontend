@@ -3,6 +3,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 /**
  * Complete the account to 8 digits, and create minimum and maximum intervals
  * 
+ * Completa la cuenta contable a 8 dígitos, y crea un intervalo de cuenta para la busqueda
+ * 
  * @example transform(400,[0]) => 400 00000
  * @example transform(400,[1]) => 400 99999
  * @returns number

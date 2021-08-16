@@ -12,6 +12,7 @@ import { CuentasService } from './cuentas/cuentas.service';
 import { CuentaPipe } from '../pipes/cuenta.pipe';
 import { TaxesService } from './taxes/taxes.service';
 import { ViasService } from './generales/vias.service';
+import { SweetAlertService } from './services.index';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { ViasService } from './generales/vias.service';
     CuentasService,
     CuentaPipe,
     TaxesService,
-    ViasService
+    ViasService,
+    SweetAlertService
   ]
 })
 export class ServicesModule { }

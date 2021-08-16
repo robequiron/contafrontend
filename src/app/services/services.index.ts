@@ -10,3 +10,4 @@ export { SubgruposService } from './subgrupos/subgrupos.service';
 export { TaxesService } from './taxes/taxes.service';
 export { UserService } from './users/user.service';
 export { UsuarioService } from './usuario/usuario.service';
+export {SweetAlertService}  from './sweetalert/sweet-alert.service';

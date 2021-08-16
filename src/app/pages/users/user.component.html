@@ -95,8 +95,10 @@
                 <button 
                 class="btn btn-effect-ripple btn-primary" style="overflow: hidden; position: relative;"
                 [disabled]="f.form.invalid"
-                >Grabar</button>
-                <button [routerLink]="['/users']" type="reset" class="btn btn-effect-ripple btn-danger" style="overflow: hidden; position: relative;">Cancelar</button>
+                >{{
+                    usuario._id ? 'Modificar' : 'Grabar'
+                }}</button>
+                <button [routerLink]="['/users']" type="reset" class="btn btn-effect-ripple btn-danger" style="overflow: hidden; position: relative;">Salir</button>
             </div>
         </div>
     </form>

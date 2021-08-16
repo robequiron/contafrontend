@@ -45,7 +45,15 @@ export class TaxesService {
       return this.http.post(url,tax);
     }
   }
-
+  /**
+   * Create percentage
+   * 
+   * Creación porcentajes de impuesto
+   * 
+   * @param id Identify tax
+   * @param porcentaje Percentage
+   * @returns 
+   */
   public savePorcentaje(id:String, porcentaje:Porcentaje) {
     let token = localStorage.getItem('token');
     if (porcentaje._id) {

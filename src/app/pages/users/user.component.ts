@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { UserService } from 'src/app/services/services.index';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { SweetAlertService, UserService } from 'src/app/services/services.index';
 import { NgForm } from '@angular/forms';
 import { Usuario } from 'src/app/models/usuario.model';
-import Swal from 'sweetalert2';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 /**
  * Component to modify or create new users
  */
@@ -13,20 +14,35 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './user.component.html',
   styles: []
 })
-export class UserComponent implements OnInit {
+export class UserComponent implements OnInit, OnDestroy {
 
   /**
    * User model
+   * 
+   * Modelo de usuario
    */
 
   public usuario: Usuario = new Usuario('','','','');
+
+  /**
+   * User observable subscription
+   * 
+   * Subscription observable usuario
+   */
+  public $usuario:Subscription;
   
   /**
    * Form title
+   * 
+   * Título del formulario
    */
   public title:String= "Usuario";
+  
+  
   /**
    * Roles
+   * 
+   * Role de usuario
    */
   public roles:any;
 
@@ -49,7 +65,9 @@ export class UserComponent implements OnInit {
    */
   constructor(
     public _userService:UserService,
-    public activatedRoutes:ActivatedRoute
+    public activatedRoutes:ActivatedRoute,
+    private _swa1:SweetAlertService,
+    private router:Router
     ) { 
       activatedRoutes.params.subscribe( params => {
         let id = params['id'];
@@ -63,19 +81,27 @@ export class UserComponent implements OnInit {
    * @ignore
    */
   ngOnInit() {
+    //Obtenemos la lista de roles
     this.roles = this._userService.ROLES;
+    
   }
 
   /**
-   * Load data user
+   * Get the user through the observable
+   * 
+   * Conseguimos el usuario a través del observable
    * 
    * @param id Identifier user
    */
-
   public loadUser(id:string) {
-    this._userService.getUser(id).subscribe(
+    this.$usuario = this._userService.getUser(id).subscribe(
       (resp:Usuario) => {
         this.usuario = resp;
+      },
+      (e)=>{
+        this._swa1.get_error('Error','Existe un error al cargar el usuario. Consulte con el administrador',4000);
+        this.router.navigate(['/users']);
+        
       }
     )
   }
@@ -102,14 +128,12 @@ export class UserComponent implements OnInit {
          this._userService.saveUser(this.usuario).subscribe(
            ((resp:any)=>{
              this.usuario = resp.usuario;
-             Swal.fire({
-              icon:'info',
-              title:'Usuario grabado correctamente',
-              timer: 1500
-              })
+             this._swa1.get_success('Usuario grabado correctamente','',1500);
+
+             
            }),
            (err)=>{
-              if(err.error.error.errors.email.kind==="unique") {
+              if(err.error.error.error.errors.email.kind==="unique") {
                 this.eForm.eEmail= true;
                 this.eForm.eEmailUnique= true;
               }
@@ -162,6 +186,13 @@ export class UserComponent implements OnInit {
       this.eForm.rol = false;  
     }
 
+  }
+  
+  /**
+   * @ignore
+   */
+  public ngOnDestroy() {
+    this.$usuario.unsubscribe();
   }
 
 }

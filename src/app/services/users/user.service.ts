@@ -36,7 +36,7 @@ export class UserService {
    */
   public getUsers(name:string, email:string) {
     let token = localStorage.getItem('token');
-    let url = URL_SERVICIOS + `/usuario?from=0&limit=100&name=${name}&email=${email}&token=${token}`;
+    let url = URL_SERVICIOS + `/users?from=0&limit=100&name=${name}&email=${email}&token=${token}`;
     return this.http.get(url);
   }
 
@@ -47,7 +47,7 @@ export class UserService {
    */
   public getUser(id:string) {
     let token = localStorage.getItem('token');
-    let url = URL_SERVICIOS + `/usuario/${id}?token=${token}`;
+    let url = URL_SERVICIOS + `/users/${id}?token=${token}`;
     return this.http.get(url).pipe(
       map( (resp:any)=>{
         return resp.usuario;
@@ -68,7 +68,7 @@ export class UserService {
    */
   public deleteUser(id:string) {
     let token = localStorage.getItem('token');
-    let url = URL_SERVICIOS + '/usuario/' + id + '?token=' + token;
+    let url = URL_SERVICIOS + '/users/' + id + '?token=' + token;
     return this.http.delete(url);
   }
 
@@ -82,10 +82,10 @@ export class UserService {
     
     let token = localStorage.getItem('token');
     if(usuario._id){
-      let url = URL_SERVICIOS + '/usuario/' + usuario._id + '?token=' + token;
+      let url = URL_SERVICIOS + '/users/' + usuario._id + '?token=' + token;
       return this.http.put(url, usuario);
     } else {
-      let url = URL_SERVICIOS + '/usuario?token=' + token;
+      let url = URL_SERVICIOS + '/users?token=' + token;
       return this.http.post(url, usuario); 
     }
   }

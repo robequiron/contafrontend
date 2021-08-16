@@ -50,7 +50,7 @@ export class TaxporformComponent implements OnInit {
     console.log(f);
     
     this.porEdit.name = f.form.value.name;
-    this.porEdit.porcentaje = f.form.value.porcentaje;
+    this.porEdit.percentage = f.form.value.porcentaje;
     this.tax._id = f.form.controls.tax_id.value;
     
 
@@ -61,7 +61,7 @@ export class TaxporformComponent implements OnInit {
         
         if (resp.ok) {
           if (resp.create){
-            return resp.tax.porcentaje['0'];
+            return resp.tax.percentages['0'];
           } else {
             
           } 

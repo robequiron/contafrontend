@@ -26,6 +26,7 @@
     "jquery": "^3.5.1",
     "ng-select2": "^1.2.2",
     "ngx-bootstrap": "^5.6.1",
+    "ngx-bootstrap-growl": "0.0.7",
     "ngx-pagination": "^5.0.0",
     "rxjs": "~6.4.0",
     "select2": "^4.0.13",

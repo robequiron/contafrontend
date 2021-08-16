@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+//Function jquery
 declare function sidebarApp(mode);
 
 /**

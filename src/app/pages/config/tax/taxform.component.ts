@@ -52,7 +52,7 @@ export class TaxformComponent implements OnInit {
   public grabar(f:NgForm) {
     if (f.valid) {
       this.tax.name = f.form.value.name;
-      this.tax.taxnumber = f.form.value.taxnumber;
+      this.tax.code = f.form.value.taxnumber;
       this.tax._id = f.form.controls._id.value;
 
       this._taxservice.saveTax(this.tax).subscribe( 

@@ -93,6 +93,7 @@ export class UsersComponent implements OnInit {
    */
   public setItemPerPage(n:number):void {
     this.itemsPerPage = n;
+    this.p = 1;
   }
 
   /**
