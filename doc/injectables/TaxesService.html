@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
         <link rel="stylesheet" href="../styles/readthedocs.css">
     </head>
     <body>
@@ -39,7 +40,7 @@
 
 <ol class="breadcrumb">
   <li>Injectables</li>
-  <li>TaxesService</li>
+  <li >TaxesService</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -59,6 +60,7 @@
         <p class="comment">
             <code>src/app/services/taxes/taxes.service.ts</code>
         </p>
+
 
             <p class="comment">
                 <h3>Description</h3>
@@ -85,19 +87,19 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#deletePorcentaje">deletePorcentaje</a>
+                                <a href="#deletePorcentaje" >deletePorcentaje</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#getTaxes">getTaxes</a>
+                                <a href="#getTaxes" >getTaxes</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#savePorcentaje">savePorcentaje</a>
+                                <a href="#savePorcentaje" >savePorcentaje</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#saveTax">saveTax</a>
+                                <a href="#saveTax" >saveTax</a>
                             </li>
                         </ul>
                     </td>
@@ -178,10 +180,8 @@
                 <td class="col-md-4">
                     <a name="deletePorcentaje"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            deletePorcentaje
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span ><b>deletePorcentaje</b></span>
                         <a href="#deletePorcentaje"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -262,10 +262,8 @@
                 <td class="col-md-4">
                     <a name="getTaxes"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            getTaxes
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span ><b>getTaxes</b></span>
                         <a href="#getTaxes"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -305,10 +303,8 @@
                 <td class="col-md-4">
                     <a name="savePorcentaje"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            savePorcentaje
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span ><b>savePorcentaje</b></span>
                         <a href="#savePorcentaje"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -316,7 +312,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>savePorcentaje(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a>, porcentaje: <a href="../classes/Porcentaje.html">Porcentaje</a>)</code>
+                    <code>savePorcentaje(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a>, porcentaje: <a href="../classes/Porcentaje.html" target="_self">Porcentaje</a>)</code>
                 </td>
             </tr>
 
@@ -401,10 +397,8 @@
                 <td class="col-md-4">
                     <a name="saveTax"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            saveTax
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span ><b>saveTax</b></span>
                         <a href="#saveTax"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -412,7 +406,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>saveTax(tax: <a href="../classes/Tax.html">Tax</a>)</code>
+                    <code>saveTax(tax: <a href="../classes/Tax.html" target="_self">Tax</a>)</code>
                 </td>
             </tr>
 
@@ -594,9 +588,9 @@ export class TaxesService {
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
-       <script src="../js/menu-wc.js" defer></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 

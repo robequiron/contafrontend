@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-	      <link rel="stylesheet" href="./styles/style.css">
+	   <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/dark.css" media="(prefers-color-scheme: dark)">
         <link rel="stylesheet" href="./styles/readthedocs.css">
     </head>
     <body>
@@ -49,23 +50,27 @@
     </ol>
     <ul class="dependencies-list">
         <li>
-            <b>@angular/animations</b> : ~8.0.0</li>
+            <b>@angular/animations</b> : ~9.1.13</li>
         <li>
-            <b>@angular/common</b> : ~8.0.0</li>
+            <b>@angular/common</b> : ~9.1.13</li>
         <li>
-            <b>@angular/compiler</b> : ~8.0.0</li>
+            <b>@angular/compiler</b> : ~9.1.13</li>
         <li>
-            <b>@angular/core</b> : ~8.0.0</li>
+            <b>@angular/core</b> : ~9.1.13</li>
         <li>
-            <b>@angular/forms</b> : ~8.0.0</li>
+            <b>@angular/forms</b> : ~9.1.13</li>
         <li>
-            <b>@angular/platform-browser</b> : ~8.0.0</li>
+            <b>@angular/platform-browser</b> : ~9.1.13</li>
         <li>
-            <b>@angular/platform-browser-dynamic</b> : ~8.0.0</li>
+            <b>@angular/platform-browser-dynamic</b> : ~9.1.13</li>
         <li>
-            <b>@angular/router</b> : ~8.0.0</li>
+            <b>@angular/router</b> : ~9.1.13</li>
         <li>
             <b>@sweetalert2/theme-bootstrap-4</b> : ^3.1.4</li>
+        <li>
+            <b>@types/jest</b> : ^27.0.1</li>
+        <li>
+            <b>@types/mocha</b> : ^9.0.0</li>
         <li>
             <b>animate.css</b> : ^3.7.2</li>
         <li>
@@ -79,15 +84,17 @@
         <li>
             <b>ngx-pagination</b> : ^5.0.0</li>
         <li>
-            <b>rxjs</b> : ~6.4.0</li>
+            <b>rxjs</b> : ~6.6.7</li>
         <li>
             <b>select2</b> : ^4.0.13</li>
         <li>
             <b>sweetalert2</b> : ^9.10.12</li>
         <li>
-            <b>tslib</b> : ^1.9.0</li>
+            <b>tslib</b> : ^1.10.0</li>
         <li>
-            <b>zone.js</b> : ~0.9.1</li>
+            <b>xmlhttprequest-ssl</b> : ^2.0.0</li>
+        <li>
+            <b>zone.js</b> : ~0.10.2</li>
     </ul>
 
                    
@@ -118,9 +125,9 @@
 
        <script src="./js/libs/custom-elements.min.js"></script>
        <script src="./js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="./js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
-       <script src="./js/menu-wc.js" defer></script>
+       
+       <script type="module" src="./js/menu-wc.js" defer></script>
+       <script nomodule src="./js/menu-wc_es5.js" defer></script>
 
        <script src="./js/libs/bootstrap-native.js"></script>
 

@@ -119,7 +119,7 @@ describe('LoginComponent', () => {
   
     
   })
-
+  /*
   it ("El usuario no está autetificado",(done)=>{
     
     const  form=<NgForm> {
@@ -142,7 +142,8 @@ describe('LoginComponent', () => {
     obs$.subscribe(
       ()=>{},
       ()=>{
-        expect().nothing();
+      
+        
         setTimeout(function() {
           expect(component.error).toBe(false)
           done();
@@ -150,7 +151,7 @@ describe('LoginComponent', () => {
       }
     )
     
-  })
+  })*/
 
 
 

@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
         <link rel="stylesheet" href="../styles/readthedocs.css">
     </head>
     <body>
@@ -39,7 +40,7 @@
 
 <ol class="breadcrumb">
   <li>Injectables</li>
-  <li>SubgruposService</li>
+  <li >SubgruposService</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -59,6 +60,7 @@
         <p class="comment">
             <code>src/app/services/subgrupos/subgrupos.service.ts</code>
         </p>
+
 
             <p class="comment">
                 <h3>Description</h3>
@@ -85,23 +87,23 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#deleteSubgrupo">deleteSubgrupo</a>
+                                <a href="#deleteSubgrupo" >deleteSubgrupo</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#getFindGroup">getFindGroup</a>
+                                <a href="#getFindGroup" >getFindGroup</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#getSubgrupo">getSubgrupo</a>
+                                <a href="#getSubgrupo" >getSubgrupo</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#getSubgrupos">getSubgrupos</a>
+                                <a href="#getSubgrupos" >getSubgrupos</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#saveSubgrupo">saveSubgrupo</a>
+                                <a href="#saveSubgrupo" >saveSubgrupo</a>
                             </li>
                         </ul>
                     </td>
@@ -182,10 +184,8 @@
                 <td class="col-md-4">
                     <a name="deleteSubgrupo"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            deleteSubgrupo
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span ><b>deleteSubgrupo</b></span>
                         <a href="#deleteSubgrupo"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -261,10 +261,8 @@
                 <td class="col-md-4">
                     <a name="getFindGroup"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            getFindGroup
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span ><b>getFindGroup</b></span>
                         <a href="#getFindGroup"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -340,10 +338,8 @@
                 <td class="col-md-4">
                     <a name="getSubgrupo"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            getSubgrupo
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span ><b>getSubgrupo</b></span>
                         <a href="#getSubgrupo"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -419,10 +415,8 @@
                 <td class="col-md-4">
                     <a name="getSubgrupos"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            getSubgrupos
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span ><b>getSubgrupos</b></span>
                         <a href="#getSubgrupos"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -517,10 +511,8 @@
                 <td class="col-md-4">
                     <a name="saveSubgrupo"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            saveSubgrupo
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span ><b>saveSubgrupo</b></span>
                         <a href="#saveSubgrupo"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -528,7 +520,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>saveSubgrupo(subgrupo: <a href="../classes/Subgrupo.html">Subgrupo</a>)</code>
+                    <code>saveSubgrupo(subgrupo: <a href="../classes/Subgrupo.html" target="_self">Subgrupo</a>)</code>
                 </td>
             </tr>
 
@@ -543,7 +535,7 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Create or update accounting subgroup </p>
+                    <div class="io-description"><p>Create or update accounting subgroup</p>
 </div>
 
                     <div class="io-description">
@@ -717,9 +709,9 @@ export class SubgruposService {
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
-       <script src="../js/menu-wc.js" defer></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 

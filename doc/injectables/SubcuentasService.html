@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
         <link rel="stylesheet" href="../styles/readthedocs.css">
     </head>
     <body>
@@ -39,7 +40,7 @@
 
 <ol class="breadcrumb">
   <li>Injectables</li>
-  <li>SubcuentasService</li>
+  <li >SubcuentasService</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -59,6 +60,7 @@
         <p class="comment">
             <code>src/app/services/subcuentas/subcuentas.service.ts</code>
         </p>
+
 
             <p class="comment">
                 <h3>Description</h3>
@@ -85,23 +87,23 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#deleteSubcuenta">deleteSubcuenta</a>
+                                <a href="#deleteSubcuenta" >deleteSubcuenta</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#getFindSubcuenta">getFindSubcuenta</a>
+                                <a href="#getFindSubcuenta" >getFindSubcuenta</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#getSubcuenta">getSubcuenta</a>
+                                <a href="#getSubcuenta" >getSubcuenta</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#getSubcuentas">getSubcuentas</a>
+                                <a href="#getSubcuentas" >getSubcuentas</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#saveSubcuenta">saveSubcuenta</a>
+                                <a href="#saveSubcuenta" >saveSubcuenta</a>
                             </li>
                         </ul>
                     </td>
@@ -182,10 +184,8 @@
                 <td class="col-md-4">
                     <a name="deleteSubcuenta"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            deleteSubcuenta
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span ><b>deleteSubcuenta</b></span>
                         <a href="#deleteSubcuenta"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -261,10 +261,8 @@
                 <td class="col-md-4">
                     <a name="getFindSubcuenta"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            getFindSubcuenta
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span ><b>getFindSubcuenta</b></span>
                         <a href="#getFindSubcuenta"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -335,10 +333,8 @@
                 <td class="col-md-4">
                     <a name="getSubcuenta"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            getSubcuenta
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span ><b>getSubcuenta</b></span>
                         <a href="#getSubcuenta"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -414,10 +410,8 @@
                 <td class="col-md-4">
                     <a name="getSubcuentas"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            getSubcuentas
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span ><b>getSubcuentas</b></span>
                         <a href="#getSubcuentas"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -541,10 +535,8 @@
                 <td class="col-md-4">
                     <a name="saveSubcuenta"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            saveSubcuenta
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span ><b>saveSubcuenta</b></span>
                         <a href="#saveSubcuenta"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -552,7 +544,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>saveSubcuenta(subcuenta: <a href="../classes/Subcuenta.html">Subcuenta</a>)</code>
+                    <code>saveSubcuenta(subcuenta: <a href="../classes/Subcuenta.html" target="_self">Subcuenta</a>)</code>
                 </td>
             </tr>
 
@@ -594,7 +586,7 @@
 
 
                                     <td>
-                                        <p>Subcuenta model </p>
+                                        <p>Subcuenta model</p>
 
                                     </td>
                                 </tr>
@@ -759,9 +751,9 @@ export class SubcuentasService {
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
-       <script src="../js/menu-wc.js" defer></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 

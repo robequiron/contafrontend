@@ -5,14 +5,14 @@ import { CuentaPipe } from './cuenta.pipe';
 
 @NgModule({
   declarations: [
-  RoundceilPipe,
+  
   CuentaPipe,
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    RoundceilPipe,
+    
     CuentaPipe
 
   ]

@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-	      <link rel="stylesheet" href="./styles/style.css">
+	   <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/dark.css" media="(prefers-color-scheme: dark)">
         <link rel="stylesheet" href="./styles/readthedocs.css">
     </head>
     <body>
@@ -488,7 +489,7 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                <a href=".//functions.html#colorThemePreview">src/app/pages/pages.component.ts</a>
+                <a href="./miscellaneous/functions.html#colorThemePreview">src/app/pages/pages.component.ts</a>
             </td>
             <td>function</td>
             <td>colorThemePreview</td>
@@ -500,7 +501,7 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                <a href=".//functions.html#init_plugins">src/app/pages/pages.component.ts</a>
+                <a href="./miscellaneous/functions.html#init_plugins">src/app/pages/pages.component.ts</a>
             </td>
             <td>function</td>
             <td>init_plugins</td>
@@ -602,7 +603,7 @@
             <td>UserComponent</td>
             <td align="right" data-sort="100">
                 <span class="coverage-percent">100 %</span>
-                <span class="coverage-count">(12/12)</span>
+                <span class="coverage-count">(13/13)</span>
             </td>
         </tr>
         <tr class="very-good">
@@ -761,6 +762,18 @@
                 <span class="coverage-count">(7/7)</span>
             </td>
         </tr>
+        <tr class="good">
+            <td>
+                <!-- miscellaneous -->
+                <a href="./injectables/SweetAlertService.html">src/app/services/sweetalert/sweet-alert.service.ts</a>
+            </td>
+            <td>injectable</td>
+            <td>SweetAlertService</td>
+            <td align="right" data-sort="62">
+                <span class="coverage-percent">62 %</span>
+                <span class="coverage-count">(5/8)</span>
+            </td>
+        </tr>
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
@@ -812,7 +825,7 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                <a href=".//functions.html#colorThemePreview">src/app/shared/colortheme/colortheme.component.ts</a>
+                <a href="./miscellaneous/functions.html#colorThemePreview">src/app/shared/colortheme/colortheme.component.ts</a>
             </td>
             <td>function</td>
             <td>colorThemePreview</td>
@@ -836,7 +849,7 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                <a href=".//functions.html#sidebarApp">src/app/shared/navbar/navbar.component.ts</a>
+                <a href="./miscellaneous/functions.html#sidebarApp">src/app/shared/navbar/navbar.component.ts</a>
             </td>
             <td>function</td>
             <td>sidebarApp</td>
@@ -893,6 +906,30 @@
                 <span class="coverage-count">(1/1)</span>
             </td>
         </tr>
+        <tr class="low">
+            <td>
+                <!-- miscellaneous -->
+                <a href="./miscellaneous/variables.html#context">src/test.ts</a>
+            </td>
+            <td>variable</td>
+            <td>context</td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/1)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <!-- miscellaneous -->
+                <a href="./miscellaneous/variables.html#require">src/test.ts</a>
+            </td>
+            <td>variable</td>
+            <td>require</td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/1)</span>
+            </td>
+        </tr>
     </tbody>
 </table>
 
@@ -925,9 +962,9 @@
 
        <script src="./js/libs/custom-elements.min.js"></script>
        <script src="./js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="./js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
-       <script src="./js/menu-wc.js" defer></script>
+       
+       <script type="module" src="./js/menu-wc.js" defer></script>
+       <script nomodule src="./js/menu-wc_es5.js" defer></script>
 
        <script src="./js/libs/bootstrap-native.js"></script>
 

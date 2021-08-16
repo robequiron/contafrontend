@@ -41,7 +41,7 @@
             class="form-control"
             (focusout)=onFocusOut(f.form.controls)
             (keydown.esc)="cancel()"
-            [(ngModel)]="porEdit.porcentaje"
+            [(ngModel)]="porEdit.percentage"
             >
             <span class="help-block" *ngIf="eForm.ePorcentaje">Es obligatorio un número de impuesto. Entre 1 y 9</span>
             <span class="help-block" *ngIf="eForm.ePorcentaje">El identificador ya existe</span>

@@ -16,7 +16,7 @@
             class="form-control"
             (focusout)=onFocusOut(f.form.controls)
             (keydown.esc)="cancel()"
-            [(ngModel)]="tax.taxnumber"
+            [(ngModel)]="tax.code"
             >
             <span class="help-block" *ngIf="eForm.eTaxNumber && !eForm.eTaxUnique">Es obligatorio un número de impuesto. Entre 1 y 9</span>
             <span class="help-block" *ngIf="eForm.eTaxNumber && eForm.eTaxUnique">El identificador ya existe</span>

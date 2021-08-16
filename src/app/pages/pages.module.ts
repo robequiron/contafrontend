@@ -30,13 +30,13 @@ import { ViasComponent } from './config/vias/vias.component';
 import { ViaComponent } from './config/vias/via.component';
 import { GeneralComponent } from './config/general/general.component';
 import { ConfigModule } from './config/config.module';
+import { PipesModule } from '../pipes/pipes.module';
 
 
 @NgModule({
   declarations: [
     ConfigComponent,
     DashboardComponent,
-    RoundceilPipe,
     UsersComponent,
     UserComponent,
     GruposComponent,
@@ -55,7 +55,8 @@ import { ConfigModule } from './config/config.module';
     TaxporformComponent,
     ViasComponent,
     ViaComponent,
-   
+    RoundceilPipe
+    
     
     
     
@@ -68,6 +69,7 @@ import { ConfigModule } from './config/config.module';
     ConfigModule,
     NgxPaginationModule,
     NgSelect2Module,
+   
     BsDatepickerModule.forRoot()
   ]
 })

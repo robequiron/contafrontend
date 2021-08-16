@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
         <link rel="stylesheet" href="../styles/readthedocs.css">
     </head>
     <body>
@@ -41,7 +42,7 @@
 
 <ol class="breadcrumb">
     <li>Guards</li>
-    <li>LoginGuardGuard</li>
+    <li >LoginGuardGuard</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -66,6 +67,7 @@
 
 
 
+
                 <section>
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
@@ -80,11 +82,11 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#_usuarioService">_usuarioService</a>
+                                <a href="#_usuarioService" >_usuarioService</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#route">route</a>
+                                <a href="#route" >route</a>
                             </li>
                         </ul>
                     </td>
@@ -99,11 +101,11 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#canActivate">canActivate</a>
+                                <a href="#canActivate" >canActivate</a>
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#verificarToken">verificarToken</a>
+                                <a href="#verificarToken" >verificarToken</a>
                             </li>
                         </ul>
                     </td>
@@ -123,7 +125,7 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(route: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, _usuarioService: <a href="../injectables/UsuarioService.html">UsuarioService</a>)</code>
+<code>constructor(route: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, _usuarioService: <a href="../injectables/UsuarioService.html" target="_self">UsuarioService</a>)</code>
                     </td>
                 </tr>
                         <tr>
@@ -189,9 +191,7 @@
                 <td class="col-md-4">
                     <a name="canActivate"></a>
                     <span class="name">
-                        <b>
-                            canActivate
-                        </b>
+                        <span ><b>canActivate</b></span>
                         <a href="#canActivate"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -228,10 +228,8 @@
                 <td class="col-md-4">
                     <a name="verificarToken"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Private</span>
-                            verificarToken
-                        </b>
+                        <span class="modifier">Private</span>
+                        <span ><b>verificarToken</b></span>
                         <a href="#verificarToken"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -354,9 +352,9 @@ export class LoginGuardGuard implements CanActivate {
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
-       <script src="../js/menu-wc.js" defer></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 
